@@ -6,17 +6,17 @@ const modules = loadContent(
 );
 if (!modules.length) throw new Error('No content modules found');
 if (process.argv.includes('--complete')) {
-  for (const module of modules) {
-    for (const lesson of module.lessons)
-      if (!module.quizzes.some((q) => q.lessonSlug === lesson.slug))
-        throw new Error(`Missing check: ${module.slug}/${lesson.slug}`);
+  for (const contentModule of modules) {
+    for (const lesson of contentModule.lessons)
+      if (!contentModule.quizzes.some((q) => q.lessonSlug === lesson.slug))
+        throw new Error(`Missing check: ${contentModule.slug}/${lesson.slug}`);
     if (
-      module.kind === 'course' &&
-      !module.quizzes.some((q) => q.data.kind === 'exam')
+      contentModule.kind === 'course' &&
+      !contentModule.quizzes.some((q) => q.data.kind === 'exam')
     )
-      throw new Error(`Missing exam: ${module.slug}`);
-    if (!module.quizzes.some((q) => q.data.kind === 'freetext'))
-      throw new Error(`Missing free-text: ${module.slug}`);
+      throw new Error(`Missing exam: ${contentModule.slug}`);
+    if (!contentModule.quizzes.some((q) => q.data.kind === 'freetext'))
+      throw new Error(`Missing free-text: ${contentModule.slug}`);
   }
 }
 console.log(

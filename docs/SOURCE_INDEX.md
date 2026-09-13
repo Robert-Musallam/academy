@@ -37,3 +37,12 @@ Appendix A is authoritative wherever a PNG is ambiguous. All 13 PNGs were visual
 ## Content review note
 
 A9 describes a 25-year warranty on materials and craftsmanship, while the manifest requires 25-year product / 3-year labor language. The original text is preserved; the lesson explicitly uses the manifest wording for proposals. Include this lesson in the Gate 9 spot-check.
+
+## Four new lessons — pending Gate 9
+
+- [Pre-Appointment Prep Checklist](../content/rnb/sales-design-consultant/foundations/pre-appointment-prep.mdx)
+- [Presenting the Price](../content/rnb/sales-design-consultant/closing/presenting-the-price.mdx)
+- [The Same-Day Drop & Financing](../content/rnb/sales-design-consultant/closing/same-day-drop-and-financing.mdx)
+- [When They Don't Sign — the Exit Script](../content/rnb/sales-design-consultant/closing/exit-script.mdx)
+
+These are authored from the decision manifest sales rules and remain `draft: true` until approved.

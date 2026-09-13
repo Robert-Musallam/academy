@@ -1,75 +1,53 @@
 # Graph execution
 
-| Node                      | Status                 | Verification                                                                                                                                                     |
-| ------------------------- | ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 0 — Decision manifest     | Supplied by human      | Retained in `docs/KICKOFF.md`                                                                                                                                    |
-| 1 — Repo scaffold         | Verified and committed | `pnpm install && pnpm build && pnpm test` exited 0; Next.js 15.5.25 build and 1 source-asset test passed; Supabase initialized; lint and typecheck also exited 0 |
-| 2 — Schema                | VERIFIED (2026-09-13)  | Docker Supabase start/reset passed; public tables = 17; tenants = 2; transactional RLS assertions passed                                                         |
-| 3–18 and final acceptance | Not started            | Next: Node 3; no human gate reached                                                                                                                              |
+**Current stop: Node 9 — HUMAN GATE: content review.** Nodes 1–8 are verified and committed. Node 10 has not started. Four lessons remain drafts and the diagram key remains unapproved.
 
-## Previous Node 2 environment blockage (resolved 2026-09-13)
+| Node                                  | Status                       | Verify result                                                                                                                               |
+| ------------------------------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| 0 — Decision manifest                 | Supplied                     | Canonical kickoff retained in `docs/KICKOFF.md`                                                                                             |
+| 1 — Repo scaffold                     | PASS                         | Install, Next.js 15.5.25 production build, initial test, lint, and typecheck exited 0; Supabase initialized                                 |
+| 2 — Schema                            | PASS                         | Docker Supabase start/reset; **17 public tables**, **2 tenants**; transactional RLS checks passed                                           |
+| 3 — Auth + roster gating              | PASS                         | `pnpm test -- auth`; rostered dispatch, non-roster 403, actual Postgres trainee isolation; build passed                                     |
+| 4 — Content pipeline                  | PASS                         | Fixture content lint/sync; lesson count **1**; draft filtering tests passed                                                                 |
+| 5 — Source transcription              | PASS                         | Lint/sync; **7 modules**, **29 non-draft lessons**; all MDX compiled                                                                        |
+| 6 — Quizzes, exams, free-text, gating | PASS                         | `pnpm test -- progress quizzes`; 89% fails, 90% passes, prerequisites enforced; exam pools **20/22/20/24/20**                               |
+| 7 — Four NEW lessons                  | PASS                         | Content lint; exact draft grep **4**; each new lesson has a check                                                                           |
+| 8 — Diagram key                       | PASS (arithmetic/tests only) | `pnpm test -- diagram`; schema, inclusive ±5%, per-field ±8% rejection, invalid input rejection; trainee grading blocked until key approval |
+| 9 — Content review                    | WAITING FOR HUMAN            | PR `content-v1`, local review page, four drafts, diagram key/assumptions, and source index staged                                           |
+| 10–18 and final acceptance            | Not started                  | Require preceding verifies and human gates                                                                                                  |
 
-The migration, idempotent seed, and `docs/SCHEMA.md` are drafts. They have not been applied to a database or tested for SQL correctness or RLS behavior. A commit preserves this work; it does not mark the node complete.
+## Gate 9 staging validation
 
-First verification attempt:
+- `pnpm content:lint --complete` and `pnpm content:sync` passed: **7 modules, 33 lessons, 45 quizzes** in source content.
+- `pnpm lint`, `pnpm build`, and `pnpm test` passed: **25 tests across 6 files**, including real local Postgres RLS tests.
+- All **33** MDX lessons, including all four drafts, compiled using `next-mdx-remote/serialize`.
+- The local review page was visually inspected in the browser. It renders drafts, source links, callouts, checks with answers, exam pools, and free-text rubrics.
+- Local production-mode HTTP checks returned **404** for `/review` and `/review/source/IMG_1384.jpeg`, and **200** for `/login`.
+- Final database counts remain **17 tables, 2 tenants, 7 modules, 29 published lessons**. The hidden Node 4 fixture adds one draft-only database row beyond the 33 source lessons.
+- No live-email delivery, simulator, manager UI, Teams digest, or full acceptance claim is made. Those belong to later nodes. No production project was accessed.
+
+## Node 2 recovery record
+
+The first session stopped because Docker and psql were unavailable. On 2026-09-13, Robert supplied a working Docker Desktop and psql installation. `pnpm exec supabase start` then succeeded, applying the schema and seed.
+
+The literal kickoff verification reset the database successfully, but `supabase status -o env | grep DB_URL | cut -d= -f2-` supplied no usable connection string to psql. That psql call failed against the default local socket (exit 2). The one fix used the local Docker Supabase endpoint configured on port 54322 and repeated start/reset and both count queries; they returned **17** and **2**. The Postgres 16 fallback is no longer used.
+
+Verified command:
 
 ```sh
-pnpm exec supabase start > /dev/null && pnpm exec supabase db reset --local > /dev/null && psql 'postgres://postgres:postgres@127.0.0.1:54322/postgres' -v ON_ERROR_STOP=1 -c "select count(*) from information_schema.tables where table_schema='public'" -c 'select count(*) from tenants'
+pnpm exec supabase start > /dev/null && pnpm exec supabase db reset > /dev/null && psql 'postgres://postgres:postgres@127.0.0.1:54322/postgres' -v ON_ERROR_STOP=1 -c "select count(*) from information_schema.tables where table_schema='public'" -c 'select count(*) from tenants'
 ```
 
-Result: exit 1 at Supabase startup. No command output was returned; startup stdout was suppressed because it can contain credentials. Diagnostic checks reported:
+Startup stdout is suppressed to avoid displaying generated credentials. The project CLI uses `SUPABASE_HOME` under `work/supabase-home`, separate from any existing machine credentials. `tests/sql/schema-rls.sql` verifies all-table RLS, trainee ownership, manager tenant access, admin access, revoked membership, anonymous denial, and prevention of role/score forgery; fixtures roll back.
 
-```text
-zsh:1: command not found: docker
-zsh:2: command not found: psql
-```
+## Node 3 testing boundary
 
-The one recovery attempt substituted the exact local Postgres 16 URL provided in the kickoff:
+Unit tests stub the email transport and verify dispatch only after roster lookup. The RLS test runs against actual local Postgres. Actual email delivery remains part of deployed acceptance. Protected pages are dynamic so the app builds without credentials. Public signup is disabled in config; magic links use `shouldCreateUser: false`. Admin roster creation provisions an auth identity first.
 
-```sh
-psql 'postgres://postgres:postgres@localhost:5432/academy' -v ON_ERROR_STOP=1 -1 -f supabase/migrations/20260913015118_academy_schema.sql -f supabase/seed.sql -c "select count(*) from information_schema.tables where table_schema='public'" -c 'select count(*) from tenants'
-```
+## Content and grading decisions
 
-Result: exit 127.
+The module-specific pass table governs M6/M7: their free-text prompts are practice, while tiers/forms determine completion. Node 7 includes checks for its new draft lessons; existing exam pools do not draw those draft questions. The diagram's numeric tests do not establish that the proposed geometry is the correct interpretation of the source; Robert must confirm or correct it at Gate 9.
 
-```text
-zsh:1: command not found: psql
-```
+## Resume signal
 
-Diagnosis: this local macOS environment lacks the Docker runtime and PostgreSQL client required by the graph. No environment setup script was found in this repository. The fallback database's availability could not be verified. Neither migration nor seed executed.
-
-## Resumed verification: PASS
-
-Docker Desktop and psql are now installed. `pnpm exec supabase start` succeeded. The literal kickoff verification reset the database successfully, but its `status -o env | grep DB_URL` expression supplied no usable connection string to psql. One fix used the local Supabase endpoint configured in `supabase/config.toml` (port 54322), then repeated start/reset and both count queries: **17** public tables and **2** tenants. `tests/sql/schema-rls.sql` also passed: all tables have RLS, trainee isolation, manager tenant restriction, admin access, disabled membership denial, anonymous denial, and prevention of role/score forgery. All test fixtures rolled back. The Postgres 16 fallback is no longer used.
-
-Next unverified node: **Node 3**.
-
-### Historical resume requirements (satisfied)
-
-Provide a running Docker-compatible local environment with `psql`, or the prescribed local Postgres 16 environment and its setup script (including Supabase auth/RLS fixtures). Resume at Node 2 and rerun its verification. Expected: 17 public tables and 2 tenants. Do not start Node 3 until it passes.
-
-The project CLI uses `SUPABASE_HOME` set to the checkout's `work/supabase-home`; the bundled Node executable directory was added to PATH for commands in this environment. No production project was accessed, and no Gate 9 or Gate 16 approval has been requested.
-
-## Node 3 — VERIFIED
-
-`pnpm test -- auth` passed (7 tests including the real Postgres RLS suite); `pnpm build` passed after marking the protected roster page dynamic. Unit tests confirm rostered email dispatch and non-roster 403 without dispatch. Email transport is stubbed for these tests; actual email delivery remains part of deployed acceptance. Admin creates the auth identity when adding a roster row; public signup is disabled in Supabase config and every magic-link request sets `shouldCreateUser: false`. Session checks use verified auth identity plus active roster membership. Next: Node 4.
-
-## Node 4 — VERIFIED
-
-Fixture content lint exited 0; fixture sync exited 0; `select count(*) from lessons` returned **1**. Both content validation tests passed. The fixture is draft-only at lesson order 99. Next: Node 5.
-
-## Node 5 — VERIFIED
-
-Content lint and content sync exited 0. Database counts: **7** modules in the Sales & Design Consultant track and **29** non-draft lessons. All 29 MDX bodies compiled successfully through `next-mdx-remote/serialize`. `docs/SOURCE_INDEX.md` maps the source sheets to every lesson. Next: Node 6.
-
-## Node 6 — VERIFIED
-
-`pnpm test -- progress quizzes` passed all 20 current tests. Full content lint and sync passed: 7 modules, 29 lessons, 41 quizzes. M1–M5 exam pools contain 20, 22, 20, 24, and 20 questions, with shuffled 10-question draws and 90% passing. Every lesson has a check and every module has a free-text rubric. The module-specific manifest table governs gating: free-text is required for M1–M5; M6/M7 reflections are practice, with their tier/form rules determining completion. Next: Node 7.
-
-## Node 7 — VERIFIED
-
-Content lint exited 0 with 33 lessons and 45 quizzes. The exact draft grep returned **4**. The four new lessons and their informational checks remain drafts until Gate 9 approval; published exam pools use only existing non-draft sources. Next: Node 8.
-
-## Node 8 — VERIFIED
-
-`pnpm test -- diagram` passed all 25 current tests. The key schema, arithmetic reconciliation, inclusive ±5% acceptance, per-field ±8% rejection, invalid-input rejection, and unapproved-key trainee block passed. The proposed model is explicitly unapproved; geometry awaits Robert's Gate 9 confirmation. Next: **Node 9 — HUMAN GATE: content review**. Do not start Node 10.
+PR merged, or reply **GATE 9 APPROVED** with any edits listed. On approval, apply the edits, flip the four drafts to `draft: false`, mark the confirmed diagram model approved, sync/reverify, and commit Node 9 approval before beginning Node 10.

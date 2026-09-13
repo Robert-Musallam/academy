@@ -20,16 +20,16 @@ export function examPassed(score: number) {
 export function trainingPath(evidence: ProgressEvidence) {
   let previousPassed = true;
   return Array.from({ length: 7 }, (_, index) => {
-    const module = index + 1;
+    const moduleNumber = index + 1;
     let requirementsMet = false;
-    if (module <= 5) {
-      const course = evidence.courses[module];
+    if (moduleNumber <= 5) {
+      const course = evidence.courses[moduleNumber];
       requirementsMet =
         !!course &&
         course.examScores.some(examPassed) &&
         course.freeTextPassed &&
-        (module !== 3 || course.diagramPassed === true);
-    } else if (module === 6) {
+        (moduleNumber !== 3 || course.diagramPassed === true);
+    } else if (moduleNumber === 6) {
       requirementsMet = (['warm', 'standard', 'hard'] as const).every((tier) =>
         evidence.passingSimTiers.includes(tier),
       );
@@ -45,7 +45,7 @@ export function trainingPath(evidence: ProgressEvidence) {
         ? 'passed'
         : 'unlocked';
     previousPassed = status === 'passed';
-    return { module, status } as {
+    return { module: moduleNumber, status } as {
       module: number;
       status: 'locked' | 'unlocked' | 'passed';
     };
