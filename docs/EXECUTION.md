@@ -1,6 +1,6 @@
 # Graph execution
 
-**Current work: Node 13.** Robert accepted the playable 3D yard as v1 and authorized continuing to Gate 16. Node 12 passed its trainee verification.
+**Current stop: HUMAN GATE 16 — infrastructure and provider decision.** Robert accepted the playable 3D yard as v1. Nodes 12–15 are complete and locally verified. No production deployment, real-provider call, or Teams post has occurred. See INFRA_CHECKLIST.md and PROVIDER_OPTIONS.md.
 
 | Node                                  | Status                       | Verify result                                                                                                                               |
 | ------------------------------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -16,8 +16,12 @@
 | 9 — Content review                    | APPROVED WITH EDITS          | PR `content-v1`, local review page, four drafts, diagram key/assumptions, and source index staged                                           |
 | 10 — Simulator engine                 | PASS                         | 40-turn cap, 10 daily runs, four grading fixtures, usage logging                                                                            |
 | 11 — Persona roster                   | PASS                         | 6 personas, hard/standard/warm 2 each, 18 scenarios                                                                                         |
-| 12 — Trainee UI                       | IN PROGRESS / HUMAN PREVIEW  | Simulator preview verified; full trainee workflow verify remains pending                                                                    |
-| 13–18 and final acceptance            | Not started                  | Require preceding verifies and human gates                                                                                                  |
+| 12 — Trainee UI                       | PASS                         | Gated lessons/exams/free-text/diagram, persistent simulator and field practice; trainee browser verify passed                               |
+| 13 — Manager + admin UI               | PASS                         | Tenant isolation, both field evaluations plus HCP, sign-off withdrawal and roster administration verified                                   |
+| 14 — Teams digest                     | PASS                         | Adaptive Card, stalled trainee, timezone, authorization and delivery checks passed; no real post                                            |
+| 15 — Full local acceptance            | PASS                         | Lint/build, 48 unit/integration tests and 11 browser tests passed                                                                           |
+| 16 — Infrastructure + provider        | HUMAN GATE                   | Checklist and three model/cost options staged                                                                                               |
+| 17–18 and final acceptance            | Not started                  | Await Gate 16 setup and resume signal                                                                                                       |
 
 ## Historical Gate 9 staging validation
 
@@ -110,3 +114,11 @@ Implemented the CRON_SECRET-protected route, Adaptive Card payload, completed De
 `pnpm test -- digest` passed all 46 unit/integration tests. Digest-specific tests passed on the first run; the existing RLS test assumed only two total progress rows and failed after browser fixtures added legitimate tenant progress. One fix scoped its exact-count assertion to its two transactional fixture rows; the full rerun passed. Security advisors report no issues.
 
 Two UTC cron candidates (13:00 and 14:00 Monday) plus an America/Denver 07:00 guard resolve the kickoff's fixed-UTC/DST conflict. `manual=1` is an authenticated operator override; dry-run bypasses scheduling only, never authorization. Workflows webhook setup replaces the retiring legacy connector route, preserving the TEAMS_WEBHOOK_URL name and Adaptive Card contract. Gate 16 documents channel setup, ownership and delivery caveats.
+
+## Node 15 — full local acceptance
+
+The exact command `pnpm lint && pnpm build && LLM_PROVIDER=mock pnpm test && LLM_PROVIDER=mock pnpm test:e2e` passed: production compilation, formatting, 48 unit/integration tests across 11 files, and 11 browser/API tests (24.2 seconds). First attempt stopped at lint because two local variables used Next's reserved `module` name; one fix renamed them and the full rerun passed. Supplementary checks now cover simultaneous 11-run allocation (10 admitted), lease exclusion, private-state/RPC permission denial, digest delivery claims and persisted account field practice. Server data reads paginate rather than silently truncating histories/digest totals at the PostgREST page limit.
+
+RUNBOOK.md covers roster operations, trainee/manager workflow, lessons, personas/scenarios, tenants/tracks, provider rotation, local verification, digest operations and v2 boundaries. M6/M7 written prompts are available as practice; their completion still uses simulator tiers/manager forms. Supabase dependencies are pinned to the installed verified versions. Production fixture-shortcut checks and final review packaging are recorded below.
+
+Production guard checks passed after a build and start with ACADEMY_E2E deliberately enabled: fixture cookies could not unlock `/learn`, `/manager`, `/admin/roster`, `/sim/api` or field-practice API (all redirected to login); login returned 200; development reviews returned 404; unauthenticated digest dry-run returned 401. This confirms the test shortcut is disabled by the production-mode guard even if the test switch is accidentally set. Database remains 17 public tables, 2 tenants and exactly 2 personas per tier. Local production server stopped after checks.

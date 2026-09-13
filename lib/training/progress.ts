@@ -66,10 +66,10 @@ export async function overview(member: Roster) {
 }
 export async function allowed(member: Roster, slug: string) {
   const state = await overview(member);
-  const module = state.modules.find((m) => m.slug === slug);
-  if (!module || module.status === 'locked')
+  const courseModule = state.modules.find((m) => m.slug === slug);
+  if (!courseModule || courseModule.status === 'locked')
     throw new Error('Complete the previous module first');
-  return module;
+  return courseModule;
 }
 export async function touch(
   member: Roster,

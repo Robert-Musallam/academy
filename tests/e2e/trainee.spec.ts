@@ -138,3 +138,42 @@ test('trainee warm sim persists conversation, grade and costs; ownership and cap
   });
   expect(forbidden.status()).toBe(400);
 });
+
+test('trainee field practice saves to database and restores after navigation', async ({
+  page,
+  context,
+}) => {
+  const id = 'eeeeeeee-0000-4000-8000-000000000022';
+  await seed(id, 'sim');
+  await context.addCookies([
+    { name: 'academy-test-roster', value: id, url: 'http://127.0.0.1:3000' },
+  ]);
+  await page.goto('/learn/field-lab');
+  await expect(
+    page.getByRole('heading', { name: 'The Willow Court backyard' }),
+  ).toBeVisible();
+  await expect(
+    page.getByRole('button', { name: 'Save practice', exact: true }),
+  ).toBeEnabled();
+  // Shared 3D controls are covered by the complete yard test; this checks the account-backed path.
+  await page.getByRole('button', { name: /The low spot/ }).click();
+  await page
+    .getByRole('button', { name: 'Save practice', exact: true })
+    .click();
+  await expect(page.getByRole('button', { name: 'Saved ✓' })).toBeVisible();
+  await page.goto('/learn');
+  await page.goto('/learn/field-lab');
+  await expect(
+    page.getByRole('button', { name: /The low spot/ }),
+  ).toContainText('✓');
+  const snapshots = await query(
+    'select snapshot from private.yard_practice where owner=$1',
+    [id],
+  );
+  expect(snapshots[0].snapshot.evidence.observed).toContain('drainage');
+  const snapshot = await (
+    await page.request.get('/learn/field-lab/api')
+  ).json();
+  expect(snapshot.run.messages).toHaveLength(1);
+  expect(JSON.stringify(snapshot)).not.toContain('hidden_budget');
+});

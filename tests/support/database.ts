@@ -34,7 +34,7 @@ export async function seed(
       id,
       tenant,
       mode === 'foreign' ? null : track,
-      `${mode}@academy-test.invalid`,
+      `${id === ids[mode as keyof typeof ids] ? mode : mode + '-' + id.slice(-4)}@academy-test.invalid`,
       ['manager', 'admin', 'foreign'].includes(mode)
         ? mode === 'admin'
           ? 'admin'

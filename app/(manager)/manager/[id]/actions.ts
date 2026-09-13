@@ -42,7 +42,7 @@ export async function saveEvaluation(id: string, form: FormData) {
             },
     );
     await allowed(target, type === 'hcp_exercise' ? 'measurement' : 'field');
-    const module = (
+    const fieldModule = (
       await rows<Module>('modules', {
         track_id: target.track_id,
         tenant_id: target.tenant_id,
@@ -52,14 +52,14 @@ export async function saveEvaluation(id: string, form: FormData) {
     const existing = (
       await rows<FormRow>('manager_forms', {
         roster_id: id,
-        module_id: module.id,
+        module_id: fieldModule.id,
         type: input.type,
       })
     )[0];
     const value = {
       tenant_id: target.tenant_id,
       roster_id: id,
-      module_id: module.id,
+      module_id: fieldModule.id,
       evaluator_id: caller.id,
       type: input.type,
       responses: input,
@@ -76,9 +76,9 @@ export async function saveEvaluation(id: string, form: FormData) {
     await write(
       'module_progress',
       { status: 'in_progress', passed_at: null },
-      { roster_id: id, module_id: module.id },
+      { roster_id: id, module_id: fieldModule.id },
     );
-    await touch(target, module.id);
+    await touch(target, fieldModule.id);
     saved = true;
   } catch {
     saved = false;

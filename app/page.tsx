@@ -15,8 +15,14 @@ export default function HomePage() {
         We build a company we are proud of.
       </p>
       <p className="mt-12 border-t border-stone-300 pt-6 text-sm text-stone-600">
-        The Sales &amp; Design Consultant training track is being prepared.
+        Train for confident landscape consultations.
       </p>
+      <a
+        href="/login"
+        className="mt-6 rounded bg-emerald-900 px-5 py-3 text-white self-start"
+      >
+        Sign in to Academy →
+      </a>
     </main>
   );
 }

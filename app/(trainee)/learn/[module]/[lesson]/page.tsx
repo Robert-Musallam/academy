@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { actor } from '@/lib/training/access';
 import { allowed } from '@/lib/training/progress';
@@ -24,7 +25,10 @@ export default async function LessonPage({
       <h1 className="mt-8">{lesson.title}</h1>
       <article className="lesson-body">{await renderLesson(lesson)}</article>
       {ls === 'diagram-exercise' && (
-        <img
+        <Image
+          unoptimized
+          width={1200}
+          height={1600}
           src="/learn/diagram-image"
           alt="Sample measurement diagram with labeled turf, rock and paver dimensions"
         />

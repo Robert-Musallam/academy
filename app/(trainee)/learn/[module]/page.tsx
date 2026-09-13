@@ -43,6 +43,15 @@ export default async function ModulePage({
           />
         </>
       )}
+      {m.position >= 6 && (
+        <Assessment
+          module={slug}
+          prompt={
+            content.quizzes.find((q) => q.slug === 'freetext')?.data
+              .questions[0].prompt
+          }
+        />
+      )}
       {m.position === 3 && (
         <>
           <Link

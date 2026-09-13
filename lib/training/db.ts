@@ -53,12 +53,22 @@ export async function rows<T>(
       entries.map(([, v]) => v),
     );
   }
-  let query = adminClient().from(table).select('*');
-  for (const [k, v] of Object.entries(filter))
-    query = v === null ? query.is(k, null) : query.eq(k, v);
-  const { data, error } = await query;
-  if (error) throw new Error('Unable to load Academy data');
-  return (data ?? []) as T[];
+  // PostgREST limits a response page; load every scoped page for histories/digests.
+  const result: T[] = [];
+  const client = adminClient();
+  for (let offset = 0; ; offset += 500) {
+    let query = client
+      .from(table)
+      .select('*')
+      .order('id')
+      .range(offset, offset + 499);
+    for (const [k, v] of Object.entries(filter))
+      query = v === null ? query.is(k, null) : query.eq(k, v);
+    const { data, error } = await query;
+    if (error) throw new Error('Unable to load Academy data');
+    result.push(...((data ?? []) as T[]));
+    if ((data ?? []).length < 500) return result;
+  }
 }
 export async function write<T>(
   table: string,
