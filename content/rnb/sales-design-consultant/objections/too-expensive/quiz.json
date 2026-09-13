@@ -1,0 +1,46 @@
+{
+  "kind": "lesson",
+  "draw_count": 3,
+  "pass_percent": null,
+  "questions": [
+    {
+      "id": "too-expensive-1",
+      "kind": "single_choice",
+      "prompt": "What can too expensive mean?",
+      "options": [
+        "The customer does not yet see enough value",
+        "The customer needs no education",
+        "A 20% discount is mandatory"
+      ],
+      "correct_answer": 0,
+      "source_reference": "too-expensive",
+      "source_quote": "don't see enough value / comparing prices"
+    },
+    {
+      "id": "too-expensive-2",
+      "kind": "single_choice",
+      "prompt": "What diagnostic question helps with price concern?",
+      "options": [
+        "Will you sign before seeing the design?",
+        "Can I skip the installation explanation?",
+        "If price wasn't the concern, would this be the solution you'd want?"
+      ],
+      "correct_answer": 2,
+      "source_reference": "too-expensive",
+      "source_quote": "If price wasn't the concern, would this be the solution you'd want for your home?"
+    },
+    {
+      "id": "too-expensive-3",
+      "kind": "single_choice",
+      "prompt": "What supports the value response to price concern?",
+      "options": [
+        "An immediate discount before a proposal",
+        "Quality materials, proper installation, lasting results",
+        "Lower price without scope comparison"
+      ],
+      "correct_answer": 1,
+      "source_reference": "too-expensive",
+      "source_quote": "Quality materials, proper installation, results that last save money over time"
+    }
+  ]
+}

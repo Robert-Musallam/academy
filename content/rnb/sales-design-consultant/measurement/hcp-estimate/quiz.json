@@ -1,0 +1,64 @@
+{
+  "kind": "lesson",
+  "draw_count": 5,
+  "pass_percent": null,
+  "questions": [
+    {
+      "id": "hcp-estimate-1",
+      "kind": "single_choice",
+      "prompt": "Who reviews the quantity takeoff?",
+      "options": ["The manager", "An unauthenticated visitor", "No one"],
+      "correct_answer": 0,
+      "source_reference": "hcp-estimate",
+      "source_quote": "Have the manager review the diagram and quantity takeoff"
+    },
+    {
+      "id": "hcp-estimate-2",
+      "kind": "single_choice",
+      "prompt": "What should be identified before building the estimate?",
+      "options": [
+        "Only the maximum discount",
+        "Only an email address",
+        "Customer vision and project scope"
+      ],
+      "correct_answer": 2,
+      "source_reference": "hcp-estimate",
+      "source_quote": "Identify the customer vision and project scope"
+    },
+    {
+      "id": "hcp-estimate-3",
+      "kind": "single_choice",
+      "prompt": "What proposal preparation principle is required?",
+      "options": [
+        "Use no installation details",
+        "Right materials and methods with multiple options",
+        "Choose units after presenting the price"
+      ],
+      "correct_answer": 1,
+      "source_reference": "hcp-estimate",
+      "source_quote": "right materials and methods, multiple options"
+    },
+    {
+      "id": "hcp-estimate-4",
+      "kind": "single_choice",
+      "prompt": "What accompanies the proposal?",
+      "options": ["Financing", "A promise to skip measurement", "No review"],
+      "correct_answer": 0,
+      "source_reference": "hcp-estimate",
+      "source_quote": "Present financing alongside the proposal"
+    },
+    {
+      "id": "hcp-estimate-5",
+      "kind": "single_choice",
+      "prompt": "How does Academy handle HCP?",
+      "options": [
+        "Connects to and edits HCP automatically",
+        "Replaces HCP billing",
+        "Records a manager sign-off for the external exercise"
+      ],
+      "correct_answer": 2,
+      "source_reference": "hcp-estimate",
+      "source_quote": "Academy does not connect to HCP"
+    }
+  ]
+}

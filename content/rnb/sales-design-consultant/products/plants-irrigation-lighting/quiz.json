@@ -1,0 +1,46 @@
+{
+  "kind": "lesson",
+  "draw_count": 3,
+  "pass_percent": null,
+  "questions": [
+    {
+      "id": "plants-irrigation-lighting-1",
+      "kind": "single_choice",
+      "prompt": "What plant selection principle is specified?",
+      "options": [
+        "Climate-appropriate desert plants",
+        "Ignore water needs",
+        "Use only the tallest plant"
+      ],
+      "correct_answer": 0,
+      "source_reference": "plants-irrigation-lighting",
+      "source_quote": "climate-appropriate (desert)"
+    },
+    {
+      "id": "plants-irrigation-lighting-2",
+      "kind": "single_choice",
+      "prompt": "Why use zoned irrigation?",
+      "options": [
+        "Give every plant the same schedule by default",
+        "Eliminate all planning",
+        "Match systems to trees, shrubs, turf, and planters"
+      ],
+      "correct_answer": 2,
+      "source_reference": "plants-irrigation-lighting",
+      "source_quote": "custom zoned systems (trees, shrubs, turf, planters)"
+    },
+    {
+      "id": "plants-irrigation-lighting-3",
+      "kind": "single_choice",
+      "prompt": "What lighting system is described?",
+      "options": [
+        "Exposed unplanned wiring",
+        "Low-voltage LED",
+        "High-voltage floodlights only"
+      ],
+      "correct_answer": 1,
+      "source_reference": "plants-irrigation-lighting",
+      "source_quote": "low-voltage LED"
+    }
+  ]
+}

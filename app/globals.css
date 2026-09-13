@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  background: #f5f5f0;
+  color: #183c31;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.lesson-content {
+  line-height: 1.8;
+  color: #37413b;
+}
+.lesson-content p {
+  margin: 1rem 0;
+}
+.lesson-content h2 {
+  margin: 2rem 0 0.75rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #183c31;
+}
+.lesson-content h3 {
+  margin: 1.5rem 0 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+.lesson-content ul,
+.lesson-content ol {
+  padding-left: 1.4rem;
+  margin: 1rem 0;
+}
+.lesson-content ul {
+  list-style: disc;
+}
+.lesson-content ol {
+  list-style: decimal;
+}
+.lesson-content li {
+  margin: 0.5rem 0;
+}
+.lesson-content aside h2 {
+  margin-top: 0;
+  font-size: 1rem;
+}

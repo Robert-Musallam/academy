@@ -1,0 +1,261 @@
+{
+  "kind": "exam",
+  "draw_count": 10,
+  "pass_percent": 90,
+  "questions": [
+    {
+      "id": "value-framing-1",
+      "kind": "single_choice",
+      "prompt": "What do people buy according to the value sheet?",
+      "options": ["Results", "Only materials", "Only the cheapest quote"],
+      "correct_answer": 0,
+      "source_reference": "value-framing",
+      "source_quote": "People don't buy materials, they buy the results."
+    },
+    {
+      "id": "value-framing-2",
+      "kind": "single_choice",
+      "prompt": "What is a retaining wall benefit?",
+      "options": [
+        "Replacing discovery questions",
+        "Eliminating every installation step",
+        "Managing grade and preventing erosion"
+      ],
+      "correct_answer": 2,
+      "source_reference": "value-framing",
+      "source_quote": "prevents soil erosion, manages grade"
+    },
+    {
+      "id": "value-framing-3",
+      "kind": "single_choice",
+      "prompt": "How should you connect a material to the customer?",
+      "options": [
+        "Discuss price before use",
+        "Tie its benefit to the customer's goals",
+        "Recite features without listening"
+      ],
+      "correct_answer": 1,
+      "source_reference": "value-framing",
+      "source_quote": "always connect the material to the customer's goals"
+    },
+    {
+      "id": "turf-1",
+      "kind": "single_choice",
+      "prompt": "Which backing differentiates RNB turf?",
+      "options": [
+        "White proprietary Hydroflow backing",
+        "Painted black backing",
+        "Nonpermeable plastic sheet"
+      ],
+      "correct_answer": 0,
+      "source_reference": "turf",
+      "source_quote": "white proprietary Hydroflow backing"
+    },
+    {
+      "id": "turf-2",
+      "kind": "single_choice",
+      "prompt": "What base material does RNB install?",
+      "options": [
+        "Only washed concrete sand",
+        "No prepared base",
+        "2–3 inches of territory-approved limestone chat or crushed granite breeze"
+      ],
+      "correct_answer": 2,
+      "source_reference": "turf",
+      "source_quote": "install 2–3\" of territory-approved base: limestone chat or crushed granite breeze"
+    },
+    {
+      "id": "turf-3",
+      "kind": "single_choice",
+      "prompt": "How is the turf perimeter secured?",
+      "options": [
+        "No nails around the perimeter",
+        "Galvanized nails every 5–6 inches",
+        "Regular nails every 5–6 feet"
+      ],
+      "correct_answer": 1,
+      "source_reference": "turf",
+      "source_quote": "galvanized nails every 5–6\""
+    },
+    {
+      "id": "turf-4",
+      "kind": "single_choice",
+      "prompt": "What turf infill is described?",
+      "options": [
+        "Enviro-green infill such as Zeodorizer/Camofill",
+        "Plain silica sand only",
+        "No infill"
+      ],
+      "correct_answer": 0,
+      "source_reference": "turf",
+      "source_quote": "enviro-green infill (Zeodorizer, Camofill)"
+    },
+    {
+      "id": "pavers-1",
+      "kind": "single_choice",
+      "prompt": "Which paver thickness is for driveways and heavy vehicles?",
+      "options": ["60mm", "45mm", "Both are foot-traffic only"],
+      "correct_answer": 0,
+      "source_reference": "pavers",
+      "source_quote": "60mm for driveways and heavy vehicle traffic"
+    },
+    {
+      "id": "pavers-2",
+      "kind": "single_choice",
+      "prompt": "Which paver thickness is used for foot-traffic patios?",
+      "options": ["60cm", "10mm", "45mm"],
+      "correct_answer": 2,
+      "source_reference": "pavers",
+      "source_quote": "45mm for patios"
+    },
+    {
+      "id": "pavers-3",
+      "kind": "single_choice",
+      "prompt": "How is Sailor-style edger priced?",
+      "options": [
+        "Excluded from every proposal",
+        "Included in paver sqft at no extra charge",
+        "Always charged a second time by LF"
+      ],
+      "correct_answer": 1,
+      "source_reference": "pavers",
+      "source_quote": "Sailor-style edger included in the sqft at no extra charge"
+    },
+    {
+      "id": "patio-covers-1",
+      "kind": "single_choice",
+      "prompt": "What material is specified for patio covers?",
+      "options": [
+        "Aircraft-grade aluminum",
+        "Untreated plywood only",
+        "Steel mesh only"
+      ],
+      "correct_answer": 0,
+      "source_reference": "patio-covers",
+      "source_quote": "Aircraft-grade aluminum"
+    },
+    {
+      "id": "patio-covers-2",
+      "kind": "single_choice",
+      "prompt": "Which cover option provides partial shade and airflow?",
+      "options": ["Solid", "Insulated roof only", "Lattice"],
+      "correct_answer": 2,
+      "source_reference": "patio-covers",
+      "source_quote": "Lattice (partial shade with airflow)"
+    },
+    {
+      "id": "patio-covers-3",
+      "kind": "single_choice",
+      "prompt": "How are patio covers sold?",
+      "options": [
+        "By number of ceiling fans",
+        "SQFT with posts and footers separate",
+        "LF with all footers always included"
+      ],
+      "correct_answer": 1,
+      "source_reference": "patio-covers",
+      "source_quote": "Sold by sqft; posts and footers separate"
+    },
+    {
+      "id": "outdoor-kitchens-1",
+      "kind": "single_choice",
+      "prompt": "Which equipment brand is specified in every kitchen?",
+      "options": [
+        "Bull",
+        "Any unlisted brand by default",
+        "No equipment brand"
+      ],
+      "correct_answer": 0,
+      "source_reference": "outdoor-kitchens",
+      "source_quote": "Bull equipment in every kitchen"
+    },
+    {
+      "id": "outdoor-kitchens-2",
+      "kind": "single_choice",
+      "prompt": "What warranty is stated for Bull equipment?",
+      "options": ["Three months", "Ten years only", "Lifetime"],
+      "correct_answer": 2,
+      "source_reference": "outdoor-kitchens",
+      "source_quote": "lifetime warranty on grills, burners, components"
+    },
+    {
+      "id": "outdoor-kitchens-3",
+      "kind": "single_choice",
+      "prompt": "Which unit prices an outdoor kitchen?",
+      "options": ["Gallons", "LF", "Tons"],
+      "correct_answer": 1,
+      "source_reference": "outdoor-kitchens",
+      "source_quote": "outdoor kitchens by LF"
+    },
+    {
+      "id": "fencing-gates-1",
+      "kind": "single_choice",
+      "prompt": "What distinguishes modern fencing?",
+      "options": [
+        "2×1-inch steel panels with about a 1-inch gap",
+        "Wide-spaced vertical bars only",
+        "No privacy objective"
+      ],
+      "correct_answer": 0,
+      "source_reference": "fencing-gates",
+      "source_quote": "2\"×1\" steel panels"
+    },
+    {
+      "id": "fencing-gates-2",
+      "kind": "single_choice",
+      "prompt": "How is fencing priced?",
+      "options": ["SQFT for every fence", "Per ton", "LF"],
+      "correct_answer": 2,
+      "source_reference": "fencing-gates",
+      "source_quote": "fencing by LF"
+    },
+    {
+      "id": "fencing-gates-3",
+      "kind": "single_choice",
+      "prompt": "How are gates priced?",
+      "options": ["As turf square footage", "By unit", "Per gallon"],
+      "correct_answer": 1,
+      "source_reference": "fencing-gates",
+      "source_quote": "gates by unit"
+    },
+    {
+      "id": "plants-irrigation-lighting-1",
+      "kind": "single_choice",
+      "prompt": "What plant selection principle is specified?",
+      "options": [
+        "Climate-appropriate desert plants",
+        "Ignore water needs",
+        "Use only the tallest plant"
+      ],
+      "correct_answer": 0,
+      "source_reference": "plants-irrigation-lighting",
+      "source_quote": "climate-appropriate (desert)"
+    },
+    {
+      "id": "plants-irrigation-lighting-2",
+      "kind": "single_choice",
+      "prompt": "Why use zoned irrigation?",
+      "options": [
+        "Give every plant the same schedule by default",
+        "Eliminate all planning",
+        "Match systems to trees, shrubs, turf, and planters"
+      ],
+      "correct_answer": 2,
+      "source_reference": "plants-irrigation-lighting",
+      "source_quote": "custom zoned systems (trees, shrubs, turf, planters)"
+    },
+    {
+      "id": "plants-irrigation-lighting-3",
+      "kind": "single_choice",
+      "prompt": "What lighting system is described?",
+      "options": [
+        "Exposed unplanned wiring",
+        "Low-voltage LED",
+        "High-voltage floodlights only"
+      ],
+      "correct_answer": 1,
+      "source_reference": "plants-irrigation-lighting",
+      "source_quote": "low-voltage LED"
+    }
+  ]
+}

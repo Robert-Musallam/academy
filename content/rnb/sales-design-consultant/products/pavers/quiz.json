@@ -1,0 +1,38 @@
+{
+  "kind": "lesson",
+  "draw_count": 3,
+  "pass_percent": null,
+  "questions": [
+    {
+      "id": "pavers-1",
+      "kind": "single_choice",
+      "prompt": "Which paver thickness is for driveways and heavy vehicles?",
+      "options": ["60mm", "45mm", "Both are foot-traffic only"],
+      "correct_answer": 0,
+      "source_reference": "pavers",
+      "source_quote": "60mm for driveways and heavy vehicle traffic"
+    },
+    {
+      "id": "pavers-2",
+      "kind": "single_choice",
+      "prompt": "Which paver thickness is used for foot-traffic patios?",
+      "options": ["60cm", "10mm", "45mm"],
+      "correct_answer": 2,
+      "source_reference": "pavers",
+      "source_quote": "45mm for patios"
+    },
+    {
+      "id": "pavers-3",
+      "kind": "single_choice",
+      "prompt": "How is Sailor-style edger priced?",
+      "options": [
+        "Excluded from every proposal",
+        "Included in paver sqft at no extra charge",
+        "Always charged a second time by LF"
+      ],
+      "correct_answer": 1,
+      "source_reference": "pavers",
+      "source_quote": "Sailor-style edger included in the sqft at no extra charge"
+    }
+  ]
+}

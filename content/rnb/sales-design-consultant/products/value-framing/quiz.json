@@ -1,0 +1,42 @@
+{
+  "kind": "lesson",
+  "draw_count": 3,
+  "pass_percent": null,
+  "questions": [
+    {
+      "id": "value-framing-1",
+      "kind": "single_choice",
+      "prompt": "What do people buy according to the value sheet?",
+      "options": ["Results", "Only materials", "Only the cheapest quote"],
+      "correct_answer": 0,
+      "source_reference": "value-framing",
+      "source_quote": "People don't buy materials, they buy the results."
+    },
+    {
+      "id": "value-framing-2",
+      "kind": "single_choice",
+      "prompt": "What is a retaining wall benefit?",
+      "options": [
+        "Replacing discovery questions",
+        "Eliminating every installation step",
+        "Managing grade and preventing erosion"
+      ],
+      "correct_answer": 2,
+      "source_reference": "value-framing",
+      "source_quote": "prevents soil erosion, manages grade"
+    },
+    {
+      "id": "value-framing-3",
+      "kind": "single_choice",
+      "prompt": "How should you connect a material to the customer?",
+      "options": [
+        "Discuss price before use",
+        "Tie its benefit to the customer's goals",
+        "Recite features without listening"
+      ],
+      "correct_answer": 1,
+      "source_reference": "value-framing",
+      "source_quote": "always connect the material to the customer's goals"
+    }
+  ]
+}

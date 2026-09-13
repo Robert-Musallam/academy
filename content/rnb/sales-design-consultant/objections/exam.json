@@ -1,0 +1,315 @@
+{
+  "kind": "exam",
+  "draw_count": 10,
+  "pass_percent": 90,
+  "questions": [
+    {
+      "id": "five-step-pattern-1",
+      "kind": "single_choice",
+      "prompt": "Which step follows Acknowledge?",
+      "options": ["Understand", "Drop the price", "End the appointment"],
+      "correct_answer": 0,
+      "source_reference": "five-step-pattern",
+      "source_quote": "Acknowledge → Understand"
+    },
+    {
+      "id": "five-step-pattern-2",
+      "kind": "single_choice",
+      "prompt": "What is an objection according to the sheet?",
+      "options": [
+        "Always a final refusal",
+        "Permission to skip discovery",
+        "Not a rejection"
+      ],
+      "correct_answer": 2,
+      "source_reference": "five-step-pattern",
+      "source_quote": "An objection is not a rejection."
+    },
+    {
+      "id": "five-step-pattern-3",
+      "kind": "single_choice",
+      "prompt": "What does Reframe connect to?",
+      "options": [
+        "A discount before education",
+        "Customer goals and long-term value",
+        "The rep's impatience"
+      ],
+      "correct_answer": 1,
+      "source_reference": "five-step-pattern",
+      "source_quote": "Reframe around the customer's goals and long-term value"
+    },
+    {
+      "id": "too-expensive-1",
+      "kind": "single_choice",
+      "prompt": "What can too expensive mean?",
+      "options": [
+        "The customer does not yet see enough value",
+        "The customer needs no education",
+        "A 20% discount is mandatory"
+      ],
+      "correct_answer": 0,
+      "source_reference": "too-expensive",
+      "source_quote": "don't see enough value / comparing prices"
+    },
+    {
+      "id": "too-expensive-2",
+      "kind": "single_choice",
+      "prompt": "What diagnostic question helps with price concern?",
+      "options": [
+        "Will you sign before seeing the design?",
+        "Can I skip the installation explanation?",
+        "If price wasn't the concern, would this be the solution you'd want?"
+      ],
+      "correct_answer": 2,
+      "source_reference": "too-expensive",
+      "source_quote": "If price wasn't the concern, would this be the solution you'd want for your home?"
+    },
+    {
+      "id": "too-expensive-3",
+      "kind": "single_choice",
+      "prompt": "What supports the value response to price concern?",
+      "options": [
+        "An immediate discount before a proposal",
+        "Quality materials, proper installation, lasting results",
+        "Lower price without scope comparison"
+      ],
+      "correct_answer": 1,
+      "source_reference": "too-expensive",
+      "source_quote": "Quality materials, proper installation, results that last save money over time"
+    },
+    {
+      "id": "other-estimates-1",
+      "kind": "single_choice",
+      "prompt": "What should the customer compare besides price?",
+      "options": [
+        "Materials, installation, warranty, reputation",
+        "Only the font on a proposal",
+        "Nothing else"
+      ],
+      "correct_answer": 0,
+      "source_reference": "other-estimates",
+      "source_quote": "materials, installation process, warranty, reputation"
+    },
+    {
+      "id": "other-estimates-2",
+      "kind": "single_choice",
+      "prompt": "What experience statement supports this response?",
+      "options": [
+        "Over 150 years",
+        "Three weeks",
+        "Over 15 years in the industry"
+      ],
+      "correct_answer": 2,
+      "source_reference": "other-estimates",
+      "source_quote": "over 15 years"
+    },
+    {
+      "id": "other-estimates-3",
+      "kind": "single_choice",
+      "prompt": "What does needing other estimates usually mean here?",
+      "options": [
+        "Discovery is prohibited",
+        "The customer wants to compare",
+        "The customer has already signed"
+      ],
+      "correct_answer": 1,
+      "source_reference": "other-estimates",
+      "source_quote": "want to compare"
+    },
+    {
+      "id": "think-about-it-1",
+      "kind": "single_choice",
+      "prompt": "What should you identify when a customer needs to think?",
+      "options": [
+        "The real concern holding them back",
+        "The cheapest discount immediately",
+        "A reason to stop listening"
+      ],
+      "correct_answer": 0,
+      "source_reference": "think-about-it",
+      "source_quote": "find the real objection"
+    },
+    {
+      "id": "think-about-it-2",
+      "kind": "single_choice",
+      "prompt": "Which set of concerns does the sheet suggest exploring?",
+      "options": [
+        "Only turf color",
+        "Only a competitor name",
+        "Investment, design, timing, or something else"
+      ],
+      "correct_answer": 2,
+      "source_reference": "think-about-it",
+      "source_quote": "investment, design, timing, or something else"
+    },
+    {
+      "id": "think-about-it-3",
+      "kind": "single_choice",
+      "prompt": "What question helps if no specific concern emerges?",
+      "options": [
+        "Should I skip the proposal?",
+        "What would you need to feel comfortable deciding today?",
+        "Why are you wasting time?"
+      ],
+      "correct_answer": 1,
+      "source_reference": "think-about-it",
+      "source_quote": "What would you need to feel comfortable making a decision today?"
+    },
+    {
+      "id": "talk-to-spouse-1",
+      "kind": "single_choice",
+      "prompt": "What is behind the spouse objection?",
+      "options": [
+        "Someone else must approve",
+        "The project needs no measurements",
+        "Warranty is irrelevant"
+      ],
+      "correct_answer": 0,
+      "source_reference": "talk-to-spouse",
+      "source_quote": "someone else must approve"
+    },
+    {
+      "id": "talk-to-spouse-2",
+      "kind": "single_choice",
+      "prompt": "What attitude should guide the spouse response?",
+      "options": [
+        "Ignore the absent spouse",
+        "Force a decision without agreement",
+        "Both should be comfortable"
+      ],
+      "correct_answer": 2,
+      "source_reference": "talk-to-spouse",
+      "source_quote": "both should be comfortable"
+    },
+    {
+      "id": "talk-to-spouse-3",
+      "kind": "single_choice",
+      "prompt": "What does the conditional spouse question explore?",
+      "options": [
+        "Whether to promise a bigger discount",
+        "Whether this customer personally feels ready if the spouse agrees",
+        "Whether the spouse can be excluded"
+      ],
+      "correct_answer": 1,
+      "source_reference": "talk-to-spouse",
+      "source_quote": "would you personally feel ready to move forward?"
+    },
+    {
+      "id": "competitor-cheaper-1",
+      "kind": "single_choice",
+      "prompt": "What should you ask first about a cheaper competitor?",
+      "options": [
+        "What the other company included",
+        "Whether to cut the price without review",
+        "Whether to skip drainage education"
+      ],
+      "correct_answer": 0,
+      "source_reference": "competitor-cheaper",
+      "source_quote": "ask what the other company included"
+    },
+    {
+      "id": "competitor-cheaper-2",
+      "kind": "single_choice",
+      "prompt": "What can explain a price difference?",
+      "options": [
+        "Only the sales rep's preference",
+        "No scope difference is possible",
+        "Materials, preparation, drainage, installation standards, warranty"
+      ],
+      "correct_answer": 2,
+      "source_reference": "competitor-cheaper",
+      "source_quote": "materials, preparation, drainage, installation standards, warranty"
+    },
+    {
+      "id": "competitor-cheaper-3",
+      "kind": "single_choice",
+      "prompt": "What long-term concern supports this response?",
+      "options": [
+        "Repairs never affect value",
+        "Avoid paying twice by building it right first",
+        "Paying twice is always beneficial"
+      ],
+      "correct_answer": 1,
+      "source_reference": "competitor-cheaper",
+      "source_quote": "not paying twice"
+    },
+    {
+      "id": "not-ready-1",
+      "kind": "single_choice",
+      "prompt": "What should you ask when the customer is not ready?",
+      "options": [
+        "What needs to happen first?",
+        "Can we ignore your timeline?",
+        "Should I reduce scope without asking?"
+      ],
+      "correct_answer": 0,
+      "source_reference": "not-ready",
+      "source_quote": "what needs to happen first?"
+    },
+    {
+      "id": "not-ready-2",
+      "kind": "single_choice",
+      "prompt": "What timing factors may change?",
+      "options": [
+        "The customer's name",
+        "The definition of square feet",
+        "Scheduling and material availability"
+      ],
+      "correct_answer": 2,
+      "source_reference": "not-ready",
+      "source_quote": "scheduling and material availability change"
+    },
+    {
+      "id": "not-ready-3",
+      "kind": "single_choice",
+      "prompt": "What close aligns with the customer's timeline?",
+      "options": [
+        "Promise unlimited availability",
+        "Reserve a spot and plan around the timeline",
+        "Demand immediate installation regardless"
+      ],
+      "correct_answer": 1,
+      "source_reference": "not-ready",
+      "source_quote": "reserve your spot and plan around your timeline"
+    },
+    {
+      "id": "email-quote-1",
+      "kind": "single_choice",
+      "prompt": "What can an email-only request mean?",
+      "options": [
+        "Price without commitment",
+        "Automatic permission to skip education",
+        "A completed sale"
+      ],
+      "correct_answer": 0,
+      "source_reference": "email-quote",
+      "source_quote": "price without commitment"
+    },
+    {
+      "id": "email-quote-2",
+      "kind": "single_choice",
+      "prompt": "Before emailing, what should you verify?",
+      "options": [
+        "Only the rep's schedule",
+        "Only the discount ceiling",
+        "That the proposal matches what matters to the customer"
+      ],
+      "correct_answer": 2,
+      "source_reference": "email-quote",
+      "source_quote": "first make sure the proposal matches"
+    },
+    {
+      "id": "email-quote-3",
+      "kind": "single_choice",
+      "prompt": "What review question is suggested?",
+      "options": [
+        "Is your spouse irrelevant?",
+        "Can I quickly review what's most important to you?",
+        "Can I send a price without discussing the project?"
+      ],
+      "correct_answer": 1,
+      "source_reference": "email-quote",
+      "source_quote": "Can I quickly review what's most important to you about this project?"
+    }
+  ]
+}

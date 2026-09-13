@@ -1,0 +1,46 @@
+{
+  "kind": "lesson",
+  "draw_count": 3,
+  "pass_percent": null,
+  "questions": [
+    {
+      "id": "three-tiers-1",
+      "kind": "single_choice",
+      "prompt": "How many passing tiers are required for M6?",
+      "options": [
+        "Warm, standard, and hard",
+        "Warm only",
+        "Any two warm personas"
+      ],
+      "correct_answer": 0,
+      "source_reference": "three-tiers",
+      "source_quote": "one passing run at each tier: warm, standard, hard"
+    },
+    {
+      "id": "three-tiers-2",
+      "kind": "single_choice",
+      "prompt": "When does M7 unlock?",
+      "options": [
+        "Immediately after starting a sim",
+        "After a failed warm run",
+        "After all three tiers pass"
+      ],
+      "correct_answer": 2,
+      "source_reference": "three-tiers",
+      "source_quote": "M7 unlocks only when all three tiers are passed"
+    },
+    {
+      "id": "three-tiers-3",
+      "kind": "single_choice",
+      "prompt": "What should you do with the grade feedback?",
+      "options": [
+        "Change your roster role",
+        "Practice the missing skill before another run",
+        "Ignore the quoted lines"
+      ],
+      "correct_answer": 1,
+      "source_reference": "three-tiers",
+      "source_quote": "Practice the missing skill before another run"
+    }
+  ]
+}

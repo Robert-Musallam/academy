@@ -1,0 +1,46 @@
+{
+  "kind": "lesson",
+  "draw_count": 3,
+  "pass_percent": null,
+  "questions": [
+    {
+      "id": "hcp-sign-off-1",
+      "kind": "single_choice",
+      "prompt": "What does the manager review for HCP sign-off?",
+      "options": [
+        "The sample-diagram estimate",
+        "A leaderboard rank",
+        "An unmeasured price"
+      ],
+      "correct_answer": 0,
+      "source_reference": "hcp-sign-off",
+      "source_quote": "completed sample-diagram estimate in HCP"
+    },
+    {
+      "id": "hcp-sign-off-2",
+      "kind": "single_choice",
+      "prompt": "When can M7 be complete?",
+      "options": [
+        "After any one form",
+        "Before M6",
+        "After M6 plus ride-along, passing Day 5, and HCP sign-off"
+      ],
+      "correct_answer": 2,
+      "source_reference": "hcp-sign-off",
+      "source_quote": "M7 is complete only after M6 passes"
+    },
+    {
+      "id": "hcp-sign-off-3",
+      "kind": "single_choice",
+      "prompt": "Does Academy access HCP directly?",
+      "options": [
+        "Yes, it reads all company jobs",
+        "No, it records the sign-off",
+        "Yes, it edits live estimates"
+      ],
+      "correct_answer": 1,
+      "source_reference": "hcp-sign-off",
+      "source_quote": "does not access HCP"
+    }
+  ]
+}

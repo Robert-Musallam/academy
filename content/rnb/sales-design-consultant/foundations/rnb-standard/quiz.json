@@ -1,0 +1,60 @@
+{
+  "kind": "lesson",
+  "draw_count": 5,
+  "pass_percent": null,
+  "questions": [
+    {
+      "id": "rnb-standard-1",
+      "kind": "single_choice",
+      "prompt": "Which commitment is part of RNB's mission?",
+      "options": [
+        "Honest communication",
+        "Lowest price at any cost",
+        "Fast promises without review"
+      ],
+      "correct_answer": 0,
+      "source_reference": "rnb-standard",
+      "source_quote": "honest communication"
+    },
+    {
+      "id": "rnb-standard-2",
+      "kind": "single_choice",
+      "prompt": "What does RNB build beyond landscapes?",
+      "options": [
+        "Only a product catalog",
+        "A price leaderboard",
+        "Trust and relationships"
+      ],
+      "correct_answer": 2,
+      "source_reference": "rnb-standard",
+      "source_quote": "We build trust. We build relationships."
+    },
+    {
+      "id": "rnb-standard-3",
+      "kind": "single_choice",
+      "prompt": "How much industry experience should a rep state?",
+      "options": ["5 years", "15+ years", "3 years"],
+      "correct_answer": 1,
+      "source_reference": "rnb-standard",
+      "source_quote": "15+ years"
+    },
+    {
+      "id": "rnb-standard-4",
+      "kind": "single_choice",
+      "prompt": "What labor warranty does the manifest require?",
+      "options": ["3 years", "25 years", "Lifetime"],
+      "correct_answer": 0,
+      "source_reference": "rnb-standard",
+      "source_quote": "3-year labor warranty"
+    },
+    {
+      "id": "rnb-standard-5",
+      "kind": "single_choice",
+      "prompt": "What warranty applies to RNB turf?",
+      "options": ["3 years", "10 years", "Lifetime"],
+      "correct_answer": 2,
+      "source_reference": "rnb-standard",
+      "source_quote": "lifetime turf warranty"
+    }
+  ]
+}

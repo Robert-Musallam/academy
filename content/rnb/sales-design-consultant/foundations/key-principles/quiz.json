@@ -1,0 +1,72 @@
+{
+  "kind": "lesson",
+  "draw_count": 5,
+  "pass_percent": null,
+  "questions": [
+    {
+      "id": "key-principles-1",
+      "kind": "single_choice",
+      "prompt": "Which listening principle should guide the appointment?",
+      "options": [
+        "Listen more than you speak",
+        "Speak continuously to prevent objections",
+        "Ask no questions"
+      ],
+      "correct_answer": 0,
+      "source_reference": "key-principles",
+      "source_quote": "listen more than you speak"
+    },
+    {
+      "id": "key-principles-2",
+      "kind": "single_choice",
+      "prompt": "How should a rep contribute to the design?",
+      "options": [
+        "Copy the competitor without questions",
+        "Avoid proposing opportunities",
+        "Offer ideas rather than only take orders"
+      ],
+      "correct_answer": 2,
+      "source_reference": "key-principles",
+      "source_quote": "offer ideas, don't be an order taker"
+    },
+    {
+      "id": "key-principles-3",
+      "kind": "single_choice",
+      "prompt": "Which relationship principle is explicit?",
+      "options": [
+        "Debate every customer preference",
+        "Build rapport and trust",
+        "Pressure without understanding"
+      ],
+      "correct_answer": 1,
+      "source_reference": "key-principles",
+      "source_quote": "build rapport and trust"
+    },
+    {
+      "id": "key-principles-4",
+      "kind": "single_choice",
+      "prompt": "How should you treat the customer's home?",
+      "options": [
+        "Like your own",
+        "As a showroom only",
+        "As an obstacle to the sale"
+      ],
+      "correct_answer": 0,
+      "source_reference": "key-principles",
+      "source_quote": "treat every home like your own"
+    },
+    {
+      "id": "key-principles-5",
+      "kind": "single_choice",
+      "prompt": "What question opens discovery?",
+      "options": [
+        "Can you sign before we measure?",
+        "What discount will close you now?",
+        "Tell me about the project you're envisioning."
+      ],
+      "correct_answer": 2,
+      "source_reference": "key-principles",
+      "source_quote": "Tell me about the project you're envisioning."
+    }
+  ]
+}

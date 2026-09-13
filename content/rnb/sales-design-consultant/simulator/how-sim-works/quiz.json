@@ -1,0 +1,38 @@
+{
+  "kind": "lesson",
+  "draw_count": 3,
+  "pass_percent": null,
+  "questions": [
+    {
+      "id": "how-sim-works-1",
+      "kind": "single_choice",
+      "prompt": "What is the maximum number of turns in a run?",
+      "options": ["40", "100", "Unlimited"],
+      "correct_answer": 0,
+      "source_reference": "how-sim-works",
+      "source_quote": "maximum of 40 turns"
+    },
+    {
+      "id": "how-sim-works-2",
+      "kind": "single_choice",
+      "prompt": "What is the daily run limit per trainee?",
+      "options": ["40", "Unlimited", "10"],
+      "correct_answer": 2,
+      "source_reference": "how-sim-works",
+      "source_quote": "at most 10 runs per calendar day"
+    },
+    {
+      "id": "how-sim-works-3",
+      "kind": "single_choice",
+      "prompt": "What score rule must a passing run meet?",
+      "options": [
+        "One perfect dimension alone",
+        "Total at least 75 and each dimension at least half its weight",
+        "Total 75 alone regardless of dimensions"
+      ],
+      "correct_answer": 1,
+      "source_reference": "how-sim-works",
+      "source_quote": "total ≥ 75 AND every dimension ≥ 50% of its weight"
+    }
+  ]
+}

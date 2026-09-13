@@ -1,0 +1,38 @@
+{
+  "kind": "lesson",
+  "draw_count": 3,
+  "pass_percent": null,
+  "questions": [
+    {
+      "id": "outdoor-kitchens-1",
+      "kind": "single_choice",
+      "prompt": "Which equipment brand is specified in every kitchen?",
+      "options": [
+        "Bull",
+        "Any unlisted brand by default",
+        "No equipment brand"
+      ],
+      "correct_answer": 0,
+      "source_reference": "outdoor-kitchens",
+      "source_quote": "Bull equipment in every kitchen"
+    },
+    {
+      "id": "outdoor-kitchens-2",
+      "kind": "single_choice",
+      "prompt": "What warranty is stated for Bull equipment?",
+      "options": ["Three months", "Ten years only", "Lifetime"],
+      "correct_answer": 2,
+      "source_reference": "outdoor-kitchens",
+      "source_quote": "lifetime warranty on grills, burners, components"
+    },
+    {
+      "id": "outdoor-kitchens-3",
+      "kind": "single_choice",
+      "prompt": "Which unit prices an outdoor kitchen?",
+      "options": ["Gallons", "LF", "Tons"],
+      "correct_answer": 1,
+      "source_reference": "outdoor-kitchens",
+      "source_quote": "outdoor kitchens by LF"
+    }
+  ]
+}

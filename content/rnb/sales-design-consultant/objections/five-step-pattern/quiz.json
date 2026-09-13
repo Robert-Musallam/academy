@@ -1,0 +1,42 @@
+{
+  "kind": "lesson",
+  "draw_count": 3,
+  "pass_percent": null,
+  "questions": [
+    {
+      "id": "five-step-pattern-1",
+      "kind": "single_choice",
+      "prompt": "Which step follows Acknowledge?",
+      "options": ["Understand", "Drop the price", "End the appointment"],
+      "correct_answer": 0,
+      "source_reference": "five-step-pattern",
+      "source_quote": "Acknowledge → Understand"
+    },
+    {
+      "id": "five-step-pattern-2",
+      "kind": "single_choice",
+      "prompt": "What is an objection according to the sheet?",
+      "options": [
+        "Always a final refusal",
+        "Permission to skip discovery",
+        "Not a rejection"
+      ],
+      "correct_answer": 2,
+      "source_reference": "five-step-pattern",
+      "source_quote": "An objection is not a rejection."
+    },
+    {
+      "id": "five-step-pattern-3",
+      "kind": "single_choice",
+      "prompt": "What does Reframe connect to?",
+      "options": [
+        "A discount before education",
+        "Customer goals and long-term value",
+        "The rep's impatience"
+      ],
+      "correct_answer": 1,
+      "source_reference": "five-step-pattern",
+      "source_quote": "Reframe around the customer's goals and long-term value"
+    }
+  ]
+}

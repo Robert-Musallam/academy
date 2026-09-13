@@ -1,0 +1,46 @@
+{
+  "kind": "lesson",
+  "draw_count": 3,
+  "pass_percent": null,
+  "questions": [
+    {
+      "id": "email-quote-1",
+      "kind": "single_choice",
+      "prompt": "What can an email-only request mean?",
+      "options": [
+        "Price without commitment",
+        "Automatic permission to skip education",
+        "A completed sale"
+      ],
+      "correct_answer": 0,
+      "source_reference": "email-quote",
+      "source_quote": "price without commitment"
+    },
+    {
+      "id": "email-quote-2",
+      "kind": "single_choice",
+      "prompt": "Before emailing, what should you verify?",
+      "options": [
+        "Only the rep's schedule",
+        "Only the discount ceiling",
+        "That the proposal matches what matters to the customer"
+      ],
+      "correct_answer": 2,
+      "source_reference": "email-quote",
+      "source_quote": "first make sure the proposal matches"
+    },
+    {
+      "id": "email-quote-3",
+      "kind": "single_choice",
+      "prompt": "What review question is suggested?",
+      "options": [
+        "Is your spouse irrelevant?",
+        "Can I quickly review what's most important to you?",
+        "Can I send a price without discussing the project?"
+      ],
+      "correct_answer": 1,
+      "source_reference": "email-quote",
+      "source_quote": "Can I quickly review what's most important to you about this project?"
+    }
+  ]
+}

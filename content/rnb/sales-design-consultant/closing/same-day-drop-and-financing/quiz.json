@@ -1,0 +1,46 @@
+{
+  "kind": "lesson",
+  "draw_count": 3,
+  "pass_percent": null,
+  "questions": [
+    {
+      "id": "same-day-drop-and-financing-1",
+      "kind": "single_choice",
+      "prompt": "What determines the maximum same-day drop?",
+      "options": [
+        "Territory-approved cap (current default 10%)",
+        "A universal 25% cap",
+        "Any amount the rep chooses"
+      ],
+      "correct_answer": 0,
+      "source_reference": "same-day-drop-and-financing",
+      "source_quote": "territory-approved cap (current default 10%)"
+    },
+    {
+      "id": "same-day-drop-and-financing-2",
+      "kind": "single_choice",
+      "prompt": "When may a drop be offered?",
+      "options": [
+        "Before discovery",
+        "Before explaining the project",
+        "After full proposal and reinforced value"
+      ],
+      "correct_answer": 2,
+      "source_reference": "same-day-drop-and-financing",
+      "source_quote": "only after the full proposal has been presented and value reinforced"
+    },
+    {
+      "id": "same-day-drop-and-financing-3",
+      "kind": "single_choice",
+      "prompt": "What must financing explanations avoid?",
+      "options": [
+        "Presenting financing with the proposal",
+        "Invented rates or approval promises",
+        "Current approved information"
+      ],
+      "correct_answer": 1,
+      "source_reference": "same-day-drop-and-financing",
+      "source_quote": "do not invent rates, monthly payments, eligibility, or approval"
+    }
+  ]
+}

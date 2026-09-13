@@ -1,0 +1,46 @@
+{
+  "kind": "lesson",
+  "draw_count": 3,
+  "pass_percent": null,
+  "questions": [
+    {
+      "id": "competitor-cheaper-1",
+      "kind": "single_choice",
+      "prompt": "What should you ask first about a cheaper competitor?",
+      "options": [
+        "What the other company included",
+        "Whether to cut the price without review",
+        "Whether to skip drainage education"
+      ],
+      "correct_answer": 0,
+      "source_reference": "competitor-cheaper",
+      "source_quote": "ask what the other company included"
+    },
+    {
+      "id": "competitor-cheaper-2",
+      "kind": "single_choice",
+      "prompt": "What can explain a price difference?",
+      "options": [
+        "Only the sales rep's preference",
+        "No scope difference is possible",
+        "Materials, preparation, drainage, installation standards, warranty"
+      ],
+      "correct_answer": 2,
+      "source_reference": "competitor-cheaper",
+      "source_quote": "materials, preparation, drainage, installation standards, warranty"
+    },
+    {
+      "id": "competitor-cheaper-3",
+      "kind": "single_choice",
+      "prompt": "What long-term concern supports this response?",
+      "options": [
+        "Repairs never affect value",
+        "Avoid paying twice by building it right first",
+        "Paying twice is always beneficial"
+      ],
+      "correct_answer": 1,
+      "source_reference": "competitor-cheaper",
+      "source_quote": "not paying twice"
+    }
+  ]
+}

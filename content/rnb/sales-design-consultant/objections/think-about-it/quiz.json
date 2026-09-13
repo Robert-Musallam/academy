@@ -1,0 +1,46 @@
+{
+  "kind": "lesson",
+  "draw_count": 3,
+  "pass_percent": null,
+  "questions": [
+    {
+      "id": "think-about-it-1",
+      "kind": "single_choice",
+      "prompt": "What should you identify when a customer needs to think?",
+      "options": [
+        "The real concern holding them back",
+        "The cheapest discount immediately",
+        "A reason to stop listening"
+      ],
+      "correct_answer": 0,
+      "source_reference": "think-about-it",
+      "source_quote": "find the real objection"
+    },
+    {
+      "id": "think-about-it-2",
+      "kind": "single_choice",
+      "prompt": "Which set of concerns does the sheet suggest exploring?",
+      "options": [
+        "Only turf color",
+        "Only a competitor name",
+        "Investment, design, timing, or something else"
+      ],
+      "correct_answer": 2,
+      "source_reference": "think-about-it",
+      "source_quote": "investment, design, timing, or something else"
+    },
+    {
+      "id": "think-about-it-3",
+      "kind": "single_choice",
+      "prompt": "What question helps if no specific concern emerges?",
+      "options": [
+        "Should I skip the proposal?",
+        "What would you need to feel comfortable deciding today?",
+        "Why are you wasting time?"
+      ],
+      "correct_answer": 1,
+      "source_reference": "think-about-it",
+      "source_quote": "What would you need to feel comfortable making a decision today?"
+    }
+  ]
+}

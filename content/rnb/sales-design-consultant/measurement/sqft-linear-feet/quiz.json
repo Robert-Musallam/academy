@@ -1,0 +1,68 @@
+{
+  "kind": "lesson",
+  "draw_count": 5,
+  "pass_percent": null,
+  "questions": [
+    {
+      "id": "sqft-linear-feet-1",
+      "kind": "single_choice",
+      "prompt": "What calculates rectangular square footage?",
+      "options": [
+        "Length × width",
+        "Length + width",
+        "Perimeter × height in every case"
+      ],
+      "correct_answer": 0,
+      "source_reference": "sqft-linear-feet",
+      "source_quote": "length × width"
+    },
+    {
+      "id": "sqft-linear-feet-2",
+      "kind": "single_choice",
+      "prompt": "What is the area of a 20-foot by 15-foot rectangle?",
+      "options": ["35 sqft", "70 sqft", "300 sqft"],
+      "correct_answer": 2,
+      "source_reference": "sqft-linear-feet",
+      "source_quote": "300 sqft"
+    },
+    {
+      "id": "sqft-linear-feet-3",
+      "kind": "single_choice",
+      "prompt": "What does LF measure?",
+      "options": [
+        "Weight of material",
+        "Length along the run",
+        "Enclosed area"
+      ],
+      "correct_answer": 1,
+      "source_reference": "sqft-linear-feet",
+      "source_quote": "LF = length along the run"
+    },
+    {
+      "id": "sqft-linear-feet-4",
+      "kind": "single_choice",
+      "prompt": "How should a curved run be measured?",
+      "options": [
+        "Follow its contour and total developed length",
+        "Use only a straight shortcut",
+        "Assume every curve is 10 feet"
+      ],
+      "correct_answer": 0,
+      "source_reference": "sqft-linear-feet",
+      "source_quote": "follow contour, total developed length"
+    },
+    {
+      "id": "sqft-linear-feet-5",
+      "kind": "single_choice",
+      "prompt": "What should you account for in the takeoff?",
+      "options": [
+        "Only the visible color",
+        "Customer budget instead of dimensions",
+        "Waste, cuts, and edging"
+      ],
+      "correct_answer": 2,
+      "source_reference": "sqft-linear-feet",
+      "source_quote": "waste, cuts, and edging"
+    }
+  ]
+}

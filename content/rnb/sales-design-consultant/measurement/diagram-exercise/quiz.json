@@ -1,0 +1,60 @@
+{
+  "kind": "lesson",
+  "draw_count": 5,
+  "pass_percent": null,
+  "questions": [
+    {
+      "id": "diagram-exercise-1",
+      "kind": "single_choice",
+      "prompt": "What is the labeled paver rectangle?",
+      "options": [
+        "18 feet by 10 feet",
+        "34 feet by 25 feet",
+        "5 feet by 7 feet"
+      ],
+      "correct_answer": 0,
+      "source_reference": "diagram-exercise",
+      "source_quote": "18' wide × 10' tall"
+    },
+    {
+      "id": "diagram-exercise-2",
+      "kind": "single_choice",
+      "prompt": "How is paver edger LF calculated for the exercise?",
+      "options": ["Paver area squared", "Rock tonnage", "Paver perimeter"],
+      "correct_answer": 2,
+      "source_reference": "diagram-exercise",
+      "source_quote": "the paver perimeter"
+    },
+    {
+      "id": "diagram-exercise-3",
+      "kind": "single_choice",
+      "prompt": "What waste allowance is shown separately for turf and pavers?",
+      "options": ["0%", "10%", "50%"],
+      "correct_answer": 1,
+      "source_reference": "diagram-exercise",
+      "source_quote": "10% waste line"
+    },
+    {
+      "id": "diagram-exercise-4",
+      "kind": "single_choice",
+      "prompt": "What tolerance applies to each requested figure?",
+      "options": ["±5%", "±25%", "Any positive figure"],
+      "correct_answer": 0,
+      "source_reference": "diagram-exercise",
+      "source_quote": "±5%"
+    },
+    {
+      "id": "diagram-exercise-5",
+      "kind": "single_choice",
+      "prompt": "How should missing diagram dimensions be handled?",
+      "options": [
+        "Silently invent dimensions",
+        "Ignore all labeled dimensions",
+        "State the geometric assumptions"
+      ],
+      "correct_answer": 2,
+      "source_reference": "diagram-exercise",
+      "source_quote": "list your assumptions"
+    }
+  ]
+}

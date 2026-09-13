@@ -1,0 +1,38 @@
+{
+  "kind": "lesson",
+  "draw_count": 3,
+  "pass_percent": null,
+  "questions": [
+    {
+      "id": "day-five-evaluation-1",
+      "kind": "single_choice",
+      "prompt": "How many items are in the Day 5 evaluation?",
+      "options": ["8", "3", "40"],
+      "correct_answer": 0,
+      "source_reference": "day-five-evaluation",
+      "source_quote": "these 8 items"
+    },
+    {
+      "id": "day-five-evaluation-2",
+      "kind": "single_choice",
+      "prompt": "Who records strengths, weaknesses, and a pass decision?",
+      "options": ["The trainee alone", "An anonymous visitor", "The manager"],
+      "correct_answer": 2,
+      "source_reference": "day-five-evaluation",
+      "source_quote": "The manager evaluates"
+    },
+    {
+      "id": "day-five-evaluation-3",
+      "kind": "single_choice",
+      "prompt": "What else does Field completion require?",
+      "options": [
+        "One warm sim without other tiers",
+        "Ride-along and HCP sign-off after M6 passes",
+        "Only an exam retry"
+      ],
+      "correct_answer": 1,
+      "source_reference": "day-five-evaluation",
+      "source_quote": "ride-along checklist and HCP exercise sign-off after M6 passes"
+    }
+  ]
+}
