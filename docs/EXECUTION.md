@@ -1,13 +1,13 @@
 # Graph execution
 
-| Node                      | Status                                 | Verification                                                                                                                                                     |
-| ------------------------- | -------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 0 — Decision manifest     | Supplied by human                      | Retained in `docs/KICKOFF.md`                                                                                                                                    |
-| 1 — Repo scaffold         | Verified and committed                 | `pnpm install && pnpm build && pnpm test` exited 0; Next.js 15.5.25 build and 1 source-asset test passed; Supabase initialized; lint and typecheck also exited 0 |
-| 2 — Schema                | Draft committed; BLOCKED, not verified | Both local database attempts failed before migration execution; details below                                                                                    |
-| 3–18 and final acceptance | Not started                            | Blocked by Node 2; no human gate reached                                                                                                                         |
+| Node                      | Status                 | Verification                                                                                                                                                     |
+| ------------------------- | ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 0 — Decision manifest     | Supplied by human      | Retained in `docs/KICKOFF.md`                                                                                                                                    |
+| 1 — Repo scaffold         | Verified and committed | `pnpm install && pnpm build && pnpm test` exited 0; Next.js 15.5.25 build and 1 source-asset test passed; Supabase initialized; lint and typecheck also exited 0 |
+| 2 — Schema                | VERIFIED (2026-09-13)  | Docker Supabase start/reset passed; public tables = 17; tenants = 2; transactional RLS assertions passed                                                         |
+| 3–18 and final acceptance | Not started            | Next: Node 3; no human gate reached                                                                                                                              |
 
-## Node 2 — stopped under the two-failure rule
+## Previous Node 2 environment blockage (resolved 2026-09-13)
 
 The migration, idempotent seed, and `docs/SCHEMA.md` are drafts. They have not been applied to a database or tested for SQL correctness or RLS behavior. A commit preserves this work; it does not mark the node complete.
 
@@ -38,7 +38,13 @@ zsh:1: command not found: psql
 
 Diagnosis: this local macOS environment lacks the Docker runtime and PostgreSQL client required by the graph. No environment setup script was found in this repository. The fallback database's availability could not be verified. Neither migration nor seed executed.
 
-## Resume
+## Resumed verification: PASS
+
+Docker Desktop and psql are now installed. `pnpm exec supabase start` succeeded. The literal kickoff verification reset the database successfully, but its `status -o env | grep DB_URL` expression supplied no usable connection string to psql. One fix used the local Supabase endpoint configured in `supabase/config.toml` (port 54322), then repeated start/reset and both count queries: **17** public tables and **2** tenants. `tests/sql/schema-rls.sql` also passed: all tables have RLS, trainee isolation, manager tenant restriction, admin access, disabled membership denial, anonymous denial, and prevention of role/score forgery. All test fixtures rolled back. The Postgres 16 fallback is no longer used.
+
+Next unverified node: **Node 3**.
+
+### Historical resume requirements (satisfied)
 
 Provide a running Docker-compatible local environment with `psql`, or the prescribed local Postgres 16 environment and its setup script (including Supabase auth/RLS fixtures). Resume at Node 2 and rerun its verification. Expected: 17 public tables and 2 tenants. Do not start Node 3 until it passes.
 

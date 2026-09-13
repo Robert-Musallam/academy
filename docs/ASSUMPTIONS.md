@@ -21,3 +21,8 @@
 
 - Local Supabase startup failed. The single recovery attempt used the kickoff's prescribed Postgres 16 fallback URL instead of obtaining a URL from `supabase status`, which can print credentials.
 - The recovery failed because `psql` is not installed. No database migration or seed ran; the schema is an unverified draft. Execution stops at Node 2 under the user's two-failure rule.
+
+## Node 2 resumed verification
+
+- Docker Desktop and psql are now available. Tests use Docker Supabase (Postgres 17 from the initialized config), not the Postgres 16 fallback.
+- The literal status/grep expression supplied no usable DB URL. The verified command uses the configured local Supabase endpoint at 127.0.0.1:54322; credentials are never displayed by status.

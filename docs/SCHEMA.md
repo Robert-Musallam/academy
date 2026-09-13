@@ -1,6 +1,6 @@
 # Academy schema — Node 2
 
-Status: drafted; not verified against a running local database yet.
+Status: verified on local Docker Supabase on 2026-09-13. Start/reset, 17-table count, 2-tenant count, and transactional RLS checks passed.
 
 The migration creates exactly 17 tables in `public`. IDs are UUIDs. Every tenant-owned relationship uses a composite foreign key including `tenant_id`, preventing links to another tenant's rows. Seed is idempotent: two tenants (`rnb`, `gcv`), with the Sales & Design Consultant track and the empty Project Manager placeholder under `rnb`.
 
