@@ -16,3 +16,8 @@
 - The module-specific pass table governs simulator and field completion. Node 13's abbreviated verification must also include the HCP sign-off and prerequisites required by the manifest.
 - Multiple lessons in one module need unique quiz paths; the content pipeline must document a deterministic layout before Node 4 verification.
 - The fixed UTC cron in Node 14 does not track Denver daylight saving time year-round; resolve that scheduling conflict before implementing the digest.
+
+## Node 2 environment substitution attempt
+
+- Local Supabase startup failed. The single recovery attempt used the kickoff's prescribed Postgres 16 fallback URL instead of obtaining a URL from `supabase status`, which can print credentials.
+- The recovery failed because `psql` is not installed. No database migration or seed ran; the schema is an unverified draft. Execution stops at Node 2 under the user's two-failure rule.
