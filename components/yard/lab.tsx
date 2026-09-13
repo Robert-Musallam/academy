@@ -66,7 +66,13 @@ type Snapshot = {
   answers?: FieldAnswers;
   run: ReturnType<typeof publicRun>;
 };
-export function YardLab() {
+export function YardLab({
+  endpoint = '/review/yard/api',
+  preview = true,
+}: {
+  endpoint?: string;
+  preview?: boolean;
+}) {
   const [tool, setTool] = useState<YardTool>('explore'),
     [view, setView] = useState<CameraView>('orbit'),
     [reset, setReset] = useState(0),
@@ -97,7 +103,7 @@ export function YardLab() {
   const logEnd = useRef<HTMLDivElement>(null);
   const onReady = useCallback(() => setReady(true), []);
   useEffect(() => {
-    fetch('/review/yard/api')
+    fetch(endpoint)
       .then(async (r) => {
         if (!r.ok) throw new Error();
         return r.json() as Promise<Snapshot>;
@@ -126,7 +132,7 @@ export function YardLab() {
       window.removeEventListener('pointerup', up);
       window.removeEventListener('blur', up);
     };
-  }, []);
+  }, [endpoint]);
   useEffect(() => {
     logEnd.current?.scrollIntoView({ block: 'nearest' });
   }, [run?.messages.length]);
@@ -186,7 +192,7 @@ export function YardLab() {
     setBusy(true);
     setError('');
     try {
-      const response = await fetch('/review/yard/api', {
+      const response = await fetch(endpoint, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(body),
@@ -265,7 +271,10 @@ export function YardLab() {
   return (
     <div className="yard-app">
       <header className="yard-header">
-        <Link href="/review" className="yard-brand">
+        <Link
+          href={preview ? '/review' : '/learn/simulator'}
+          className="yard-brand"
+        >
           <b>A</b>
           <span>
             ACADEMY<small>ROCK N BLOCK</small>
@@ -275,7 +284,8 @@ export function YardLab() {
           FIELD LAB <span>/</span> PROPERTY 01
         </div>
         <div className="yard-header-right">
-          <span className="yard-preview-dot" /> Playable preview{' '}
+          <span className="yard-preview-dot" />{' '}
+          {preview ? 'Playable preview' : 'Field practice'}{' '}
           <button
             onClick={() => post({ action: 'save', evidence })}
             disabled={busy || !run}
@@ -1093,7 +1103,10 @@ export function YardLab() {
           )}
           <div className="yard-notebook-footer">
             <span>LEARN BY DOING</span>
-            <small>Local practice · Save before reloading</small>
+            <small>
+              {preview ? 'Local practice' : 'Saved to your Academy account'} ·
+              Save before reloading
+            </small>
           </div>
         </aside>
       </div>

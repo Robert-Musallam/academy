@@ -29,3 +29,7 @@ The viewer supports desktop and phone layouts, plus an interactive 2D plan and a
 All visible geometry is generated in code; no third-party model or image assets are bundled. Rendering uses Three.js 0.186.0 and React Three Fiber 9.7.0. React/ReactDOM are pinned to 19.2.8 to satisfy the renderer’s declared peer range; matching React types are pinned. Peer checks pass. Rendering runs on demand, with continuous updates while navigating; grass and small rocks use instanced geometry, and pixel ratio is capped at 1.5.
 
 Implementation references: [React Three Fiber](https://github.com/pmndrs/react-three-fiber), [Three.js Raycaster](https://threejs.org/docs/pages/Raycaster.html), [OrbitControls](https://threejs.org/docs/pages/OrbitControls.html).
+
+## Review outcome
+
+Robert accepted this property as v1 on September 13 and authorized continuing to Gate 16. The approved viewer is integrated at `/learn/field-lab` behind the Simulator module gate, with durable account-scoped saving. The development-only URL above remains available for visual review. Additional properties and a full 3D material catalog remain future iterations; the six-persona, 18-scenario appointment roster is included in the v1 training workflow.

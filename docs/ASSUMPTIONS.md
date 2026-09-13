@@ -33,3 +33,11 @@
 
 - The module-specific pass table governs M6 and M7. Their required free-text prompts are practice; simulator tiers and manager forms determine passing.
 - Node 6 creates quizzes for existing lessons. Node 7 introduces the four draft lessons together with their lesson checks. Draft checks stay unavailable through the lesson RLS policy, and existing module exams do not draw draft lesson questions.
+
+## Digest decisions
+
+- Weekly reporting covers the previous completed Monday–Sunday calendar week in America/Denver, with an exclusive Monday end date. Started means first saved module activity. Stalled means no recorded module activity for over 72 hours, falling back to roster creation; completed field graduates are excluded.
+- The manifest's single 13:00 UTC expression only equals 07:00 Denver during daylight time. Two Monday candidates and a Denver-hour guard preserve 07:00 throughout the year. Cron precision still depends on the hosting plan.
+- The single v1 Teams webhook is scoped to RNB. Adding GCV notifications later requires an explicitly separate tenant-to-channel configuration.
+- Teams Workflows is the current setup path. Create an Adaptive Card-capable incoming webhook workflow with maintained owners; keep its URL solely in the dashboard environment configuration.
+- HTTP acknowledgement is not proof a Teams workflow posted successfully. Ambiguous network failures can duplicate an external post if retried; inspect workflow/channel history before manually retrying.

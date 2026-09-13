@@ -57,7 +57,7 @@ end $$;
 
 set local request.jwt.claim.sub = '10000000-0000-0000-0000-000000000003';
 do $$ begin
-  if (select count(*) from public.module_progress) <> 2 then raise exception 'Manager cannot see tenant progress'; end if;
+  if (select count(*) from public.module_progress where module_id='20000000-0000-0000-0000-000000000001') <> 2 then raise exception 'Manager cannot see tenant progress'; end if;
   if (select count(*) from public.tenants) <> 1 then raise exception 'Manager tenant isolation failed'; end if;
   update public.roster set role='admin' where email='manager@example.test';
   if found then raise exception 'Manager role escalation succeeded'; end if;

@@ -13,3 +13,7 @@ Provider is selected by runtime environment. No model is chosen before Gate 16. 
 Node 11 verification: content sync passed. Database personas are hard 2, standard 2, warm 2. Six validated briefs contain 18 distinct scenarios and 18 scripted triggers; all 34 tests passed. Scenarios use the unconfigured/default territory until real service areas and caps are supplied.
 
 The immersive extension uses the same MockProvider and SimEngine. Validated scene context is supplied atomically with each turn; it is not added to the public run payload. The new field assessment is distinct from the original seven-dimension sales rubric and is not written to trainee completion. See YARD_REVIEW.md.
+
+## Accepted v1 integration
+
+The first 3D yard is approved. `/learn/field-lab` now saves account-scoped practice in the private database schema; `/sim` saves conversations, grades and cost records using DatabaseSimStore. Both enforce the Simulator module gate. Private run snapshots retain the persona/scenario/policy; only publicRun output reaches the browser. The original `/review/*` routes remain local development previews and are disabled in production. See RUNBOOK.md for quota, recovery and field-score boundaries.

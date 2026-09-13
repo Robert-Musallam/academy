@@ -41,3 +41,9 @@ Foreign-key and RLS lookup columns have supporting indexes. Content sync must up
 Run the exact Node 2 verification in `docs/KICKOFF.md`, using `pnpm exec supabase` for the project CLI. Keep `SUPABASE_HOME` under `work/supabase-home` and do not print Supabase status credentials. The supplied database-only Postgres 16 fallback is permitted only when available; it also needs the minimal Supabase `auth.users`, `auth.uid()`, and database roles for RLS tests. Those fixtures belong in local setup, not a production migration.
 
 Expected results: 17 public tables, 2 tenants, 2 `rnb` tracks, no `gcv` tracks, and RLS enabled on all 17 tables. Do not advance to Node 3 until verification succeeds.
+
+## Persistent training and digest operations
+
+Nodes 12–14 add two private tables: `private.sim_state` for hidden, versioned appointment snapshots and expiring leases, and `private.yard_practice` for saved field evidence/answers. Neither is exposed in the Data API or readable by authenticated clients; the public table count remains 17. Narrow public RPC entry points are invoker functions with execution revoked from PUBLIC/anon/authenticated and granted only to service_role. Trusted routes validate membership and ownership before using them. Existing RLS still protects direct client reads and denies score writes.
+
+Daily run allocation uses a transaction advisory lock per roster member. Run commit saves transcript, grade, usage and state atomically under an operation lease. A unique tenant/week digest row plus an atomic claim prevents concurrent or already-sent delivery duplication. External webhook acknowledgement ambiguity remains an operational limitation documented in RUNBOOK.md.

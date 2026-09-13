@@ -27,10 +27,12 @@ export function Simulator({
   personas,
   endpoint,
   preview = false,
+  mock = false,
 }: {
   personas: Persona[];
   endpoint: string;
   preview?: boolean;
+  mock?: boolean;
 }) {
   const [tier, setTier] = useState<Tier>('warm');
   const [selected, setSelected] = useState(
@@ -99,17 +101,20 @@ export function Simulator({
   return (
     <div className="sim-shell">
       <header className="sim-header">
-        <a href="/review" className="sim-brand">
+        <a href={preview ? '/review' : '/learn'} className="sim-brand">
           <span className="sim-mark">A</span> ACADEMY
           <span className="sim-brand-divider">/</span>
           <span className="sim-brand-track">Rock N Block</span>
         </a>
         <span className="sim-track-label">SALES & DESIGN CONSULTANT</span>
       </header>
-      {preview && (
+      {(preview || mock) && (
         <div className="sim-preview-banner">
-          <strong>Interactive preview</strong>
-          <a href="/review/yard" className="font-semibold underline">
+          <strong>{preview ? 'Interactive preview' : 'Practice mode'}</strong>
+          <a
+            href={preview ? '/review/yard' : '/learn/field-lab'}
+            className="font-semibold underline"
+          >
             Open the 3D field lab →
           </a>
           <span>
@@ -390,7 +395,7 @@ export function Simulator({
                     End when your appointment has reached its next step. At 40
                     turns, end to view feedback.
                   </p>
-                  {preview && (
+                  {(preview || mock) && (
                     <p className="sim-mock-note">
                       This preview uses scripted replies. The sample score
                       demonstrates the feedback layout; it does not measure your

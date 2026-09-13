@@ -1,6 +1,6 @@
 # Graph execution
 
-**Current stop: HUMAN GATE — first playable 3D yard.** Robert approved replacing the text-only simulator target with an immersive landscape prototype. The first spatial learning loop is built at `/review/yard`. Nodes 1–11 remain verified. Node 12 remains in progress; its full authenticated trainee workflow and `trainee` e2e verify have not passed. Review this property before expanding the library or starting Node 13.
+**Current stop: HUMAN GATE 16 — infrastructure and provider decision.** Robert accepted the playable 3D yard as v1. Nodes 12–15 are complete and locally verified. No production deployment, real-provider call, or Teams post has occurred. See INFRA_CHECKLIST.md and PROVIDER_OPTIONS.md.
 
 | Node                                  | Status                       | Verify result                                                                                                                               |
 | ------------------------------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -16,8 +16,12 @@
 | 9 — Content review                    | APPROVED WITH EDITS          | PR `content-v1`, local review page, four drafts, diagram key/assumptions, and source index staged                                           |
 | 10 — Simulator engine                 | PASS                         | 40-turn cap, 10 daily runs, four grading fixtures, usage logging                                                                            |
 | 11 — Persona roster                   | PASS                         | 6 personas, hard/standard/warm 2 each, 18 scenarios                                                                                         |
-| 12 — Trainee UI                       | IN PROGRESS / HUMAN PREVIEW  | Simulator preview verified; full trainee workflow verify remains pending                                                                    |
-| 13–18 and final acceptance            | Not started                  | Require preceding verifies and human gates                                                                                                  |
+| 12 — Trainee UI                       | PASS                         | Gated lessons/exams/free-text/diagram, persistent simulator and field practice; trainee browser verify passed                               |
+| 13 — Manager + admin UI               | PASS                         | Tenant isolation, both field evaluations plus HCP, sign-off withdrawal and roster administration verified                                   |
+| 14 — Teams digest                     | PASS                         | Adaptive Card, stalled trainee, timezone, authorization and delivery checks passed; no real post                                            |
+| 15 — Full local acceptance            | PASS                         | Lint/build, 48 unit/integration tests and 11 browser tests passed                                                                           |
+| 16 — Infrastructure + provider        | HUMAN GATE                   | Checklist and three model/cost options staged                                                                                               |
+| 17–18 and final acceptance            | Not started                  | Await Gate 16 setup and resume signal                                                                                                       |
 
 ## Historical Gate 9 staging validation
 
@@ -88,3 +92,33 @@ Production build, lint, typecheck and all 40 unit/integration tests pass. All 6 
 Manual review at 1440 × 960 and 390 × 844 confirmed the rendered property, installation explorer and phone walk controls. The material marker positions initially applied the layer height twice; removing the duplicate offset aligned each numbered marker with its layer, verified visually on desktop and phone. The browser viewport override was reset and the playable yard left open for Robert.
 
 Resume on Robert’s review of the playable yard. Apply requested edits, then expand only the approved scope and finish Node 12 before Node 13. Gate 16 still controls real infrastructure and provider selection.
+
+## Node 12 — accepted yard and complete trainee path
+
+Robert accepted the first spatial prototype and authorized continuing to Gate 16. Added the protected module dashboard, published lesson reader/checks, persisted shuffled exams, rubric free-text submission, approved diagram exercise, attempt history, database-backed appointments, and durable account-scoped field-lab practice. A private schema holds hidden sim snapshots and yard practice; exposed public table count remains 17. Atomic database start locks enforce daily caps; expiring operation leases prevent simultaneous run writes, and commit saves transcripts/grades/costs together. RPCs are service-role only; routes validate active membership, tenant/track, module gates and owner.
+
+`LLM_PROVIDER=mock pnpm test:e2e -- trainee` passed (8 tests, including existing previews). First run reached the expected M1/M2 behavior but failed a numeric formatting assertion (`90.00%` versus `90%`) and an exact button-name selector that omitted its arrow. One correction normalized score formatting and matched the existing accessible button label; rerun passed in 15.2 seconds. Typecheck passed; local database security advisors reported no issues.
+
+The local e2e server explicitly enables a development-only, loopback-only fixture identity and direct Postgres transport, using synthetic `eeeeeeee-` roster IDs. Production ignores these switches and requires Supabase authentication and configured server credentials. Browser tests exercise real local database persistence and application authorization; JWT/email transport remains covered separately by auth/RLS checks and eventual live acceptance. No secrets were accessed. Fixtures do not establish live email delivery or real-provider quality.
+
+## Node 13 — manager and admin workflows
+
+Added tenant-scoped manager roster, per-trainee module/quiz/sim summaries, grader notes and fixes, four rated ride-along dimensions with notes, all eight manual Day 5 items with strengths/weaknesses/pass, and HCP sign-off. Prior module gates remain required. Clearing HCP or a Day 5 pass revokes M7 completion. Admin roster supports creation, role/manager assignment, active status editing and soft removal; history and existing track assignments are preserved. Staff must use a membership in the evaluation's tenant.
+
+`pnpm test:e2e -- manager` passed all 10 browser tests (16.8 seconds). It covers foreign-tenant denial, both evaluations plus HCP passing M7, withdrawn sign-off, admin create/archive and trainee admin denial. The first run passed manager evaluation behavior but an admin select locator did not match its implicit label; the one fix used the visible combobox role/name and the rerun passed. Typecheck initially needed an explicit string map for form labels; it passed after that correction.
+
+## Node 14 — weekly digest
+
+Implemented the CRON_SECRET-protected route, Adaptive Card payload, completed Denver calendar-week reporting, started/module/tier summaries and >3-day stalled activity. The configured v1 webhook is RNB-only; GCV data never enters its channel. `dry-run=1` returns a validated payload without claiming/logging/posting. Database delivery claims deduplicate sent/in-flight weeks; failures are recorded without transport credentials. No real post occurred.
+
+`pnpm test -- digest` passed all 46 unit/integration tests. Digest-specific tests passed on the first run; the existing RLS test assumed only two total progress rows and failed after browser fixtures added legitimate tenant progress. One fix scoped its exact-count assertion to its two transactional fixture rows; the full rerun passed. Security advisors report no issues.
+
+Two UTC cron candidates (13:00 and 14:00 Monday) plus an America/Denver 07:00 guard resolve the kickoff's fixed-UTC/DST conflict. `manual=1` is an authenticated operator override; dry-run bypasses scheduling only, never authorization. Workflows webhook setup replaces the retiring legacy connector route, preserving the TEAMS_WEBHOOK_URL name and Adaptive Card contract. Gate 16 documents channel setup, ownership and delivery caveats.
+
+## Node 15 — full local acceptance
+
+The exact command `pnpm lint && pnpm build && LLM_PROVIDER=mock pnpm test && LLM_PROVIDER=mock pnpm test:e2e` passed: production compilation, formatting, 48 unit/integration tests across 11 files, and 11 browser/API tests (24.2 seconds). First attempt stopped at lint because two local variables used Next's reserved `module` name; one fix renamed them and the full rerun passed. Supplementary checks now cover simultaneous 11-run allocation (10 admitted), lease exclusion, private-state/RPC permission denial, digest delivery claims and persisted account field practice. Server data reads paginate rather than silently truncating histories/digest totals at the PostgREST page limit.
+
+RUNBOOK.md covers roster operations, trainee/manager workflow, lessons, personas/scenarios, tenants/tracks, provider rotation, local verification, digest operations and v2 boundaries. M6/M7 written prompts are available as practice; their completion still uses simulator tiers/manager forms. Supabase dependencies are pinned to the installed verified versions. Production fixture-shortcut checks and final review packaging are recorded below.
+
+Production guard checks passed after a build and start with ACADEMY_E2E deliberately enabled: fixture cookies could not unlock `/learn`, `/manager`, `/admin/roster`, `/sim/api` or field-practice API (all redirected to login); login returned 200; development reviews returned 404; unauthenticated digest dry-run returned 401. This confirms the test shortcut is disabled by the production-mode guard even if the test switch is accidentally set. Database remains 17 public tables, 2 tenants and exactly 2 personas per tier. Local production server stopped after checks.
