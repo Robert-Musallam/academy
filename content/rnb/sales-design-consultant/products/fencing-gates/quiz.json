@@ -1,0 +1,38 @@
+{
+  "kind": "lesson",
+  "draw_count": 3,
+  "pass_percent": null,
+  "questions": [
+    {
+      "id": "fencing-gates-1",
+      "kind": "single_choice",
+      "prompt": "What distinguishes modern fencing?",
+      "options": [
+        "2×1-inch steel panels with about a 1-inch gap",
+        "Wide-spaced vertical bars only",
+        "No privacy objective"
+      ],
+      "correct_answer": 0,
+      "source_reference": "fencing-gates",
+      "source_quote": "2\"×1\" steel panels"
+    },
+    {
+      "id": "fencing-gates-2",
+      "kind": "single_choice",
+      "prompt": "How is fencing priced?",
+      "options": ["SQFT for every fence", "Per ton", "LF"],
+      "correct_answer": 2,
+      "source_reference": "fencing-gates",
+      "source_quote": "fencing by LF"
+    },
+    {
+      "id": "fencing-gates-3",
+      "kind": "single_choice",
+      "prompt": "How are gates priced?",
+      "options": ["As turf square footage", "By unit", "Per gallon"],
+      "correct_answer": 1,
+      "source_reference": "fencing-gates",
+      "source_quote": "gates by unit"
+    }
+  ]
+}

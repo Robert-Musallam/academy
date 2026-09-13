@@ -1,0 +1,46 @@
+{
+  "kind": "lesson",
+  "draw_count": 3,
+  "pass_percent": null,
+  "questions": [
+    {
+      "id": "talk-to-spouse-1",
+      "kind": "single_choice",
+      "prompt": "What is behind the spouse objection?",
+      "options": [
+        "Someone else must approve",
+        "The project needs no measurements",
+        "Warranty is irrelevant"
+      ],
+      "correct_answer": 0,
+      "source_reference": "talk-to-spouse",
+      "source_quote": "someone else must approve"
+    },
+    {
+      "id": "talk-to-spouse-2",
+      "kind": "single_choice",
+      "prompt": "What attitude should guide the spouse response?",
+      "options": [
+        "Ignore the absent spouse",
+        "Force a decision without agreement",
+        "Both should be comfortable"
+      ],
+      "correct_answer": 2,
+      "source_reference": "talk-to-spouse",
+      "source_quote": "both should be comfortable"
+    },
+    {
+      "id": "talk-to-spouse-3",
+      "kind": "single_choice",
+      "prompt": "What does the conditional spouse question explore?",
+      "options": [
+        "Whether to promise a bigger discount",
+        "Whether this customer personally feels ready if the spouse agrees",
+        "Whether the spouse can be excluded"
+      ],
+      "correct_answer": 1,
+      "source_reference": "talk-to-spouse",
+      "source_quote": "would you personally feel ready to move forward?"
+    }
+  ]
+}

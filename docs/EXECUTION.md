@@ -61,3 +61,7 @@ Fixture content lint exited 0; fixture sync exited 0; `select count(*) from less
 ## Node 5 — VERIFIED
 
 Content lint and content sync exited 0. Database counts: **7** modules in the Sales & Design Consultant track and **29** non-draft lessons. All 29 MDX bodies compiled successfully through `next-mdx-remote/serialize`. `docs/SOURCE_INDEX.md` maps the source sheets to every lesson. Next: Node 6.
+
+## Node 6 — VERIFIED
+
+`pnpm test -- progress quizzes` passed all 20 current tests. Full content lint and sync passed: 7 modules, 29 lessons, 41 quizzes. M1–M5 exam pools contain 20, 22, 20, 24, and 20 questions, with shuffled 10-question draws and 90% passing. Every lesson has a check and every module has a free-text rubric. The module-specific manifest table governs gating: free-text is required for M1–M5; M6/M7 reflections are practice, with their tier/form rules determining completion. Next: Node 7.

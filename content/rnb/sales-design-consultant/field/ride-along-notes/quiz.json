@@ -1,0 +1,42 @@
+{
+  "kind": "lesson",
+  "draw_count": 3,
+  "pass_percent": null,
+  "questions": [
+    {
+      "id": "ride-along-notes-1",
+      "kind": "single_choice",
+      "prompt": "Who completes the ride-along checklist?",
+      "options": [
+        "The manager",
+        "The trainee independently",
+        "An anonymous customer"
+      ],
+      "correct_answer": 0,
+      "source_reference": "ride-along-notes",
+      "source_quote": "The manager completes the ride-along checklist"
+    },
+    {
+      "id": "ride-along-notes-2",
+      "kind": "single_choice",
+      "prompt": "What rating scale is specified?",
+      "options": ["1–1000", "Pass-only with no notes", "1–5"],
+      "correct_answer": 2,
+      "source_reference": "ride-along-notes",
+      "source_quote": "from 1–5, with notes"
+    },
+    {
+      "id": "ride-along-notes-3",
+      "kind": "single_choice",
+      "prompt": "Which behavior is observed?",
+      "options": [
+        "Team leaderboard ranking",
+        "Trust-building",
+        "Account password selection"
+      ],
+      "correct_answer": 1,
+      "source_reference": "ride-along-notes",
+      "source_quote": "trust-building"
+    }
+  ]
+}

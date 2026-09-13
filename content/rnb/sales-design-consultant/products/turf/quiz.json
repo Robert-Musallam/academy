@@ -1,0 +1,59 @@
+{
+  "kind": "lesson",
+  "draw_count": 4,
+  "pass_percent": null,
+  "questions": [
+    {
+      "id": "turf-1",
+      "kind": "single_choice",
+      "prompt": "Which backing differentiates RNB turf?",
+      "options": [
+        "White proprietary Hydroflow backing",
+        "Painted black backing",
+        "Nonpermeable plastic sheet"
+      ],
+      "correct_answer": 0,
+      "source_reference": "turf",
+      "source_quote": "white proprietary Hydroflow backing"
+    },
+    {
+      "id": "turf-2",
+      "kind": "single_choice",
+      "prompt": "What base material does RNB install?",
+      "options": [
+        "Only washed concrete sand",
+        "No prepared base",
+        "2–3 inches of chat"
+      ],
+      "correct_answer": 2,
+      "source_reference": "turf",
+      "source_quote": "install 2–3\" of chat"
+    },
+    {
+      "id": "turf-3",
+      "kind": "single_choice",
+      "prompt": "How is the turf perimeter secured?",
+      "options": [
+        "No nails around the perimeter",
+        "Galvanized nails every 5–6 inches",
+        "Regular nails every 5–6 feet"
+      ],
+      "correct_answer": 1,
+      "source_reference": "turf",
+      "source_quote": "galvanized nails every 5–6\""
+    },
+    {
+      "id": "turf-4",
+      "kind": "single_choice",
+      "prompt": "What turf infill is described?",
+      "options": [
+        "Enviro-green infill such as Zeodorizer/Camofill",
+        "Plain silica sand only",
+        "No infill"
+      ],
+      "correct_answer": 0,
+      "source_reference": "turf",
+      "source_quote": "enviro-green infill (Zeodorizer, Camofill)"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "kind": "lesson",
+  "draw_count": 3,
+  "pass_percent": null,
+  "questions": [
+    {
+      "id": "patio-covers-1",
+      "kind": "single_choice",
+      "prompt": "What material is specified for patio covers?",
+      "options": [
+        "Aircraft-grade aluminum",
+        "Untreated plywood only",
+        "Steel mesh only"
+      ],
+      "correct_answer": 0,
+      "source_reference": "patio-covers",
+      "source_quote": "Aircraft-grade aluminum"
+    },
+    {
+      "id": "patio-covers-2",
+      "kind": "single_choice",
+      "prompt": "Which cover option provides partial shade and airflow?",
+      "options": ["Solid", "Insulated roof only", "Lattice"],
+      "correct_answer": 2,
+      "source_reference": "patio-covers",
+      "source_quote": "Lattice (partial shade with airflow)"
+    },
+    {
+      "id": "patio-covers-3",
+      "kind": "single_choice",
+      "prompt": "How are patio covers sold?",
+      "options": [
+        "By number of ceiling fans",
+        "SQFT with posts and footers separate",
+        "LF with all footers always included"
+      ],
+      "correct_answer": 1,
+      "source_reference": "patio-covers",
+      "source_quote": "Sold by sqft; posts and footers separate"
+    }
+  ]
+}

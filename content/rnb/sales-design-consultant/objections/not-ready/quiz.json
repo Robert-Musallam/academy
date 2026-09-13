@@ -1,0 +1,46 @@
+{
+  "kind": "lesson",
+  "draw_count": 3,
+  "pass_percent": null,
+  "questions": [
+    {
+      "id": "not-ready-1",
+      "kind": "single_choice",
+      "prompt": "What should you ask when the customer is not ready?",
+      "options": [
+        "What needs to happen first?",
+        "Can we ignore your timeline?",
+        "Should I reduce scope without asking?"
+      ],
+      "correct_answer": 0,
+      "source_reference": "not-ready",
+      "source_quote": "what needs to happen first?"
+    },
+    {
+      "id": "not-ready-2",
+      "kind": "single_choice",
+      "prompt": "What timing factors may change?",
+      "options": [
+        "The customer's name",
+        "The definition of square feet",
+        "Scheduling and material availability"
+      ],
+      "correct_answer": 2,
+      "source_reference": "not-ready",
+      "source_quote": "scheduling and material availability change"
+    },
+    {
+      "id": "not-ready-3",
+      "kind": "single_choice",
+      "prompt": "What close aligns with the customer's timeline?",
+      "options": [
+        "Promise unlimited availability",
+        "Reserve a spot and plan around the timeline",
+        "Demand immediate installation regardless"
+      ],
+      "correct_answer": 1,
+      "source_reference": "not-ready",
+      "source_quote": "reserve your spot and plan around your timeline"
+    }
+  ]
+}

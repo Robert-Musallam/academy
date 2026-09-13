@@ -1,0 +1,64 @@
+{
+  "kind": "lesson",
+  "draw_count": 5,
+  "pass_percent": null,
+  "questions": [
+    {
+      "id": "personal-follow-up-1",
+      "kind": "single_choice",
+      "prompt": "Which days have company automation?",
+      "options": [
+        "Days 0, 1, 3, 7",
+        "Days 2, 5, 10 only",
+        "Every day through 60"
+      ],
+      "correct_answer": 0,
+      "source_reference": "personal-follow-up",
+      "source_quote": "day 0, 1, 3, 7"
+    },
+    {
+      "id": "personal-follow-up-2",
+      "kind": "single_choice",
+      "prompt": "Which channels does company automation use?",
+      "options": ["Door knocks only", "Calls only", "Email and text"],
+      "correct_answer": 2,
+      "source_reference": "personal-follow-up",
+      "source_quote": "email and text"
+    },
+    {
+      "id": "personal-follow-up-3",
+      "kind": "single_choice",
+      "prompt": "What is the rep's first evening follow-up?",
+      "options": [
+        "Day 7 group email",
+        "Day 0 personal text",
+        "Day 1 generic broadcast"
+      ],
+      "correct_answer": 1,
+      "source_reference": "personal-follow-up",
+      "source_quote": "day 0 evening text"
+    },
+    {
+      "id": "personal-follow-up-4",
+      "kind": "single_choice",
+      "prompt": "When is the rep's first personal call?",
+      "options": ["Day 2", "Day 3", "Day 7"],
+      "correct_answer": 0,
+      "source_reference": "personal-follow-up",
+      "source_quote": "day 2 call"
+    },
+    {
+      "id": "personal-follow-up-5",
+      "kind": "single_choice",
+      "prompt": "What is the Day 5 personal touch?",
+      "options": [
+        "The first generic auto-email",
+        "A 20% discount promise",
+        "A photo/value touch"
+      ],
+      "correct_answer": 2,
+      "source_reference": "personal-follow-up",
+      "source_quote": "day 5 photo/value touch"
+    }
+  ]
+}

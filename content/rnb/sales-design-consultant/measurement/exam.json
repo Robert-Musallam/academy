@@ -1,0 +1,231 @@
+{
+  "kind": "exam",
+  "draw_count": 10,
+  "pass_percent": 90,
+  "questions": [
+    {
+      "id": "sqft-linear-feet-1",
+      "kind": "single_choice",
+      "prompt": "What calculates rectangular square footage?",
+      "options": [
+        "Length × width",
+        "Length + width",
+        "Perimeter × height in every case"
+      ],
+      "correct_answer": 0,
+      "source_reference": "sqft-linear-feet",
+      "source_quote": "length × width"
+    },
+    {
+      "id": "sqft-linear-feet-2",
+      "kind": "single_choice",
+      "prompt": "What is the area of a 20-foot by 15-foot rectangle?",
+      "options": ["35 sqft", "70 sqft", "300 sqft"],
+      "correct_answer": 2,
+      "source_reference": "sqft-linear-feet",
+      "source_quote": "300 sqft"
+    },
+    {
+      "id": "sqft-linear-feet-3",
+      "kind": "single_choice",
+      "prompt": "What does LF measure?",
+      "options": [
+        "Weight of material",
+        "Length along the run",
+        "Enclosed area"
+      ],
+      "correct_answer": 1,
+      "source_reference": "sqft-linear-feet",
+      "source_quote": "LF = length along the run"
+    },
+    {
+      "id": "sqft-linear-feet-4",
+      "kind": "single_choice",
+      "prompt": "How should a curved run be measured?",
+      "options": [
+        "Follow its contour and total developed length",
+        "Use only a straight shortcut",
+        "Assume every curve is 10 feet"
+      ],
+      "correct_answer": 0,
+      "source_reference": "sqft-linear-feet",
+      "source_quote": "follow contour, total developed length"
+    },
+    {
+      "id": "sqft-linear-feet-5",
+      "kind": "single_choice",
+      "prompt": "What should you account for in the takeoff?",
+      "options": [
+        "Only the visible color",
+        "Customer budget instead of dimensions",
+        "Waste, cuts, and edging"
+      ],
+      "correct_answer": 2,
+      "source_reference": "sqft-linear-feet",
+      "source_quote": "waste, cuts, and edging"
+    },
+    {
+      "id": "sold-by-1",
+      "kind": "single_choice",
+      "prompt": "What rock conversion is specified at 2-inch depth?",
+      "options": [
+        "1 ton per 100 sqft",
+        "1 ton per 1,000 sqft",
+        "10 tons per 100 sqft"
+      ],
+      "correct_answer": 0,
+      "source_reference": "sold-by",
+      "source_quote": "1 ton = 100 sqft at 2\" depth"
+    },
+    {
+      "id": "sold-by-2",
+      "kind": "single_choice",
+      "prompt": "When do rock/soil orders require added delivery?",
+      "options": ["Only over 3,000 sqft", "Never", "Under 300 sqft"],
+      "correct_answer": 2,
+      "source_reference": "sold-by",
+      "source_quote": "add delivery on orders under 300 sqft"
+    },
+    {
+      "id": "sold-by-3",
+      "kind": "single_choice",
+      "prompt": "What extra length applies to Romex tapped from the panel?",
+      "options": ["Add nothing", "Add 14 feet", "Add 8 inches"],
+      "correct_answer": 1,
+      "source_reference": "sold-by",
+      "source_quote": "add 14' if tapping from panel"
+    },
+    {
+      "id": "sold-by-4",
+      "kind": "single_choice",
+      "prompt": "What extra length applies to gas lines?",
+      "options": ["Add 8 feet", "Add 14 inches", "Add 100 feet"],
+      "correct_answer": 0,
+      "source_reference": "sold-by",
+      "source_quote": "add 8' to any linear footage needed"
+    },
+    {
+      "id": "sold-by-5",
+      "kind": "single_choice",
+      "prompt": "Which walls are explicitly priced by SQFT?",
+      "options": [
+        "Every 6-inch CMU run",
+        "No walls",
+        "Retaining walls including 8-inch CMU"
+      ],
+      "correct_answer": 2,
+      "source_reference": "sold-by",
+      "source_quote": "retaining walls including 8\" CMU walls"
+    },
+    {
+      "id": "diagram-exercise-1",
+      "kind": "single_choice",
+      "prompt": "What is the labeled paver rectangle?",
+      "options": [
+        "18 feet by 10 feet",
+        "34 feet by 25 feet",
+        "5 feet by 7 feet"
+      ],
+      "correct_answer": 0,
+      "source_reference": "diagram-exercise",
+      "source_quote": "18' wide × 10' tall"
+    },
+    {
+      "id": "diagram-exercise-2",
+      "kind": "single_choice",
+      "prompt": "How is paver edger LF calculated for the exercise?",
+      "options": ["Paver area squared", "Rock tonnage", "Paver perimeter"],
+      "correct_answer": 2,
+      "source_reference": "diagram-exercise",
+      "source_quote": "the paver perimeter"
+    },
+    {
+      "id": "diagram-exercise-3",
+      "kind": "single_choice",
+      "prompt": "What waste allowance is shown separately for turf and pavers?",
+      "options": ["0%", "10%", "50%"],
+      "correct_answer": 1,
+      "source_reference": "diagram-exercise",
+      "source_quote": "10% waste line"
+    },
+    {
+      "id": "diagram-exercise-4",
+      "kind": "single_choice",
+      "prompt": "What tolerance applies to each requested figure?",
+      "options": ["±5%", "±25%", "Any positive figure"],
+      "correct_answer": 0,
+      "source_reference": "diagram-exercise",
+      "source_quote": "±5%"
+    },
+    {
+      "id": "diagram-exercise-5",
+      "kind": "single_choice",
+      "prompt": "How should missing diagram dimensions be handled?",
+      "options": [
+        "Silently invent dimensions",
+        "Ignore all labeled dimensions",
+        "State the geometric assumptions"
+      ],
+      "correct_answer": 2,
+      "source_reference": "diagram-exercise",
+      "source_quote": "list your assumptions"
+    },
+    {
+      "id": "hcp-estimate-1",
+      "kind": "single_choice",
+      "prompt": "Who reviews the quantity takeoff?",
+      "options": ["The manager", "An unauthenticated visitor", "No one"],
+      "correct_answer": 0,
+      "source_reference": "hcp-estimate",
+      "source_quote": "Have the manager review the diagram and quantity takeoff"
+    },
+    {
+      "id": "hcp-estimate-2",
+      "kind": "single_choice",
+      "prompt": "What should be identified before building the estimate?",
+      "options": [
+        "Only the maximum discount",
+        "Only an email address",
+        "Customer vision and project scope"
+      ],
+      "correct_answer": 2,
+      "source_reference": "hcp-estimate",
+      "source_quote": "Identify the customer vision and project scope"
+    },
+    {
+      "id": "hcp-estimate-3",
+      "kind": "single_choice",
+      "prompt": "What proposal preparation principle is required?",
+      "options": [
+        "Use no installation details",
+        "Right materials and methods with multiple options",
+        "Choose units after presenting the price"
+      ],
+      "correct_answer": 1,
+      "source_reference": "hcp-estimate",
+      "source_quote": "right materials and methods, multiple options"
+    },
+    {
+      "id": "hcp-estimate-4",
+      "kind": "single_choice",
+      "prompt": "What accompanies the proposal?",
+      "options": ["Financing", "A promise to skip measurement", "No review"],
+      "correct_answer": 0,
+      "source_reference": "hcp-estimate",
+      "source_quote": "Present financing alongside the proposal"
+    },
+    {
+      "id": "hcp-estimate-5",
+      "kind": "single_choice",
+      "prompt": "How does Academy handle HCP?",
+      "options": [
+        "Connects to and edits HCP automatically",
+        "Replaces HCP billing",
+        "Records a manager sign-off for the external exercise"
+      ],
+      "correct_answer": 2,
+      "source_reference": "hcp-estimate",
+      "source_quote": "Academy does not connect to HCP"
+    }
+  ]
+}

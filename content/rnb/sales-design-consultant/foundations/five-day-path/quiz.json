@@ -1,0 +1,72 @@
+{
+  "kind": "lesson",
+  "draw_count": 5,
+  "pass_percent": null,
+  "questions": [
+    {
+      "id": "five-day-path-1",
+      "kind": "single_choice",
+      "prompt": "What is a Day 1 exercise?",
+      "options": [
+        "Use the sample diagram to build an HCP estimate",
+        "Run unsupervised appointments",
+        "Complete the final review first"
+      ],
+      "correct_answer": 0,
+      "source_reference": "five-day-path",
+      "source_quote": "get square footage from sample diagram and build the estimate in HCP"
+    },
+    {
+      "id": "five-day-path-2",
+      "kind": "single_choice",
+      "prompt": "What is covered on Day 2?",
+      "options": [
+        "Final evaluation only",
+        "Skip diagrams and practice",
+        "Product/sales training and change orders"
+      ],
+      "correct_answer": 2,
+      "source_reference": "five-day-path",
+      "source_quote": "Day 2 — product/sales"
+    },
+    {
+      "id": "five-day-path-3",
+      "kind": "single_choice",
+      "prompt": "What happens on Days 3/4?",
+      "options": [
+        "Avoid observing closing techniques",
+        "Ride along with attention to trust and drawing",
+        "Start with a final pass decision"
+      ],
+      "correct_answer": 1,
+      "source_reference": "five-day-path",
+      "source_quote": "Day 3/4 — ride along"
+    },
+    {
+      "id": "five-day-path-4",
+      "kind": "single_choice",
+      "prompt": "What happens on Day 5?",
+      "options": [
+        "Real appointments with supervision and evaluation",
+        "Self-certification without review",
+        "Skip customer questions"
+      ],
+      "correct_answer": 0,
+      "source_reference": "five-day-path",
+      "source_quote": "run real appointments with supervision"
+    },
+    {
+      "id": "five-day-path-5",
+      "kind": "single_choice",
+      "prompt": "What is one training success tip?",
+      "options": [
+        "Talk more than the customer",
+        "Avoid feedback",
+        "Practice daily and ask questions"
+      ],
+      "correct_answer": 2,
+      "source_reference": "five-day-path",
+      "source_quote": "practice daily and ask questions"
+    }
+  ]
+}

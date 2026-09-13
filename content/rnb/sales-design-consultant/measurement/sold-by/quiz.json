@@ -1,0 +1,60 @@
+{
+  "kind": "lesson",
+  "draw_count": 5,
+  "pass_percent": null,
+  "questions": [
+    {
+      "id": "sold-by-1",
+      "kind": "single_choice",
+      "prompt": "What rock conversion is specified at 2-inch depth?",
+      "options": [
+        "1 ton per 100 sqft",
+        "1 ton per 1,000 sqft",
+        "10 tons per 100 sqft"
+      ],
+      "correct_answer": 0,
+      "source_reference": "sold-by",
+      "source_quote": "1 ton = 100 sqft at 2\" depth"
+    },
+    {
+      "id": "sold-by-2",
+      "kind": "single_choice",
+      "prompt": "When do rock/soil orders require added delivery?",
+      "options": ["Only over 3,000 sqft", "Never", "Under 300 sqft"],
+      "correct_answer": 2,
+      "source_reference": "sold-by",
+      "source_quote": "add delivery on orders under 300 sqft"
+    },
+    {
+      "id": "sold-by-3",
+      "kind": "single_choice",
+      "prompt": "What extra length applies to Romex tapped from the panel?",
+      "options": ["Add nothing", "Add 14 feet", "Add 8 inches"],
+      "correct_answer": 1,
+      "source_reference": "sold-by",
+      "source_quote": "add 14' if tapping from panel"
+    },
+    {
+      "id": "sold-by-4",
+      "kind": "single_choice",
+      "prompt": "What extra length applies to gas lines?",
+      "options": ["Add 8 feet", "Add 14 inches", "Add 100 feet"],
+      "correct_answer": 0,
+      "source_reference": "sold-by",
+      "source_quote": "add 8' to any linear footage needed"
+    },
+    {
+      "id": "sold-by-5",
+      "kind": "single_choice",
+      "prompt": "Which walls are explicitly priced by SQFT?",
+      "options": [
+        "Every 6-inch CMU run",
+        "No walls",
+        "Retaining walls including 8-inch CMU"
+      ],
+      "correct_answer": 2,
+      "source_reference": "sold-by",
+      "source_quote": "retaining walls including 8\" CMU walls"
+    }
+  ]
+}

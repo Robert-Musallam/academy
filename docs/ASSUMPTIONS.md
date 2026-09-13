@@ -26,3 +26,8 @@
 
 - Docker Desktop and psql are now available. Tests use Docker Supabase (Postgres 17 from the initialized config), not the Postgres 16 fallback.
 - The literal status/grep expression supplied no usable DB URL. The verified command uses the configured local Supabase endpoint at 127.0.0.1:54322; credentials are never displayed by status.
+
+## Progress and content sequencing
+
+- The module-specific pass table governs M6 and M7. Their required free-text prompts are practice; simulator tiers and manager forms determine passing.
+- Node 6 creates quizzes for existing lessons. Node 7 introduces the four draft lessons together with their lesson checks. Draft checks stay unavailable through the lesson RLS policy, and existing module exams do not draw draft lesson questions.

@@ -1,0 +1,46 @@
+{
+  "kind": "lesson",
+  "draw_count": 3,
+  "pass_percent": null,
+  "questions": [
+    {
+      "id": "other-estimates-1",
+      "kind": "single_choice",
+      "prompt": "What should the customer compare besides price?",
+      "options": [
+        "Materials, installation, warranty, reputation",
+        "Only the font on a proposal",
+        "Nothing else"
+      ],
+      "correct_answer": 0,
+      "source_reference": "other-estimates",
+      "source_quote": "materials, installation process, warranty, reputation"
+    },
+    {
+      "id": "other-estimates-2",
+      "kind": "single_choice",
+      "prompt": "What experience statement supports this response?",
+      "options": [
+        "Over 150 years",
+        "Three weeks",
+        "Over 15 years in the industry"
+      ],
+      "correct_answer": 2,
+      "source_reference": "other-estimates",
+      "source_quote": "over 15 years"
+    },
+    {
+      "id": "other-estimates-3",
+      "kind": "single_choice",
+      "prompt": "What does needing other estimates usually mean here?",
+      "options": [
+        "Discovery is prohibited",
+        "The customer wants to compare",
+        "The customer has already signed"
+      ],
+      "correct_answer": 1,
+      "source_reference": "other-estimates",
+      "source_quote": "want to compare"
+    }
+  ]
+}

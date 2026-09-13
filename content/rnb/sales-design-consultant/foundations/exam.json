@@ -1,0 +1,255 @@
+{
+  "kind": "exam",
+  "draw_count": 10,
+  "pass_percent": 90,
+  "questions": [
+    {
+      "id": "rnb-standard-1",
+      "kind": "single_choice",
+      "prompt": "Which commitment is part of RNB's mission?",
+      "options": [
+        "Honest communication",
+        "Lowest price at any cost",
+        "Fast promises without review"
+      ],
+      "correct_answer": 0,
+      "source_reference": "rnb-standard",
+      "source_quote": "honest communication"
+    },
+    {
+      "id": "rnb-standard-2",
+      "kind": "single_choice",
+      "prompt": "What does RNB build beyond landscapes?",
+      "options": [
+        "Only a product catalog",
+        "A price leaderboard",
+        "Trust and relationships"
+      ],
+      "correct_answer": 2,
+      "source_reference": "rnb-standard",
+      "source_quote": "We build trust. We build relationships."
+    },
+    {
+      "id": "rnb-standard-3",
+      "kind": "single_choice",
+      "prompt": "How much industry experience should a rep state?",
+      "options": ["5 years", "15+ years", "3 years"],
+      "correct_answer": 1,
+      "source_reference": "rnb-standard",
+      "source_quote": "15+ years"
+    },
+    {
+      "id": "rnb-standard-4",
+      "kind": "single_choice",
+      "prompt": "What labor warranty does the manifest require?",
+      "options": ["3 years", "25 years", "Lifetime"],
+      "correct_answer": 0,
+      "source_reference": "rnb-standard",
+      "source_quote": "3-year labor warranty"
+    },
+    {
+      "id": "rnb-standard-5",
+      "kind": "single_choice",
+      "prompt": "What product warranty is stated for turf, pavers, and fencing?",
+      "options": ["3 years", "10 years", "25 years"],
+      "correct_answer": 2,
+      "source_reference": "rnb-standard",
+      "source_quote": "25-year product warranty"
+    },
+    {
+      "id": "five-day-path-1",
+      "kind": "single_choice",
+      "prompt": "What is a Day 1 exercise?",
+      "options": [
+        "Use the sample diagram to build an HCP estimate",
+        "Run unsupervised appointments",
+        "Complete the final review first"
+      ],
+      "correct_answer": 0,
+      "source_reference": "five-day-path",
+      "source_quote": "get square footage from sample diagram and build the estimate in HCP"
+    },
+    {
+      "id": "five-day-path-2",
+      "kind": "single_choice",
+      "prompt": "What is covered on Day 2?",
+      "options": [
+        "Final evaluation only",
+        "Skip diagrams and practice",
+        "Product/sales training and change orders"
+      ],
+      "correct_answer": 2,
+      "source_reference": "five-day-path",
+      "source_quote": "Day 2 — product/sales"
+    },
+    {
+      "id": "five-day-path-3",
+      "kind": "single_choice",
+      "prompt": "What happens on Days 3/4?",
+      "options": [
+        "Avoid observing closing techniques",
+        "Ride along with attention to trust and drawing",
+        "Start with a final pass decision"
+      ],
+      "correct_answer": 1,
+      "source_reference": "five-day-path",
+      "source_quote": "Day 3/4 — ride along"
+    },
+    {
+      "id": "five-day-path-4",
+      "kind": "single_choice",
+      "prompt": "What happens on Day 5?",
+      "options": [
+        "Real appointments with supervision and evaluation",
+        "Self-certification without review",
+        "Skip customer questions"
+      ],
+      "correct_answer": 0,
+      "source_reference": "five-day-path",
+      "source_quote": "run real appointments with supervision"
+    },
+    {
+      "id": "five-day-path-5",
+      "kind": "single_choice",
+      "prompt": "What is one training success tip?",
+      "options": [
+        "Talk more than the customer",
+        "Avoid feedback",
+        "Practice daily and ask questions"
+      ],
+      "correct_answer": 2,
+      "source_reference": "five-day-path",
+      "source_quote": "practice daily and ask questions"
+    },
+    {
+      "id": "seven-step-consultation-1",
+      "kind": "single_choice",
+      "prompt": "What comes before products or pricing?",
+      "options": [
+        "Discover the customer's vision",
+        "Offer the maximum discount",
+        "Email a price without questions"
+      ],
+      "correct_answer": 0,
+      "source_reference": "seven-step-consultation",
+      "source_quote": "Step 2 Discover their vision — before products or pricing"
+    },
+    {
+      "id": "seven-step-consultation-2",
+      "kind": "single_choice",
+      "prompt": "What should happen while measuring?",
+      "options": [
+        "Stop listening to the customer",
+        "Reveal price before education",
+        "Build rapport and ask questions"
+      ],
+      "correct_answer": 2,
+      "source_reference": "seven-step-consultation",
+      "source_quote": "Build rapport while measuring"
+    },
+    {
+      "id": "seven-step-consultation-3",
+      "kind": "single_choice",
+      "prompt": "What belongs in the HCP proposal?",
+      "options": [
+        "No installation detail",
+        "Right materials and methods with multiple options",
+        "Only the cheapest total"
+      ],
+      "correct_answer": 1,
+      "source_reference": "seven-step-consultation",
+      "source_quote": "right materials and methods, multiple options"
+    },
+    {
+      "id": "seven-step-consultation-4",
+      "kind": "single_choice",
+      "prompt": "When do you educate on installation and warranty?",
+      "options": [
+        "Before presenting price",
+        "Only after the customer signs",
+        "Only if a competitor asks"
+      ],
+      "correct_answer": 0,
+      "source_reference": "seven-step-consultation",
+      "source_quote": "Educate before presenting price"
+    },
+    {
+      "id": "seven-step-consultation-5",
+      "kind": "single_choice",
+      "prompt": "What must accompany the proposal presentation?",
+      "options": [
+        "An early discount before value",
+        "A promise to skip the warranty review",
+        "Financing options"
+      ],
+      "correct_answer": 2,
+      "source_reference": "seven-step-consultation",
+      "source_quote": "present financing options"
+    },
+    {
+      "id": "key-principles-1",
+      "kind": "single_choice",
+      "prompt": "Which listening principle should guide the appointment?",
+      "options": [
+        "Listen more than you speak",
+        "Speak continuously to prevent objections",
+        "Ask no questions"
+      ],
+      "correct_answer": 0,
+      "source_reference": "key-principles",
+      "source_quote": "listen more than you speak"
+    },
+    {
+      "id": "key-principles-2",
+      "kind": "single_choice",
+      "prompt": "How should a rep contribute to the design?",
+      "options": [
+        "Copy the competitor without questions",
+        "Avoid proposing opportunities",
+        "Offer ideas rather than only take orders"
+      ],
+      "correct_answer": 2,
+      "source_reference": "key-principles",
+      "source_quote": "offer ideas, don't be an order taker"
+    },
+    {
+      "id": "key-principles-3",
+      "kind": "single_choice",
+      "prompt": "Which relationship principle is explicit?",
+      "options": [
+        "Debate every customer preference",
+        "Build rapport and trust",
+        "Pressure without understanding"
+      ],
+      "correct_answer": 1,
+      "source_reference": "key-principles",
+      "source_quote": "build rapport and trust"
+    },
+    {
+      "id": "key-principles-4",
+      "kind": "single_choice",
+      "prompt": "How should you treat the customer's home?",
+      "options": [
+        "Like your own",
+        "As a showroom only",
+        "As an obstacle to the sale"
+      ],
+      "correct_answer": 0,
+      "source_reference": "key-principles",
+      "source_quote": "treat every home like your own"
+    },
+    {
+      "id": "key-principles-5",
+      "kind": "single_choice",
+      "prompt": "What question opens discovery?",
+      "options": [
+        "Can you sign before we measure?",
+        "What discount will close you now?",
+        "Tell me about the project you're envisioning."
+      ],
+      "correct_answer": 2,
+      "source_reference": "key-principles",
+      "source_quote": "Tell me about the project you're envisioning."
+    }
+  ]
+}

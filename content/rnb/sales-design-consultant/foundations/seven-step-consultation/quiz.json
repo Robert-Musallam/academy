@@ -1,0 +1,72 @@
+{
+  "kind": "lesson",
+  "draw_count": 5,
+  "pass_percent": null,
+  "questions": [
+    {
+      "id": "seven-step-consultation-1",
+      "kind": "single_choice",
+      "prompt": "What comes before products or pricing?",
+      "options": [
+        "Discover the customer's vision",
+        "Offer the maximum discount",
+        "Email a price without questions"
+      ],
+      "correct_answer": 0,
+      "source_reference": "seven-step-consultation",
+      "source_quote": "Step 2 Discover their vision — before products or pricing"
+    },
+    {
+      "id": "seven-step-consultation-2",
+      "kind": "single_choice",
+      "prompt": "What should happen while measuring?",
+      "options": [
+        "Stop listening to the customer",
+        "Reveal price before education",
+        "Build rapport and ask questions"
+      ],
+      "correct_answer": 2,
+      "source_reference": "seven-step-consultation",
+      "source_quote": "Build rapport while measuring"
+    },
+    {
+      "id": "seven-step-consultation-3",
+      "kind": "single_choice",
+      "prompt": "What belongs in the HCP proposal?",
+      "options": [
+        "No installation detail",
+        "Right materials and methods with multiple options",
+        "Only the cheapest total"
+      ],
+      "correct_answer": 1,
+      "source_reference": "seven-step-consultation",
+      "source_quote": "right materials and methods, multiple options"
+    },
+    {
+      "id": "seven-step-consultation-4",
+      "kind": "single_choice",
+      "prompt": "When do you educate on installation and warranty?",
+      "options": [
+        "Before presenting price",
+        "Only after the customer signs",
+        "Only if a competitor asks"
+      ],
+      "correct_answer": 0,
+      "source_reference": "seven-step-consultation",
+      "source_quote": "Educate before presenting price"
+    },
+    {
+      "id": "seven-step-consultation-5",
+      "kind": "single_choice",
+      "prompt": "What must accompany the proposal presentation?",
+      "options": [
+        "An early discount before value",
+        "A promise to skip the warranty review",
+        "Financing options"
+      ],
+      "correct_answer": 2,
+      "source_reference": "seven-step-consultation",
+      "source_quote": "present financing options"
+    }
+  ]
+}
