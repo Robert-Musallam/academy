@@ -49,3 +49,7 @@ Next unverified node: **Node 3**.
 Provide a running Docker-compatible local environment with `psql`, or the prescribed local Postgres 16 environment and its setup script (including Supabase auth/RLS fixtures). Resume at Node 2 and rerun its verification. Expected: 17 public tables and 2 tenants. Do not start Node 3 until it passes.
 
 The project CLI uses `SUPABASE_HOME` set to the checkout's `work/supabase-home`; the bundled Node executable directory was added to PATH for commands in this environment. No production project was accessed, and no Gate 9 or Gate 16 approval has been requested.
+
+## Node 3 — VERIFIED
+
+`pnpm test -- auth` passed (7 tests including the real Postgres RLS suite); `pnpm build` passed after marking the protected roster page dynamic. Unit tests confirm rostered email dispatch and non-roster 403 without dispatch. Email transport is stubbed for these tests; actual email delivery remains part of deployed acceptance. Admin creates the auth identity when adding a roster row; public signup is disabled in Supabase config and every magic-link request sets `shouldCreateUser: false`. Session checks use verified auth identity plus active roster membership. Next: Node 4.
