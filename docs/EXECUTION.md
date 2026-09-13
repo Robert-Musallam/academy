@@ -1,6 +1,6 @@
 # Graph execution
 
-**Current stop: HUMAN GATE — first playable 3D yard.** Robert approved replacing the text-only simulator target with an immersive landscape prototype. The first spatial learning loop is built at `/review/yard`. Nodes 1–11 remain verified. Node 12 remains in progress; its full authenticated trainee workflow and `trainee` e2e verify have not passed. Review this property before expanding the library or starting Node 13.
+**Current work: Node 13.** Robert accepted the playable 3D yard as v1 and authorized continuing to Gate 16. Node 12 passed its trainee verification.
 
 | Node                                  | Status                       | Verify result                                                                                                                               |
 | ------------------------------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -88,3 +88,11 @@ Production build, lint, typecheck and all 40 unit/integration tests pass. All 6 
 Manual review at 1440 × 960 and 390 × 844 confirmed the rendered property, installation explorer and phone walk controls. The material marker positions initially applied the layer height twice; removing the duplicate offset aligned each numbered marker with its layer, verified visually on desktop and phone. The browser viewport override was reset and the playable yard left open for Robert.
 
 Resume on Robert’s review of the playable yard. Apply requested edits, then expand only the approved scope and finish Node 12 before Node 13. Gate 16 still controls real infrastructure and provider selection.
+
+## Node 12 — accepted yard and complete trainee path
+
+Robert accepted the first spatial prototype and authorized continuing to Gate 16. Added the protected module dashboard, published lesson reader/checks, persisted shuffled exams, rubric free-text submission, approved diagram exercise, attempt history, database-backed appointments, and durable account-scoped field-lab practice. A private schema holds hidden sim snapshots and yard practice; exposed public table count remains 17. Atomic database start locks enforce daily caps; expiring operation leases prevent simultaneous run writes, and commit saves transcripts/grades/costs together. RPCs are service-role only; routes validate active membership, tenant/track, module gates and owner.
+
+`LLM_PROVIDER=mock pnpm test:e2e -- trainee` passed (8 tests, including existing previews). First run reached the expected M1/M2 behavior but failed a numeric formatting assertion (`90.00%` versus `90%`) and an exact button-name selector that omitted its arrow. One correction normalized score formatting and matched the existing accessible button label; rerun passed in 15.2 seconds. Typecheck passed; local database security advisors reported no issues.
+
+The local e2e server explicitly enables a development-only, loopback-only fixture identity and direct Postgres transport, using synthetic `eeeeeeee-` roster IDs. Production ignores these switches and requires Supabase authentication and configured server credentials. Browser tests exercise real local database persistence and application authorization; JWT/email transport remains covered separately by auth/RLS checks and eventual live acceptance. No secrets were accessed. Fixtures do not establish live email delivery or real-provider quality.

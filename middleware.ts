@@ -2,6 +2,12 @@ import { createServerClient } from '@supabase/ssr';
 import { NextResponse, type NextRequest } from 'next/server';
 
 export async function middleware(request: NextRequest) {
+  if (
+    process.env.NODE_ENV !== 'production' &&
+    process.env.ACADEMY_E2E === '1' &&
+    /^(localhost|127\.0\.0\.1)(:\d+)?$/.test(request.headers.get('host') ?? '')
+  )
+    return NextResponse.next();
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
   const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
   const protectedPath = /^\/(admin|manager|learn|sim)(\/|$)/.test(

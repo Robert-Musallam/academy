@@ -16,7 +16,11 @@ export async function GET(request: Request) {
       if (memberships?.length)
         return NextResponse.redirect(
           new URL(
-            memberships.some((m) => m.role === 'admin') ? '/admin/roster' : '/',
+            memberships.some((m) => m.role === 'admin')
+              ? '/admin/roster'
+              : memberships.some((m) => m.role === 'manager')
+                ? '/manager'
+                : '/learn',
             url.origin,
           ),
         );

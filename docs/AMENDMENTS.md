@@ -15,3 +15,7 @@ The four new lessons are now approved with these edits. The existing proposed di
 ## Approved immersive expansion — September 13
 
 Robert approved the recommendation to build one complete playable 3D yard before expanding the simulator. The next HUMAN GATE is now the first spatial prototype: property exploration, irregular-area measurement, slope interpretation, turf/paver cutaways, a constrained layout proposal and a scene-aware homeowner conversation. See YARD_REVIEW.md. The earlier text-only preview does not satisfy this new gate. The six personas and 18 written scenarios remain reusable inputs; further properties and the material library wait for this prototype review. Provider selection remains at Gate 16; voice and headset VR are not silently added.
+
+## Playable v1 approved
+
+Robert accepted the first yard as v1 and authorized continuing through Node 15 to the next human gate (Node 16). Preserve the approved property and integrate durable training workflows; additional visual refinements remain iterative feedback. The six-persona, 18-scenario roster remains the v1 appointment scope.
