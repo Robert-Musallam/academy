@@ -1,4 +1,5 @@
 import { execFileSync } from 'node:child_process';
+import { loadPersonas } from '../lib/sim/personas';
 import { loadContent } from '../lib/content/loader';
 
 // Only the graph's local Docker database is targeted before Gate 16.
@@ -35,6 +36,13 @@ for (const m of modules) {
       sql.push(
         `insert into public.questions(tenant_id,module_id,quiz_id,slug,prompt,kind,options,correct_answer,rubric,source_reference) values(${tenant},${moduleId},${quizId},${quote(question.id)},${quote(question.prompt)},${quote(question.kind)},${json(question.options)},${json(question.correct_answer)},${question.rubric ? json(question.rubric) : 'null'},${quote(`${question.source_reference}: ${question.source_quote}`)}) on conflict(quiz_id,slug) do update set prompt=excluded.prompt,kind=excluded.kind,options=excluded.options,correct_answer=excluded.correct_answer,rubric=excluded.rubric,source_reference=excluded.source_reference;`,
       );
+  }
+}
+if (rootIndex < 0) {
+  for (const persona of loadPersonas()) {
+    sql.push(
+      `insert into public.personas(tenant_id,track_id,slug,name,tier,brief) select t.id,k.id,${quote(persona.slug)},${quote(persona.name)},${quote(persona.tier)},${json(persona)} from public.tenants t join public.tracks k on k.tenant_id=t.id where t.slug='rnb' and k.slug='sales-design-consultant' on conflict(track_id,slug) do update set name=excluded.name,tier=excluded.tier,brief=excluded.brief;`,
+    );
   }
 }
 sql.push('commit;');

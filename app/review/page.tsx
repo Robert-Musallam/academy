@@ -51,13 +51,18 @@ export default async function ReviewPage({
           aria-label="Review checklist"
           className="rounded-lg border border-amber-300 bg-amber-50 p-5"
         >
-          <h2 className="font-bold">Ready for your review</h2>
+          <h2 className="font-bold">Content approved with your corrections</h2>
           <p className="mt-2 text-sm leading-relaxed">
-            Read the four drafts, confirm the diagram assumptions, and
-            spot-check three transcribed lessons against the sheets. Drafts
-            remain unavailable to trainees. Approve in the task with GATE 9
-            APPROVED and any edits.
+            All 33 lessons are published. Warranty terms, territory-dependent
+            base materials, and adjustable drop caps reflect your September 13
+            edits. Original sheets are retained as historical source references.
           </p>
+          <Link
+            className="mt-3 inline-block font-semibold underline"
+            href="/review/yard"
+          >
+            Enter the playable 3D field lab →
+          </Link>
           <div className="mt-3 flex flex-wrap gap-x-5 gap-y-2 text-sm font-semibold underline underline-offset-4">
             <Link href={href('foundations', 'pre-appointment-prep')}>
               Prep checklist
@@ -133,14 +138,11 @@ export default async function ReviewPage({
           </article>
           {lesson.slug === 'diagram-exercise' && (
             <section className="mt-8 rounded border border-amber-400 bg-amber-50 p-5">
-              <h3 className="text-xl font-bold">
-                Proposed answer key — not approved
-              </h3>
+              <h3 className="text-xl font-bold">Approved answer key</h3>
               <p className="my-3 text-sm leading-relaxed">
                 {answerKey.model}. The PNG arrows may include the top border in
-                their 13-foot measurement. Please review every geometric
-                assumption in docs/DIAGRAM_ASSUMPTIONS.md before confirming this
-                model.
+                their 13-foot measurement. The accepted model and alternate
+                interpretations are documented in docs/DIAGRAM_ASSUMPTIONS.md.
               </p>
               <dl className="grid grid-cols-[1fr_auto] gap-x-5 gap-y-2 text-sm">
                 {Object.entries(answerKey.metrics).map(([name, metric]) => (

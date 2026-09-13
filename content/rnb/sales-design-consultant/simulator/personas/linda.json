@@ -1,0 +1,61 @@
+{
+  "slug": "linda",
+  "name": "Linda",
+  "tier": "hard",
+  "market": "RNB service territory",
+  "primary_objection": "We need to get other estimates.",
+  "secondary_objection": "We are not ready yet.",
+  "trust_unlock": "Ask which privacy or security problem prompted the visit and what must happen before she is ready.",
+  "spouse_status": "Sole decision-maker; consults an adult family member but does not require their approval.",
+  "same_day_close_condition": "Clarify real timing, compare standard and modern options using LF/unit pricing and 3-year material/labor warranty, ask for the business respectfully.",
+  "competitor_quote": "Budget estimate for standard open bars, basic latch and no keyed lock; not equivalent to modern privacy panels.",
+  "triggers": [
+    {
+      "after_turn": 3,
+      "line": "I need other estimates before deciding."
+    },
+    {
+      "after_turn": 6,
+      "line": "The other fencing price was a lot lower."
+    },
+    {
+      "after_turn": 9,
+      "line": "We are not ready yet. Maybe later."
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "privacy-gate",
+      "title": "Privacy at the side gate",
+      "territory": "default",
+      "project": "Modern fencing and gate",
+      "size": "60 LF fence; 1 gate",
+      "hidden_budget": "$10,000–$13,000",
+      "priority": "Reduce visibility from the street and improve keyed access.",
+      "constraint": "Another estimate is $6,000 for open bars and a basic latch.",
+      "opening": "I want to see what fencing might cost, but I am shopping around."
+    },
+    {
+      "id": "pool-side",
+      "title": "A more private side yard",
+      "territory": "default",
+      "project": "Modern fencing and gate",
+      "size": "90 LF fence; 1 gate",
+      "hidden_budget": "$15,000–$19,000",
+      "priority": "Feel comfortable using the side yard.",
+      "constraint": "Other estimate is $9,000 for standard bars; timing depends on another home project.",
+      "opening": "We are looking at options. I am not promising anything today."
+    },
+    {
+      "id": "entry-gates",
+      "title": "The two-gate project",
+      "territory": "default",
+      "project": "Modern fencing and two gates",
+      "size": "40 LF fence; 2 gates",
+      "hidden_budget": "$11,000–$15,000",
+      "priority": "Secure both access points with a cohesive design.",
+      "constraint": "Competitor estimate is $7,500 with basic latches; wants scope in writing.",
+      "opening": "I need prices for the fence and both gates so I can compare."
+    }
+  ]
+}
