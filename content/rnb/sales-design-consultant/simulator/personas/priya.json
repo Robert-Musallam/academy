@@ -1,0 +1,61 @@
+{
+  "slug": "priya",
+  "name": "Priya",
+  "tier": "standard",
+  "market": "RNB service territory",
+  "primary_objection": "It is too expensive.",
+  "secondary_objection": null,
+  "trust_unlock": "Ask what she cooks, who she hosts, and whether total investment or payment timing is the concern.",
+  "spouse_status": "Sole decision-maker, present.",
+  "same_day_close_condition": "Connect kitchen layout to use, distinguish equipment/material/labor warranties, explain approved financing without invented terms.",
+  "competitor_quote": null,
+  "triggers": [
+    {
+      "after_turn": 3,
+      "line": "I want something I will actually use, not just something pretty."
+    },
+    {
+      "after_turn": 6,
+      "line": "That sounds expensive. How could payments work?"
+    },
+    {
+      "after_turn": 9,
+      "line": "I need to understand what is included before I agree."
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "weekend-cook",
+      "title": "The weekend cook",
+      "territory": "default",
+      "project": "Outdoor kitchen",
+      "size": "8 LF kitchen; 24 sqft countertop",
+      "hidden_budget": "$18,000–$22,000",
+      "priority": "Grill for family on weekends.",
+      "constraint": "Payment timing matters more than minimizing every feature.",
+      "opening": "I would love to cook outside more often."
+    },
+    {
+      "id": "entertainer",
+      "title": "Dinner for a crowd",
+      "territory": "default",
+      "project": "Outdoor kitchen",
+      "size": "12 LF kitchen; 36 sqft countertop",
+      "hidden_budget": "$27,000–$33,000",
+      "priority": "Prep, grill and serve larger groups without crowding.",
+      "constraint": "Gas and electrical run distances must be measured separately.",
+      "opening": "We entertain a lot and I want this area to function better."
+    },
+    {
+      "id": "compact-kitchen",
+      "title": "A practical first kitchen",
+      "territory": "default",
+      "project": "Outdoor kitchen",
+      "size": "6 LF kitchen; 18 sqft countertop",
+      "hidden_budget": "$14,000–$18,000",
+      "priority": "Stop carrying food and tools back and forth indoors.",
+      "constraint": "Needs an honest scope comparison and approved financing information.",
+      "opening": "I am interested in an outdoor kitchen, but I need to watch the investment."
+    }
+  ]
+}

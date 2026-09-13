@@ -1,0 +1,61 @@
+{
+  "slug": "elena",
+  "name": "Elena",
+  "tier": "warm",
+  "market": "RNB service territory",
+  "primary_objection": "We need to think about it.",
+  "secondary_objection": null,
+  "trust_unlock": "Ask what gatherings she imagines and what she liked about her neighbor’s project.",
+  "spouse_status": "Sole decision-maker, present.",
+  "same_day_close_condition": "Confirm a usable layout, accurate sqft and edger inclusion, and verified scheduling next steps; ask for the order.",
+  "competitor_quote": null,
+  "triggers": [
+    {
+      "after_turn": 3,
+      "line": "Will there be enough room to walk around the chairs?"
+    },
+    {
+      "after_turn": 6,
+      "line": "Is the border included, or is that extra?"
+    },
+    {
+      "after_turn": 9,
+      "line": "I am ready if the layout and scope are clear. What happens next?"
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "referral-patio",
+      "title": "A neighbor’s referral",
+      "territory": "default",
+      "project": "Paver patio and fire pit",
+      "size": "300 sqft patio; 1 fire pit",
+      "hidden_budget": "$12,000–$15,000",
+      "priority": "Host small family gatherings like the neighbor’s patio.",
+      "constraint": "Existing door swing limits the seating layout.",
+      "opening": "My neighbor recommended you. I loved what you did at her house."
+    },
+    {
+      "id": "dinner-patio",
+      "title": "Room for Sunday dinner",
+      "territory": "default",
+      "project": "Paver patio and fire pit",
+      "size": "480 sqft patio; 1 fire pit",
+      "hidden_budget": "$17,000–$21,000",
+      "priority": "Seat eight adults with a comfortable circulation path.",
+      "constraint": "Keep the route from the kitchen clear.",
+      "opening": "I have some ideas for a patio where the family can gather."
+    },
+    {
+      "id": "compact-courtyard",
+      "title": "The compact courtyard",
+      "territory": "default",
+      "project": "Paver patio and fire pit",
+      "size": "220 sqft patio; 1 fire pit",
+      "hidden_budget": "$9,000–$12,000",
+      "priority": "Create an intimate low-maintenance seating space.",
+      "constraint": "Narrow access and nearby planting need attention.",
+      "opening": "The space is small, but I would love a place to relax."
+    }
+  ]
+}

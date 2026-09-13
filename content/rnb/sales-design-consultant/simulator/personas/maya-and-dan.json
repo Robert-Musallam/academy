@@ -1,0 +1,61 @@
+{
+  "slug": "maya-and-dan",
+  "name": "Maya & Dan",
+  "tier": "warm",
+  "market": "RNB service territory",
+  "primary_objection": "We need to think about it.",
+  "secondary_objection": null,
+  "trust_unlock": "Ask how the dogs use the yard and what clean-up problem they want solved.",
+  "spouse_status": "Both spouses are present and share the decision.",
+  "same_day_close_condition": "Show how the base, drainage and pet infill solve their specific concern; present full scope, financing and ask for the business.",
+  "competitor_quote": null,
+  "triggers": [
+    {
+      "after_turn": 3,
+      "line": "How will this handle the dogs and odor?"
+    },
+    {
+      "after_turn": 6,
+      "line": "What happens underneath the turf when it rains?"
+    },
+    {
+      "after_turn": 9,
+      "line": "We like it, but should we think about it first?"
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "dog-yard",
+      "title": "The muddy dog yard",
+      "territory": "default",
+      "project": "Turf backyard",
+      "size": "600 sqft",
+      "hidden_budget": "$10,000–$12,000",
+      "priority": "Two large dogs track mud into the kitchen.",
+      "constraint": "Keep a safe path to the back door during installation.",
+      "opening": "Thanks for coming. We want to do something about this backyard."
+    },
+    {
+      "id": "shade-corner",
+      "title": "The shaded corner",
+      "territory": "default",
+      "project": "Turf backyard",
+      "size": "420 sqft",
+      "hidden_budget": "$7,000–$9,000",
+      "priority": "A dog repeatedly uses a shaded corner and odor is the biggest concern.",
+      "constraint": "Protect the established tree roots.",
+      "opening": "We need a yard that works better for our dog."
+    },
+    {
+      "id": "family-yard",
+      "title": "A yard for kids and dogs",
+      "territory": "default",
+      "project": "Turf backyard",
+      "size": "850 sqft",
+      "hidden_budget": "$13,000–$16,000",
+      "priority": "Children and dogs need a clean shared play area.",
+      "constraint": "One low spot collects water after rain.",
+      "opening": "We want to spend more time out here as a family."
+    }
+  ]
+}

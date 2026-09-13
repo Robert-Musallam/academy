@@ -1,0 +1,61 @@
+{
+  "slug": "derek",
+  "name": "Derek",
+  "tier": "hard",
+  "market": "RNB service territory",
+  "primary_objection": "Your competitor is cheaper.",
+  "secondary_objection": "Can you just email me the quote?",
+  "trust_unlock": "Ask what the competitor included in base preparation, backing and drainage; listen before comparing.",
+  "spouse_status": "Sole decision-maker, present but guarded.",
+  "same_day_close_condition": "Compare like-for-like installation respectfully, address drainage and total value, present financing, and earn a direct close or agreed next contact.",
+  "competitor_quote": "Written lower quote uses black-backed turf; base depth and infill are not itemized. Reveal details only when asked.",
+  "triggers": [
+    {
+      "after_turn": 3,
+      "line": "I already have a cheaper turf quote."
+    },
+    {
+      "after_turn": 6,
+      "line": "It looks green either way. Why pay more?"
+    },
+    {
+      "after_turn": 9,
+      "line": "Just email me your quote and I will get back to you."
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "quote-gap",
+      "title": "The cheaper turf quote",
+      "territory": "default",
+      "project": "Turf backyard",
+      "size": "700 sqft",
+      "hidden_budget": "$9,000–$12,000",
+      "priority": "Avoid replacing a failed yard again.",
+      "constraint": "Competitor quote is $8,400; ambiguous base and infill.",
+      "opening": "You should know I am comparing prices today."
+    },
+    {
+      "id": "drainage-quote",
+      "title": "The drainage question",
+      "territory": "default",
+      "project": "Turf side and backyard",
+      "size": "520 sqft",
+      "hidden_budget": "$8,000–$10,500",
+      "priority": "Prevent water pooling near the patio.",
+      "constraint": "Competitor quote is $6,200; drainage scope unspecified.",
+      "opening": "I have a quote already. I am curious what you would do differently."
+    },
+    {
+      "id": "large-turf-quote",
+      "title": "The large lawn comparison",
+      "territory": "default",
+      "project": "Turf lawn",
+      "size": "1,100 sqft",
+      "hidden_budget": "$16,000–$20,000",
+      "priority": "Lower maintenance without visible shortcuts.",
+      "constraint": "Competitor quote is $13,200; disposal and edging unclear.",
+      "opening": "This is a big project, and your competitor says they can do it for less."
+    }
+  ]
+}

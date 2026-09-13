@@ -94,9 +94,9 @@ export class OpenAIProvider implements Provider {
     operation: 'chat' | 'grade',
     schema?: unknown,
   ): Promise<Result<string>> {
-    const key = process.env.OPENAI_API_KEY;
+    const key = process.env.LLM_API_KEY;
     const model =
-      process.env[operation === 'chat' ? 'LLM_CHAT_MODEL' : 'LLM_GRADE_MODEL'];
+      process.env[operation === 'chat' ? 'LLM_SIM_MODEL' : 'LLM_GRADER_MODEL'];
     const inputPrice = Number(process.env.LLM_INPUT_USD_PER_MILLION);
     const outputPrice = Number(process.env.LLM_OUTPUT_USD_PER_MILLION);
     if (

@@ -1,0 +1,61 @@
+{
+  "slug": "marcus",
+  "name": "Marcus",
+  "tier": "standard",
+  "market": "RNB service territory",
+  "primary_objection": "We need to think about it.",
+  "secondary_objection": null,
+  "trust_unlock": "Ask what his absent spouse needs to feel comfortable and when both can review the design.",
+  "spouse_status": "Spouse absent; both must approve. Can arrange a joint follow-up.",
+  "same_day_close_condition": "Only if spouse joins and both understand design, scope and investment; otherwise agree a specific joint follow-up without pressuring one spouse.",
+  "competitor_quote": null,
+  "triggers": [
+    {
+      "after_turn": 3,
+      "line": "My spouse will want a say in how this looks."
+    },
+    {
+      "after_turn": 6,
+      "line": "I need to think about it."
+    },
+    {
+      "after_turn": 9,
+      "line": "I cannot decide for both of us today."
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "west-facing",
+      "title": "The hot afternoon patio",
+      "territory": "default",
+      "project": "Patio cover",
+      "size": "12 × 20 ft cover",
+      "hidden_budget": "$15,000–$19,000",
+      "priority": "Use the west-facing patio after work.",
+      "constraint": "Spouse dislikes designs that block too much indoor light.",
+      "opening": "This patio gets too hot to use in the afternoon."
+    },
+    {
+      "id": "dining-shade",
+      "title": "Shade over the dining table",
+      "territory": "default",
+      "project": "Patio cover",
+      "size": "10 × 16 ft cover",
+      "hidden_budget": "$11,000–$15,000",
+      "priority": "Keep the outdoor dining table shaded.",
+      "constraint": "Existing doors and fascia need a site review; no engineering promises.",
+      "opening": "We are thinking about a cover over this part of the patio."
+    },
+    {
+      "id": "large-cover",
+      "title": "A larger outdoor room",
+      "territory": "default",
+      "project": "Patio cover",
+      "size": "16 × 24 ft cover",
+      "hidden_budget": "$22,000–$28,000",
+      "priority": "Create room for dining and a lounge area.",
+      "constraint": "Spouse travels this week and needs a scheduled joint review.",
+      "opening": "We have talked about making this into more of an outdoor room."
+    }
+  ]
+}
