@@ -1,0 +1,8 @@
+{
+  "version": 1,
+  "default": {
+    "max_same_day_drop_percent": 10,
+    "turf_base": "limestone chat or crushed granite breeze, as approved for the territory"
+  },
+  "areas": {}
+}

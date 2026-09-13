@@ -1,3 +1,5 @@
+> Gate 9 approved September 13 under “otherwise proceed.” The selected model below is now enabled; alternative interpretations are retained for provenance.
+
 # Diagram answer key — proposed, not approved
 
 **Robert must confirm or correct this model at Gate 9.** The measurements do not uniquely determine the areas. The answer key has `approved: false`; trainee grading is blocked until approval. The ±5% tests validate arithmetic against the proposed key, not the interpretation of the drawing.

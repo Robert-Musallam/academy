@@ -38,6 +38,8 @@ it('diagram: rejects missing, non-finite, negative, and textual answers', () => 
     ).toBe(false);
 });
 it('diagram: cannot grade trainees using an unapproved answer key', () => {
-  expect(() => gradeDiagram(values(), key)).toThrow('Gate 9');
+  expect(() => gradeDiagram(values(), { ...key, approved: false })).toThrow(
+    'Gate 9',
+  );
   expect(gradeDiagram(values(), { ...key, approved: true }).passed).toBe(true);
 });

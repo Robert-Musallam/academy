@@ -1,3 +1,5 @@
+> Current policy corrections and added simulator review gate: [AMENDMENTS.md](AMENDMENTS.md). These supersede conflicting original text below.
+
 > Paste this entire file into Codex (GPT-6 Astra) as the opening prompt. Execute nodes strictly in dependency order. Do not proceed past a node until its `verify` command returns the expected result. Stop and surface HUMAN GATE nodes exactly as written. Where you have a question that does not change the outcome, proceed on the manifest default and note the assumption in `docs/ASSUMPTIONS.md`. Where a question could change the outcome, ask asynchronously and keep working on nodes that don't depend on the answer.
 
 ## Mission

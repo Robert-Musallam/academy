@@ -1,6 +1,6 @@
 # Graph execution
 
-**Current stop: Node 9 — HUMAN GATE: content review.** Nodes 1–8 are verified and committed. Node 10 has not started. Four lessons remain drafts and the diagram key remains unapproved.
+**Current work: Node 10.** Gate 9 approved with September 13 amendments; all 33 source lessons are published and the diagram key is approved. Content lint/sync and all 25 tests passed after corrections. Next human review: simulator preview before Node 13.
 
 | Node                                  | Status                       | Verify result                                                                                                                               |
 | ------------------------------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -13,7 +13,7 @@
 | 6 — Quizzes, exams, free-text, gating | PASS                         | `pnpm test -- progress quizzes`; 89% fails, 90% passes, prerequisites enforced; exam pools **20/22/20/24/20**                               |
 | 7 — Four NEW lessons                  | PASS                         | Content lint; exact draft grep **4**; each new lesson has a check                                                                           |
 | 8 — Diagram key                       | PASS (arithmetic/tests only) | `pnpm test -- diagram`; schema, inclusive ±5%, per-field ±8% rejection, invalid input rejection; trainee grading blocked until key approval |
-| 9 — Content review                    | WAITING FOR HUMAN            | PR `content-v1`, local review page, four drafts, diagram key/assumptions, and source index staged                                           |
+| 9 — Content review                    | APPROVED WITH EDITS          | PR `content-v1`, local review page, four drafts, diagram key/assumptions, and source index staged                                           |
 | 10–18 and final acceptance            | Not started                  | Require preceding verifies and human gates                                                                                                  |
 
 ## Gate 9 staging validation

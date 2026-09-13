@@ -1,3 +1,5 @@
+> Gate 9 approved with September 13 corrections. See [AMENDMENTS.md](AMENDMENTS.md). The checklist below is the historical review record.
+
 # Node 9 — HUMAN GATE: content review
 
 Depends on verified Nodes 6, 7, and 8. Execution stops here; Node 10 has not started.

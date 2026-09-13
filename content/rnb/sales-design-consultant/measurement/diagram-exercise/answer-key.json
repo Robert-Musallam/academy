@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "approved": false,
+  "approved": true,
   "model": "Appendix B rectangular teaching model: 34 feet wide by 16 feet deep, 3-foot top border plus 13-foot side runs; remaining regions excluded pending review",
   "tolerance_percent": 5,
   "source": "content/source/IMG_1384.jpeg",
@@ -20,7 +20,11 @@
       "unit": "tons",
       "calculation": "180 / 100 at 2-inch depth"
     },
-    "paver_sqft": { "value": 180, "unit": "sqft", "calculation": "18 * 10" },
+    "paver_sqft": {
+      "value": 180,
+      "unit": "sqft",
+      "calculation": "18 * 10"
+    },
     "paver_edger_lf": {
       "value": 56,
       "unit": "lf",

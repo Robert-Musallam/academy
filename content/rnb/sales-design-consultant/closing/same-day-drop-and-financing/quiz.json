@@ -6,11 +6,15 @@
     {
       "id": "same-day-drop-and-financing-1",
       "kind": "single_choice",
-      "prompt": "What is the maximum same-day drop?",
-      "options": ["10%", "25%", "50%"],
+      "prompt": "What determines the maximum same-day drop?",
+      "options": [
+        "Territory-approved cap (current default 10%)",
+        "A universal 25% cap",
+        "Any amount the rep chooses"
+      ],
       "correct_answer": 0,
       "source_reference": "same-day-drop-and-financing",
-      "source_quote": "maximum of 10%"
+      "source_quote": "territory-approved cap (current default 10%)"
     },
     {
       "id": "same-day-drop-and-financing-2",

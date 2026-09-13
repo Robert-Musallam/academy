@@ -42,7 +42,7 @@ export default async function ReviewPage({
             <h1 className="mt-1 text-2xl font-bold">Content review</h1>
           </div>
           <p className="text-sm text-emerald-100">
-            Gate 9 · 7 modules · 33 lessons · 4 drafts
+            Approved content · 7 modules · 33 lessons · 0 drafts
           </p>
         </div>
       </header>

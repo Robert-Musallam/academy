@@ -50,11 +50,11 @@
     {
       "id": "rnb-standard-5",
       "kind": "single_choice",
-      "prompt": "What product warranty is stated for turf, pavers, and fencing?",
-      "options": ["3 years", "10 years", "25 years"],
+      "prompt": "What warranty applies to RNB turf?",
+      "options": ["3 years", "10 years", "Lifetime"],
       "correct_answer": 2,
       "source_reference": "rnb-standard",
-      "source_quote": "25-year product warranty"
+      "source_quote": "lifetime turf warranty"
     },
     {
       "id": "five-day-path-1",
@@ -80,7 +80,7 @@
       ],
       "correct_answer": 2,
       "source_reference": "five-day-path",
-      "source_quote": "Day 2 — product/sales"
+      "source_quote": "Day 2 \u2014 product/sales"
     },
     {
       "id": "five-day-path-3",
@@ -93,7 +93,7 @@
       ],
       "correct_answer": 1,
       "source_reference": "five-day-path",
-      "source_quote": "Day 3/4 — ride along"
+      "source_quote": "Day 3/4 \u2014 ride along"
     },
     {
       "id": "five-day-path-4",
@@ -132,7 +132,7 @@
       ],
       "correct_answer": 0,
       "source_reference": "seven-step-consultation",
-      "source_quote": "Step 2 Discover their vision — before products or pricing"
+      "source_quote": "Step 2 Discover their vision \u2014 before products or pricing"
     },
     {
       "id": "seven-step-consultation-2",
@@ -250,6 +250,15 @@
       "correct_answer": 2,
       "source_reference": "key-principles",
       "source_quote": "Tell me about the project you're envisioning."
+    },
+    {
+      "id": "rnb-standard-material-warranty",
+      "kind": "single_choice",
+      "prompt": "What warranty applies to pavers and other materials?",
+      "options": ["Lifetime", "3 years", "25 years"],
+      "correct_answer": 1,
+      "source_reference": "rnb-standard",
+      "source_quote": "3-year warranty for pavers and other materials"
     }
   ]
 }
