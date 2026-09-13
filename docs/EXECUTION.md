@@ -53,3 +53,7 @@ The project CLI uses `SUPABASE_HOME` set to the checkout's `work/supabase-home`;
 ## Node 3 — VERIFIED
 
 `pnpm test -- auth` passed (7 tests including the real Postgres RLS suite); `pnpm build` passed after marking the protected roster page dynamic. Unit tests confirm rostered email dispatch and non-roster 403 without dispatch. Email transport is stubbed for these tests; actual email delivery remains part of deployed acceptance. Admin creates the auth identity when adding a roster row; public signup is disabled in Supabase config and every magic-link request sets `shouldCreateUser: false`. Session checks use verified auth identity plus active roster membership. Next: Node 4.
+
+## Node 4 — VERIFIED
+
+Fixture content lint exited 0; fixture sync exited 0; `select count(*) from lessons` returned **1**. Both content validation tests passed. The fixture is draft-only at lesson order 99. Next: Node 5.
