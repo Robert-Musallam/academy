@@ -57,3 +57,7 @@ The project CLI uses `SUPABASE_HOME` set to the checkout's `work/supabase-home`;
 ## Node 4 — VERIFIED
 
 Fixture content lint exited 0; fixture sync exited 0; `select count(*) from lessons` returned **1**. Both content validation tests passed. The fixture is draft-only at lesson order 99. Next: Node 5.
+
+## Node 5 — VERIFIED
+
+Content lint and content sync exited 0. Database counts: **7** modules in the Sales & Design Consultant track and **29** non-draft lessons. All 29 MDX bodies compiled successfully through `next-mdx-remote/serialize`. `docs/SOURCE_INDEX.md` maps the source sheets to every lesson. Next: Node 6.
