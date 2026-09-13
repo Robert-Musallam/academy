@@ -1,3 +1,5 @@
+> Superseded by the approved immersive scope. Current human review: [First playable yard](YARD_REVIEW.md) at `/review/yard`. The text preview below remains available as a reference.
+
 # Human review: simulator preview
 
 Open http://127.0.0.1:3000/review/simulator while the local dev server is running.

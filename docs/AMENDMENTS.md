@@ -11,3 +11,7 @@ Robert approved proceeding past Gate 9 with these corrections. This document ove
 - Add a HUMAN GATE to try the simulator as soon as its interface is built, during Node 12 and before starting Node 13. Mock behavior and illustrative grading must be clearly labeled until provider/model selection at Gate 16.
 
 The four new lessons are now approved with these edits. The existing proposed diagram model is accepted under “otherwise proceed”; its geometry assumptions remain documented in DIAGRAM_ASSUMPTIONS.md.
+
+## Approved immersive expansion — September 13
+
+Robert approved the recommendation to build one complete playable 3D yard before expanding the simulator. The next HUMAN GATE is now the first spatial prototype: property exploration, irregular-area measurement, slope interpretation, turf/paver cutaways, a constrained layout proposal and a scene-aware homeowner conversation. See YARD_REVIEW.md. The earlier text-only preview does not satisfy this new gate. The six personas and 18 written scenarios remain reusable inputs; further properties and the material library wait for this prototype review. Provider selection remains at Gate 16; voice and headset VR are not silently added.

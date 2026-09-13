@@ -109,6 +109,9 @@ export function Simulator({
       {preview && (
         <div className="sim-preview-banner">
           <strong>Interactive preview</strong>
+          <a href="/review/yard" className="font-semibold underline">
+            Open the 3D field lab →
+          </a>
           <span>
             Scripted homeowner replies · Illustrative scores · Practice only
           </span>

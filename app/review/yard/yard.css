@@ -1,0 +1,1188 @@
+.yard-app {
+  --ink: #243e32;
+  --muted: #7b8274;
+  --border: #dfe1d4;
+  --cream: #faf9f3;
+  --accent: #bb853a;
+  background: var(--cream);
+  color: var(--ink);
+  min-height: 100dvh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.yard-header {
+  height: 74px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 28px;
+  border-bottom: 1px solid var(--border);
+  gap: 20px;
+  background: #fbfaf5;
+}
+.yard-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.yard-brand > b {
+  display: grid;
+  place-items: center;
+  width: 37px;
+  height: 42px;
+  background: #2c5340;
+  color: #f5f3df;
+  font:
+    30px Georgia,
+    serif;
+  border-radius: 4px 4px 13px 4px;
+}
+.yard-brand > span {
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+.yard-brand small {
+  display: block;
+  letter-spacing: 0.17em;
+  font-size: 8px;
+  color: #818675;
+  margin-top: 5px;
+  font-weight: 500;
+}
+.yard-breadcrumb {
+  font-size: 10px;
+  letter-spacing: 0.13em;
+  color: #818675;
+}
+.yard-breadcrumb span {
+  padding: 0 16px;
+  color: #bac0b0;
+}
+.yard-header-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  color: #7a806e;
+}
+.yard-header-right button {
+  margin-left: 16px;
+  border: 1px solid #d8ddcb;
+  padding: 9px 14px;
+  border-radius: 5px;
+  font-size: 11px;
+  color: #42523b;
+  background: #f3f4eb;
+}
+.yard-preview-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #ba904d;
+}
+.yard-body {
+  display: grid;
+  grid-template-columns: 90px minmax(0, 1fr) 350px;
+  height: calc(100dvh - 74px);
+  min-height: 650px;
+}
+.yard-toolrail {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  border-right: 1px solid var(--border);
+  background: #f7f7ef;
+  padding: 18px 9px;
+  gap: 8px;
+  z-index: 2;
+}
+.yard-toolrail button {
+  position: relative;
+  padding: 13px 4px 12px;
+  border-radius: 9px;
+  color: #7c8572;
+  text-align: center;
+}
+.yard-toolrail button[aria-pressed='true'] {
+  background: #e5ebd9;
+  color: #26482f;
+}
+.yard-tool-icon {
+  display: block;
+  font-size: 25px;
+  line-height: 1.2;
+  margin-bottom: 7px;
+  font-family: Georgia, serif;
+}
+.yard-toolrail button > span:not(.yard-tool-icon) {
+  font-size: 10px;
+  display: block;
+}
+.yard-toolrail small {
+  position: absolute;
+  right: 6px;
+  top: 5px;
+  font-size: 7px;
+  opacity: 0.5;
+}
+.yard-toolrail .complete small {
+  color: #517146;
+  opacity: 1;
+}
+.yard-viewport {
+  position: relative;
+  isolation: isolate;
+  min-width: 0;
+  overflow: hidden;
+  background: #e4e9dd;
+}
+.yard-scene {
+  position: absolute;
+  inset: 0;
+}
+.yard-scene canvas {
+  touch-action: none;
+  outline: none;
+}
+.yard-world-heading {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  right: 20px;
+  pointer-events: none;
+  text-shadow: 0 1px 12px #edf1e7;
+}
+.yard-world-heading p {
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: #6c7b64;
+}
+.yard-world-heading h1 {
+  font:
+    normal clamp(24px, 2.6vw, 37px)/1.18 Georgia,
+    serif;
+  letter-spacing: -0.025em;
+  margin: 10px 0;
+  color: #2c4637;
+}
+.yard-world-heading > span {
+  font-size: 10px;
+  color: #78816e;
+}
+.yard-view-controls {
+  position: absolute;
+  left: 30px;
+  top: 137px;
+  display: flex;
+  gap: 3px;
+  background: #fbfcf3d9;
+  border: 1px solid #d6deca;
+  border-radius: 7px;
+  padding: 4px;
+  box-shadow: 0 4px 20px #263c2810;
+  backdrop-filter: blur(8px);
+}
+.yard-view-controls button {
+  padding: 8px 12px;
+  border-radius: 4px;
+  color: #7c846f;
+  font-size: 10px;
+}
+.yard-view-controls button[aria-pressed='true'] {
+  background: #35573e;
+  color: #fff;
+}
+.yard-world-footer {
+  position: absolute;
+  bottom: 20px;
+  left: 25px;
+  right: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  font-size: 8px;
+  letter-spacing: 0.1em;
+  color: #687660;
+  pointer-events: none;
+}
+.yard-world-footer button {
+  pointer-events: auto;
+  background: #f8f9efd9;
+  padding: 8px 11px;
+  border: 1px solid #d1dac3;
+  border-radius: 5px;
+  font-size: 9px;
+  letter-spacing: 0;
+  backdrop-filter: blur(8px);
+}
+.yard-scene-legend {
+  position: absolute;
+  left: 30px;
+  bottom: 72px;
+  background: #f8faf0e6;
+  padding: 12px 14px;
+  border: 1px solid #d4dfcc;
+  border-radius: 7px;
+  font-size: 10px;
+  color: #507466;
+  max-width: 330px;
+}
+.yard-scene-legend i {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #4897a8;
+  margin-right: 8px;
+}
+.yard-scene-legend small {
+  display: block;
+  font-size: 8px;
+  color: #8b9582;
+  margin-top: 6px;
+}
+.yard-inspector {
+  border-left: 1px solid var(--border);
+  background: #fbfaf5;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #d4d9c8 transparent;
+  padding: 0 25px 20px;
+  z-index: 2;
+}
+.yard-inspector-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 62px;
+  border-bottom: 1px solid var(--border);
+  font-size: 8px;
+  letter-spacing: 0.15em;
+  color: #8b937e;
+  margin-bottom: 25px;
+}
+.yard-inspector-top > span:last-child {
+  letter-spacing: 0;
+  font-size: 10px;
+  color: #6f805c;
+}
+.yard-kicker {
+  font-size: 8px !important;
+  letter-spacing: 0.13em;
+  color: #8a946f !important;
+  font-weight: 700;
+  line-height: 1.7;
+}
+.yard-inspector h2 {
+  font:
+    28px/1.2 Georgia,
+    serif;
+  letter-spacing: -0.02em;
+  margin: 10px 0 15px;
+}
+.yard-inspector section > p {
+  font-size: 12px;
+  line-height: 1.8;
+  color: #7c836f;
+  margin-bottom: 19px;
+}
+.yard-observation-list {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin: 20px 0;
+}
+.yard-observation-list button {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 13px 12px;
+  text-align: left;
+  background: #f1f3e8;
+  border: 1px solid #e1e5d5;
+  border-radius: 6px;
+  font-size: 12px;
+  color: #536447;
+}
+.yard-observation-list button[aria-pressed='true'] {
+  border-color: #9aaa85;
+  background: #eaf0de;
+}
+.yard-observation-list b {
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #dfe7cd;
+  color: #637a48;
+  font-size: 10px;
+}
+.yard-observation-list button > span:last-child {
+  margin-left: auto;
+  color: #7e9067;
+}
+.yard-note {
+  background: #f0eee2;
+  border: 1px solid #e6e3d3;
+  padding: 17px;
+  border-radius: 7px;
+  margin: 22px 0;
+}
+.yard-note > span {
+  font-size: 8px;
+  letter-spacing: 0.12em;
+  color: #9a895e;
+  font-weight: 700;
+}
+.yard-note h3 {
+  font:
+    20px/1.3 Georgia,
+    serif;
+  margin: 9px 0 11px;
+  color: #526042;
+}
+.yard-note p {
+  font-size: 11px;
+  line-height: 1.85;
+  color: #7b7d62;
+  margin: 10px 0;
+}
+.yard-note > strong {
+  font-size: 11px;
+  line-height: 1.7;
+  font-weight: 500;
+  font-style: italic;
+  color: #71805b;
+  display: block;
+  margin-top: 14px;
+}
+.yard-primary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 14px 16px;
+  min-height: 44px;
+  background: #35573e;
+  color: #fff9e9;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 11px;
+  gap: 10px;
+}
+.yard-primary:hover {
+  background: #274830;
+}
+.yard-app button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.yard-app button:focus-visible,
+.yard-app a:focus-visible,
+.yard-app input:focus-visible,
+.yard-app textarea:focus-visible,
+.yard-app select:focus-visible,
+.yard-app summary:focus-visible {
+  outline: 3px solid #c5a565;
+  outline-offset: 3px;
+}
+.yard-notebook-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-top: 22px;
+  margin-top: 30px;
+  border-top: 1px solid var(--border);
+  color: #98a085;
+  font-size: 8px;
+  letter-spacing: 0.12em;
+}
+.yard-notebook-footer small {
+  font-size: 8px;
+  letter-spacing: 0;
+}
+.yard-segment {
+  display: flex;
+  gap: 4px;
+  background: #eef1e4;
+  padding: 4px;
+  border-radius: 6px;
+  margin: 20px 0;
+}
+.yard-segment button {
+  flex: 1;
+  padding: 10px 5px;
+  font-size: 11px;
+  color: #7c856a;
+  border-radius: 4px;
+}
+.yard-segment button[aria-pressed='true'] {
+  background: #fff;
+  color: #365231;
+  box-shadow: 0 1px 4px #0000000a;
+}
+.yard-corner-buttons {
+  display: flex;
+  gap: 7px;
+  margin: 17px 0 10px;
+}
+.yard-corner-buttons button {
+  flex: 1;
+  height: 35px;
+  border: 1px solid #cdd6bc;
+  border-radius: 5px;
+  color: #6c7d55;
+  background: #f4f6ec;
+  font-size: 11px;
+}
+.yard-corner-buttons button[aria-pressed='true'] {
+  background: #647e4d;
+  color: #fff;
+}
+.yard-small {
+  font-size: 9px !important;
+  color: #8b927b !important;
+  line-height: 1.75 !important;
+}
+.yard-reading {
+  padding: 22px;
+  background: #f0f3e8;
+  border: 1px solid #dde4cf;
+  border-radius: 8px;
+  margin: 20px 0 13px;
+}
+.yard-reading > small {
+  display: block;
+  font-size: 8px;
+  letter-spacing: 0.1em;
+  color: #7f8d69;
+}
+.yard-reading > strong {
+  display: block;
+  font:
+    38px Georgia,
+    serif;
+  margin: 9px 0;
+  color: #3e5c36;
+}
+.yard-reading em {
+  font:
+    12px Arial,
+    sans-serif;
+  font-style: normal;
+  color: #849574;
+  margin-left: 8px;
+}
+.yard-reading > span {
+  font-size: 9px;
+  color: #8d957b;
+}
+.yard-inline-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 13px 0;
+}
+.yard-inline-actions button,
+.yard-text-button {
+  font-size: 10px;
+  color: #6d7e52;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  padding: 5px 0;
+}
+.yard-stations {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 22px 0;
+}
+.yard-stations button {
+  padding: 16px 11px;
+  border: 1px solid #cbdcd5;
+  background: #edf4ef;
+  border-radius: 7px;
+  text-align: left;
+}
+.yard-stations span {
+  display: block;
+  font-size: 9px;
+  color: #70968b;
+}
+.yard-stations strong {
+  display: block;
+  font:
+    21px Georgia,
+    serif;
+  margin: 9px 0;
+  color: #3f7366;
+}
+.yard-stations small {
+  display: block;
+  font-size: 8px;
+  color: #899e8f;
+  line-height: 1.6;
+}
+.yard-layer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.yard-layer-list button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px;
+  background: #f1f3e9;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  text-align: left;
+  font-size: 11px;
+  color: #6f7d59;
+}
+.yard-layer-list button[aria-pressed='true'] {
+  background: #e7ecda;
+  border-color: #abb68d;
+  color: #485f39;
+}
+.yard-layer-list i {
+  width: 15px;
+  height: 15px;
+  border-radius: 3px;
+  border: 1px solid #0000000b;
+}
+.yard-layer-list small {
+  margin-left: auto;
+  font-size: 9px;
+  color: #939e7e;
+}
+.yard-label {
+  display: block;
+  font-size: 10px;
+  color: #6e7b58;
+  line-height: 1.7;
+  margin: 16px 0;
+}
+.yard-label input,
+.yard-label select {
+  display: block;
+  width: 100%;
+  padding: 12px 11px;
+  background: white;
+  border: 1px solid #d8dfca;
+  border-radius: 5px;
+  margin-top: 7px;
+  font-size: 12px;
+  color: #4f623e;
+}
+.yard-explode-control {
+  position: absolute;
+  bottom: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(340px, 80%);
+  background: #fffef4e8;
+  backdrop-filter: blur(8px);
+  border: 1px solid #d6d9c5;
+  border-radius: 9px;
+  box-shadow: 0 12px 30px #3b443411;
+  padding: 17px 20px;
+}
+.yard-explode-control > div {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  color: #737c62;
+}
+.yard-explode-control strong {
+  font-weight: 500;
+  color: #556248;
+}
+.yard-explode-control input {
+  width: 100%;
+  accent-color: #75945a;
+  margin: 14px 0 8px;
+}
+.yard-explode-control small {
+  font-size: 8px;
+  color: #9ba08a;
+}
+.yard-explode-control p {
+  font-size: 8px;
+  color: #9ba08a;
+  margin-top: 10px;
+  text-align: center;
+}
+.yard-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 12px;
+}
+.yard-toggle small {
+  display: block;
+  font-size: 9px;
+  color: #939b81;
+  margin-top: 7px;
+}
+.yard-toggle strong {
+  font-weight: 500;
+}
+.yard-toggle input {
+  width: 20px;
+  height: 20px;
+  accent-color: #63844c;
+}
+.yard-place {
+  margin-top: 22px;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cbd8ba;
+  border-radius: 6px;
+  background: #edf3e3;
+  font-size: 11px;
+  color: #69824e;
+}
+.yard-place.active {
+  background: #cddaaf;
+  border-color: #8eaa69;
+}
+.yard-bench-controls {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin: 12px 0;
+}
+.yard-bench-controls button {
+  width: 42px;
+  height: 36px;
+  border: 1px solid #d9e1cd;
+  border-radius: 5px;
+  background: #f3f6ec;
+  color: #708555;
+}
+.yard-clearance {
+  padding: 15px;
+  border-radius: 6px;
+  margin: 18px 0;
+  font-size: 11px;
+}
+.yard-clearance p {
+  font-size: 10px;
+  line-height: 1.7;
+  margin-top: 8px;
+}
+.yard-clearance.good {
+  background: #e9f0de;
+  color: #648249;
+}
+.yard-clearance.bad {
+  background: #f4e4d9;
+  color: #a3704c;
+}
+.yard-walk-controls {
+  position: absolute;
+  bottom: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+.yard-walk-controls > span {
+  font-size: 9px;
+  color: #506749;
+  background: #eef3e3db;
+  padding: 7px 12px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+.yard-walk-controls > div {
+  display: flex;
+  gap: 7px;
+  margin-top: 14px;
+}
+.yard-walk-controls button {
+  width: 43px;
+  height: 43px;
+  border: 1px solid #cbd5ba;
+  border-radius: 7px;
+  background: #f4f8ebed;
+  color: #526c42;
+  font-size: 22px;
+  touch-action: none;
+  user-select: none;
+}
+.yard-chat-log {
+  max-height: 330px;
+  overflow: auto;
+  scrollbar-width: thin;
+  padding: 8px 0;
+  margin: 14px 0 18px;
+}
+.yard-chat-bubble {
+  margin-bottom: 15px;
+}
+.yard-chat-bubble small {
+  font-size: 8px;
+  letter-spacing: 0.1em;
+  color: #96a17e;
+}
+.yard-chat-bubble p {
+  font-size: 11px;
+  line-height: 1.8;
+  padding: 12px;
+  border-radius: 0 8px 8px 8px;
+  background: #eef2e5;
+  color: #637653;
+  margin-top: 5px;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+.yard-chat-bubble.user p {
+  background: #4e6b43;
+  color: #f7f9ef;
+  border-radius: 8px 0 8px 8px;
+}
+.yard-chat-bubble.user small {
+  display: block;
+  text-align: right;
+}
+.yard-customer-section textarea {
+  width: 100%;
+  min-height: 84px;
+  border: 1px solid #d2ddc3;
+  border-radius: 6px;
+  padding: 12px;
+  background: #fff;
+  font-size: 12px;
+  line-height: 1.7;
+  resize: vertical;
+}
+.yard-chat-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin: 9px 0 16px;
+}
+.yard-chat-actions small {
+  font-size: 9px;
+  color: #8c9a77;
+}
+.yard-chat-actions .yard-primary {
+  width: auto;
+  min-width: 92px;
+  justify-content: center;
+}
+.yard-mock-badge {
+  display: inline-block;
+  padding: 7px 9px;
+  border-radius: 4px;
+  background: #ede5cd;
+  color: #9c8355;
+  font-size: 8px;
+  letter-spacing: 0.06em;
+  margin-bottom: 15px;
+}
+.yard-answer-form {
+  margin: 20px 0 25px;
+}
+.yard-field-score {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #eaf0dc;
+  border: 1px solid #d6e0c2;
+  border-radius: 8px;
+  padding: 19px 16px;
+  margin: 22px 0;
+}
+.yard-field-score small {
+  font-size: 7px;
+  letter-spacing: 0.09em;
+  color: #8a9d6b;
+}
+.yard-field-score strong {
+  display: block;
+  font:
+    38px Georgia,
+    serif;
+  color: #4d7239;
+  margin-top: 8px;
+}
+.yard-field-score em {
+  font:
+    12px Arial,
+    sans-serif;
+  color: #94a57c;
+  font-style: normal;
+}
+.yard-field-score b {
+  font-size: 10px;
+  font-weight: 500;
+  color: #758e55;
+}
+.yard-results details {
+  padding: 14px 0;
+  border-bottom: 1px solid #dfe6d1;
+}
+.yard-results summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  font-size: 11px;
+  color: #627b4d;
+  cursor: pointer;
+  list-style: none;
+}
+.yard-results summary b {
+  font-size: 10px;
+  white-space: nowrap;
+  color: #8d9f76;
+  font-weight: 500;
+}
+.yard-results details p {
+  font-size: 10px;
+  line-height: 1.8;
+  color: #879772;
+  margin: 13px 0;
+}
+.yard-results details button {
+  font-size: 9px;
+  color: #718e4e;
+  text-decoration: underline;
+}
+.yard-error {
+  padding: 12px;
+  background: #f6e9df;
+  color: #9a6a49;
+  border: 1px solid #e6d2bd;
+  border-radius: 6px;
+  font-size: 11px;
+  line-height: 1.7;
+  margin: 14px 0;
+}
+.yard-loading {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: #74896a;
+  font:
+    20px Georgia,
+    serif;
+}
+.yard-plan {
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  background: #e4e9dd;
+}
+.yard-plan [role='button'] {
+  cursor: pointer;
+  outline: none;
+}
+.yard-plan [role='button']:focus circle {
+  stroke: #e8b758;
+  stroke-width: 0.3;
+}
+.yard-fallback {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 195px;
+}
+.yard-fallback > p {
+  text-align: center;
+  font-size: 11px;
+  color: #7d8c6e;
+  padding: 12px;
+}
+.yard-fallback .yard-plan {
+  min-height: 0;
+  flex: 1;
+}
+@media (min-width: 1500px) {
+  .yard-body {
+    grid-template-columns: 100px minmax(0, 1fr) 390px;
+  }
+  .yard-inspector {
+    padding: 0 30px 25px;
+  }
+  .yard-inspector h2 {
+    font-size: 31px;
+  }
+  .yard-inspector section > p {
+    font-size: 13px;
+  }
+  .yard-world-heading {
+    top: 35px;
+    left: 40px;
+  }
+  .yard-view-controls {
+    left: 40px;
+    top: 145px;
+  }
+}
+@media (max-width: 1050px) {
+  .yard-body {
+    grid-template-columns: 72px minmax(0, 1fr) 310px;
+  }
+  .yard-toolrail {
+    padding: 15px 5px;
+  }
+  .yard-toolrail button > span:not(.yard-tool-icon) {
+    font-size: 9px;
+  }
+  .yard-inspector {
+    padding: 0 18px 20px;
+  }
+  .yard-world-heading {
+    left: 20px;
+    top: 25px;
+  }
+  .yard-world-heading h1 {
+    font-size: 27px;
+    max-width: 300px;
+  }
+  .yard-view-controls {
+    left: 20px;
+    top: 137px;
+  }
+  .yard-world-footer {
+    left: 15px;
+    right: 15px;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 9px;
+  }
+  .yard-world-footer > span {
+    font-size: 7px;
+  }
+  .yard-breadcrumb {
+    display: none;
+  }
+}
+@media (max-width: 760px) {
+  .yard-header {
+    height: 64px;
+    padding: 0 15px;
+    gap: 10px;
+  }
+  .yard-brand > b {
+    width: 29px;
+    height: 34px;
+    font-size: 24px;
+  }
+  .yard-brand > span {
+    font-size: 11px;
+  }
+  .yard-brand small {
+    font-size: 6px;
+  }
+  .yard-brand {
+    gap: 8px;
+  }
+  .yard-header-right {
+    font-size: 8px;
+    gap: 5px;
+  }
+  .yard-header-right button {
+    font-size: 9px;
+    padding: 8px 9px;
+    margin-left: 5px;
+  }
+  .yard-preview-dot {
+    width: 4px;
+    height: 4px;
+  }
+  .yard-body {
+    height: auto;
+    min-height: 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 57dvh auto;
+  }
+  .yard-toolrail {
+    grid-row: 1;
+    flex-direction: row;
+    justify-content: space-between;
+    border-right: 0;
+    border-bottom: 1px solid #dce3d0;
+    padding: 5px 7px;
+    gap: 2px;
+    position: sticky;
+    top: 0;
+  }
+  .yard-toolrail button {
+    flex: 1;
+    padding: 9px 3px 8px;
+  }
+  .yard-tool-icon {
+    font-size: 20px;
+    margin-bottom: 4px;
+  }
+  .yard-toolrail button > span:not(.yard-tool-icon) {
+    font-size: 8px;
+  }
+  .yard-toolrail small {
+    display: none;
+  }
+  .yard-viewport {
+    grid-row: 2;
+    min-height: 360px;
+  }
+  .yard-world-heading {
+    top: 18px;
+    left: 17px;
+  }
+  .yard-world-heading p {
+    font-size: 6px;
+    letter-spacing: 0.12em;
+  }
+  .yard-world-heading h1 {
+    font-size: 25px;
+    margin: 8px 0;
+  }
+  .yard-world-heading > span {
+    font-size: 8px;
+  }
+  .yard-view-controls {
+    top: 107px;
+    left: 17px;
+  }
+  .yard-view-controls button {
+    font-size: 9px;
+    padding: 7px 10px;
+  }
+  .yard-world-footer {
+    bottom: 12px;
+    left: 15px;
+    right: 15px;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+  }
+  .yard-world-footer > span {
+    font-size: 6px;
+    max-width: 170px;
+    line-height: 1.6;
+  }
+  .yard-world-footer button {
+    font-size: 8px;
+    padding: 7px 8px;
+  }
+  .yard-inspector {
+    grid-row: 3;
+    overflow: visible;
+    border-left: 0;
+    border-top: 1px solid #dce3d0;
+    padding: 0 22px 25px;
+  }
+  .yard-inspector-top {
+    height: 49px;
+    margin-bottom: 22px;
+  }
+  .yard-inspector h2 {
+    font-size: 29px;
+  }
+  .yard-inspector section > p {
+    font-size: 13px;
+  }
+  .yard-observation-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  .yard-observation-list button {
+    padding: 12px 9px;
+    gap: 7px;
+    font-size: 11px;
+  }
+  .yard-observation-list button > span:last-child {
+    display: none;
+  }
+  .yard-note p {
+    font-size: 12px;
+  }
+  .yard-note > strong {
+    font-size: 12px;
+  }
+  .yard-primary {
+    font-size: 12px;
+    min-height: 46px;
+  }
+  .yard-explode-control {
+    bottom: 49px;
+    padding: 11px 16px;
+    width: 260px;
+  }
+  .yard-explode-control input {
+    margin: 8px 0 6px;
+  }
+  .yard-explode-control p {
+    margin-top: 6px;
+  }
+  .yard-scene-legend {
+    bottom: 52px;
+    left: 17px;
+    right: 17px;
+    font-size: 9px;
+    padding: 10px 12px;
+  }
+  .yard-scene-legend small {
+    font-size: 7px;
+  }
+  .yard-walk-controls {
+    bottom: 62px;
+  }
+  .yard-walk-controls button {
+    width: 39px;
+    height: 39px;
+  }
+  .yard-fallback {
+    padding-top: 145px;
+  }
+  .yard-chat-log {
+    max-height: 340px;
+  }
+  .yard-chat-bubble p {
+    font-size: 12px;
+  }
+  .yard-label {
+    font-size: 11px;
+  }
+  .yard-label input,
+  .yard-label select,
+  .yard-customer-section textarea {
+    font-size: 16px;
+  }
+  .yard-notebook-footer {
+    margin-top: 25px;
+  }
+  .yard-results summary {
+    font-size: 12px;
+  }
+  .yard-results details p {
+    font-size: 12px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .yard-app * {
+    scroll-behavior: auto !important;
+  }
+}
+
+.yard-scene.plan {
+  padding: 165px 15px 55px;
+}
+@media (max-width: 760px) {
+  .yard-scene.plan {
+    padding: 152px 8px 45px;
+  }
+}

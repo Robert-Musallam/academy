@@ -59,9 +59,9 @@ export default async function ReviewPage({
           </p>
           <Link
             className="mt-3 inline-block font-semibold underline"
-            href="/review/simulator"
+            href="/review/yard"
           >
-            Try the simulator preview →
+            Enter the playable 3D field lab →
           </Link>
           <div className="mt-3 flex flex-wrap gap-x-5 gap-y-2 text-sm font-semibold underline underline-offset-4">
             <Link href={href('foundations', 'pre-appointment-prep')}>

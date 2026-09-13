@@ -10,7 +10,16 @@ export type Usage = {
   estimated_cost_usd: number;
 };
 export type Result<T> = { value: T; usage: Usage };
+export type YardContext = {
+  observations: string[];
+  measuredArea: number | null;
+  turf: boolean;
+  pavers: boolean;
+  doorwayClear: boolean;
+  base: string;
+};
 export type ChatInput = {
+  yardContext?: YardContext;
   system: string;
   messages: Message[];
   persona: Persona;
@@ -33,9 +42,66 @@ const mockUsage: Usage = {
   estimated_cost_usd: 0,
 };
 export class MockProvider implements Provider {
-  async chat({ messages, persona, scenario }: ChatInput) {
+  async chat({ messages, persona, scenario, yardContext }: ChatInput) {
     const turn = messages.filter((m) => m.role === 'user').length;
     const last = messages.at(-1)?.content.toLowerCase() ?? '';
+    if (yardContext) {
+      let value: string;
+      if (
+        /ignore.*instruction|system prompt|hidden brief|give.*score/i.test(last)
+      )
+        value =
+          'I would rather focus on what you would recommend for our backyard.';
+      else if (/water|drain|slope|low spot/.test(last))
+        value = yardContext.observations.includes('drainage')
+          ? 'Yes, that is the spot you inspected. Water sits closer to the house after rain. How will you address that before laying turf?'
+          : 'Water sometimes sits near the house. Can we walk over and look before deciding what to install?';
+      else if (
+        /vision|matter|priority|important|use.*space|accomplish/.test(last)
+      )
+        value =
+          'The dogs bring mud inside, and we want room to sit together. Keeping the tree and a clear route from the back door matters to us.';
+      else if (/budget|investment.*comfortable/.test(last))
+        value = `We had ${scenario.hidden_budget} in mind. I need to understand the full scope before deciding.`;
+      else if (/base|granite|limestone|install/.test(last))
+        value =
+          yardContext.base === 'washed-sand'
+            ? 'You selected washed sand. Is that the approved base for this territory? I want this prepared properly.'
+            : 'How does the base you selected help this yard stay stable and handle our dogs?';
+      else if (/design|layout|bench|door|path/.test(last))
+        value = !yardContext.doorwayClear
+          ? 'That bench blocks our route from the back door. Can you move it before we review the plan?'
+          : yardContext.turf
+            ? 'I can see the dog lawn in your proposal, and the door route is open. How will the seating area work for us?'
+            : 'Could you show me the turf and where we would sit? I find it easier to understand when I can see the layout.';
+      else if (/measur|square|sqft|area/.test(last))
+        value =
+          yardContext.measuredArea !== null
+            ? `You traced ${yardContext.measuredArea.toFixed(1)} square feet. Did you leave out the planting bed we want to keep?`
+            : 'Can you measure the irregular lawn first? We want to keep the planted corner.';
+      else if (/warranty/.test(last))
+        value =
+          'Please explain separately what covers the turf, the paver materials, and your installation labor.';
+      else if (/financ|payment/.test(last))
+        value =
+          'I would like to review the approved financing information alongside the full proposal. What is the next step to check options?';
+      else if (/ready.*move|move forward|earn.*business|proposal/.test(last))
+        value = !yardContext.doorwayClear
+          ? 'Before deciding, please fix the blocked door route.'
+          : !yardContext.observations.includes('drainage')
+            ? 'Before deciding, can we look at the water problem near the house?'
+            : !yardContext.turf
+              ? 'Please show us the proposed lawn before we decide.'
+              : 'The layout is making sense. Explain the drainage next step, complete scope, warranties and financing before we make a decision.';
+      else if (/follow.up|next.*contact|tomorrow|personal number/.test(last))
+        value =
+          'Tomorrow afternoon works for us. Please give me your personal number and bring the scope and drainage next steps.';
+      else
+        value =
+          persona.triggers.find((t) => t.after_turn === turn)?.line ??
+          'How does that connect to the yard and the priorities we discussed?';
+      return { value, usage: { ...mockUsage } };
+    }
     let value = persona.triggers.find((t) => t.after_turn === turn)?.line;
     if (!value) {
       if (/budget|investment.*comfortable/.test(last))
