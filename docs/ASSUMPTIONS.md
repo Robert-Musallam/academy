@@ -1,3 +1,5 @@
+> Current state and approved overrides: [EXECUTION.md](EXECUTION.md) and [AMENDMENTS.md](AMENDMENTS.md). Earlier blocker notes below are historical and have been resolved.
+
 # Assumptions and execution decisions
 
 - The supplied kickoff appears twice, first as plain text and then as Markdown. The Markdown copy is retained in `docs/KICKOFF.md` as the execution manifest; both describe the same graph.

@@ -1,6 +1,6 @@
 # Graph execution
 
-**Current work: Node 10.** Gate 9 approved with September 13 amendments; all 33 source lessons are published and the diagram key is approved. Content lint/sync and all 25 tests passed after corrections. Next human review: simulator preview before Node 13.
+**Current stop: HUMAN GATE — simulator preview (added at Robert’s request).** Nodes 1–11 have passed their required verification. Node 12 has begun with the simulator interface; its full trainee workflow is not yet complete or verified. Review the simulator now before finishing Node 12 and beginning Node 13. No production services or live LLM calls have been used.
 
 | Node                                  | Status                       | Verify result                                                                                                                               |
 | ------------------------------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -14,9 +14,12 @@
 | 7 — Four NEW lessons                  | PASS                         | Content lint; exact draft grep **4**; each new lesson has a check                                                                           |
 | 8 — Diagram key                       | PASS (arithmetic/tests only) | `pnpm test -- diagram`; schema, inclusive ±5%, per-field ±8% rejection, invalid input rejection; trainee grading blocked until key approval |
 | 9 — Content review                    | APPROVED WITH EDITS          | PR `content-v1`, local review page, four drafts, diagram key/assumptions, and source index staged                                           |
-| 10–18 and final acceptance            | Not started                  | Require preceding verifies and human gates                                                                                                  |
+| 10 — Simulator engine                 | PASS                         | 40-turn cap, 10 daily runs, four grading fixtures, usage logging                                                                            |
+| 11 — Persona roster                   | PASS                         | 6 personas, hard/standard/warm 2 each, 18 scenarios                                                                                         |
+| 12 — Trainee UI                       | IN PROGRESS / HUMAN PREVIEW  | Simulator preview verified; full trainee workflow verify remains pending                                                                    |
+| 13–18 and final acceptance            | Not started                  | Require preceding verifies and human gates                                                                                                  |
 
-## Gate 9 staging validation
+## Historical Gate 9 staging validation
 
 - `pnpm content:lint --complete` and `pnpm content:sync` passed: **7 modules, 33 lessons, 45 quizzes** in source content.
 - `pnpm lint`, `pnpm build`, and `pnpm test` passed: **25 tests across 6 files**, including real local Postgres RLS tests.
@@ -48,6 +51,26 @@ Unit tests stub the email transport and verify dispatch only after roster lookup
 
 The module-specific pass table governs M6/M7: their free-text prompts are practice, while tiers/forms determine completion. Node 7 includes checks for its new draft lessons; existing exam pools do not draw those draft questions. The diagram's numeric tests do not establish that the proposed geometry is the correct interpretation of the source; Robert must confirm or correct it at Gate 9.
 
+## September 13 approval and simulator preview
+
+Robert’s “otherwise proceed” approved Gate 9 with the corrections in AMENDMENTS.md. Four drafts were published and the diagram key approved; all 33 source lessons are now published. The fixture stays hidden. Content lint/sync and 25 tests passed following the policy corrections.
+
+Node 10 PASS: `LLM_PROVIDER=mock pnpm test -- sim` passed (33 total tests), including 40-turn cap, 11th daily run rejection, strict grade schema, four required grading fixtures, owner isolation and area policy override.
+
+Node 11 PASS: `pnpm content:sync` and the exact persona count query returned hard 2, standard 2, warm 2. There are 18 scenarios, three per core persona. All 34 tests passed.
+
+Node 12 IN PROGRESS: shared simulator client surface and isolated loopback-only development preview are built. This is the user-requested early review checkpoint. The authenticated dashboard, lesson/exam/free-text interactions, durable Supabase simulator store and full Node 12 `trainee` e2e verification remain to implement. Preview uses the real simulator engine with MemorySimStore and MockProvider; it cannot alter trainee progress or bypass authentication on real trainee routes.
+
+Preview verification: `LLM_PROVIDER=mock pnpm test:e2e -- simulator-preview` passed all 3 browser/API tests. A 390px viewport completed scenario selection, chat, grade card, three fixes and history; no horizontal overflow. API tests checked cross-origin rejection, malformed messages, cross-session ownership and hidden-brief omission. Manual browser review also completed a three-turn appointment and sample grade.
+
+Implementation check notes: initial preview typecheck reported an inferred `any` for the Map callback. The first replacement script matched no text; the corrected explicit Map type resolved it. Initial browser start hit a 403 because Next’s normalized URL origin differed from the request Host; comparing against the loopback request Host fixed it, and browser/API checks passed. These were supplementary preview checks, not the full Node 12 verify.
+
 ## Resume signal
 
-PR merged, or reply **GATE 9 APPROVED** with any edits listed. On approval, apply the edits, flip the four drafts to `draft: false`, mark the confirmed diagram model approved, sync/reverify, and commit Node 9 approval before beginning Node 10.
+Robert reviews `/review/simulator` and supplies approval or edits. Then finish Node 12, pass its full verify, and proceed to Node 13. Gate 16 remains mandatory. Real provider/model selection and realistic conversation-quality acceptance are deferred to Gate 16 and deployed acceptance; sample scores are illustrative.
+
+## Final preview checks
+
+Production build, lint, typecheck and all 34 unit/integration tests passed. Browser/API preview tests: 3 passed. Local production HTTP checks returned 404 for `/review`, `/review/simulator`, and `/review/simulator/api`; `/login` returned 200. Database counts: 17 public tables, 2 tenants, 33 published lessons, 6 personas.
+
+The approved content remains on `content-v1` (PR #1). Simulator work is stacked on `simulator-preview`, targeting `content-v1`, so nothing is merged to main or deployed before the later graph gates.

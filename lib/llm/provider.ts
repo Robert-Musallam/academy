@@ -97,8 +97,20 @@ export class OpenAIProvider implements Provider {
     const key = process.env.LLM_API_KEY;
     const model =
       process.env[operation === 'chat' ? 'LLM_SIM_MODEL' : 'LLM_GRADER_MODEL'];
-    const inputPrice = Number(process.env.LLM_INPUT_USD_PER_MILLION);
-    const outputPrice = Number(process.env.LLM_OUTPUT_USD_PER_MILLION);
+    const inputPrice = Number(
+      process.env[
+        operation === 'chat'
+          ? 'LLM_SIM_INPUT_USD_PER_MILLION'
+          : 'LLM_GRADER_INPUT_USD_PER_MILLION'
+      ],
+    );
+    const outputPrice = Number(
+      process.env[
+        operation === 'chat'
+          ? 'LLM_SIM_OUTPUT_USD_PER_MILLION'
+          : 'LLM_GRADER_OUTPUT_USD_PER_MILLION'
+      ],
+    );
     if (
       !key ||
       !model ||
