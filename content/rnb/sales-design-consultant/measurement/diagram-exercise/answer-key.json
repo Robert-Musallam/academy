@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "approved": false,
+  "model": "Appendix B rectangular teaching model: 34 feet wide by 16 feet deep, 3-foot top border plus 13-foot side runs; remaining regions excluded pending review",
+  "tolerance_percent": 5,
+  "source": "content/source/IMG_1384.jpeg",
+  "metrics": {
+    "turf_sqft": {
+      "value": 184,
+      "unit": "sqft",
+      "calculation": "(34 - 3 - 3) * 13 - 18 * 10"
+    },
+    "rock_sqft": {
+      "value": 180,
+      "unit": "sqft",
+      "calculation": "34 * 3 + 2 * (3 * 13)"
+    },
+    "rock_tons": {
+      "value": 1.8,
+      "unit": "tons",
+      "calculation": "180 / 100 at 2-inch depth"
+    },
+    "paver_sqft": { "value": 180, "unit": "sqft", "calculation": "18 * 10" },
+    "paver_edger_lf": {
+      "value": 56,
+      "unit": "lf",
+      "calculation": "2 * (18 + 10), all four sides"
+    },
+    "turf_waste_sqft": {
+      "value": 18.4,
+      "unit": "sqft",
+      "calculation": "184 * 0.10"
+    },
+    "turf_order_sqft": {
+      "value": 202.4,
+      "unit": "sqft",
+      "calculation": "184 + 18.4"
+    },
+    "paver_waste_sqft": {
+      "value": 18,
+      "unit": "sqft",
+      "calculation": "180 * 0.10"
+    },
+    "paver_order_sqft": {
+      "value": 198,
+      "unit": "sqft",
+      "calculation": "180 + 18"
+    }
+  }
+}

@@ -69,3 +69,7 @@ Content lint and content sync exited 0. Database counts: **7** modules in the Sa
 ## Node 7 — VERIFIED
 
 Content lint exited 0 with 33 lessons and 45 quizzes. The exact draft grep returned **4**. The four new lessons and their informational checks remain drafts until Gate 9 approval; published exam pools use only existing non-draft sources. Next: Node 8.
+
+## Node 8 — VERIFIED
+
+`pnpm test -- diagram` passed all 25 current tests. The key schema, arithmetic reconciliation, inclusive ±5% acceptance, per-field ±8% rejection, invalid-input rejection, and unapproved-key trainee block passed. The proposed model is explicitly unapproved; geometry awaits Robert's Gate 9 confirmation. Next: **Node 9 — HUMAN GATE: content review**. Do not start Node 10.
