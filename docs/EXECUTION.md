@@ -65,3 +65,7 @@ Content lint and content sync exited 0. Database counts: **7** modules in the Sa
 ## Node 6 — VERIFIED
 
 `pnpm test -- progress quizzes` passed all 20 current tests. Full content lint and sync passed: 7 modules, 29 lessons, 41 quizzes. M1–M5 exam pools contain 20, 22, 20, 24, and 20 questions, with shuffled 10-question draws and 90% passing. Every lesson has a check and every module has a free-text rubric. The module-specific manifest table governs gating: free-text is required for M1–M5; M6/M7 reflections are practice, with their tier/form rules determining completion. Next: Node 7.
+
+## Node 7 — VERIFIED
+
+Content lint exited 0 with 33 lessons and 45 quizzes. The exact draft grep returned **4**. The four new lessons and their informational checks remain drafts until Gate 9 approval; published exam pools use only existing non-draft sources. Next: Node 8.

@@ -1,0 +1,46 @@
+{
+  "kind": "lesson",
+  "draw_count": 3,
+  "pass_percent": null,
+  "questions": [
+    {
+      "id": "presenting-the-price-1",
+      "kind": "single_choice",
+      "prompt": "What comes before price?",
+      "options": [
+        "Education about products, installation, warranty, and differences",
+        "The maximum discount",
+        "An unsigned quote with no explanation"
+      ],
+      "correct_answer": 0,
+      "source_reference": "presenting-the-price",
+      "source_quote": "Before presenting price"
+    },
+    {
+      "id": "presenting-the-price-2",
+      "kind": "single_choice",
+      "prompt": "When is financing presented?",
+      "options": [
+        "Only after the customer leaves",
+        "Never with the first proposal",
+        "Alongside every proposal"
+      ],
+      "correct_answer": 2,
+      "source_reference": "presenting-the-price",
+      "source_quote": "Present financing alongside every proposal"
+    },
+    {
+      "id": "presenting-the-price-3",
+      "kind": "single_choice",
+      "prompt": "What follows the complete proposal presentation?",
+      "options": [
+        "Offer a drop before explaining value",
+        "Ask for the business and listen",
+        "Skip questions"
+      ],
+      "correct_answer": 1,
+      "source_reference": "presenting-the-price",
+      "source_quote": "ask the customer whether they are ready to move forward"
+    }
+  ]
+}

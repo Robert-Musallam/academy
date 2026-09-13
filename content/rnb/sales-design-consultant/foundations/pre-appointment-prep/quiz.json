@@ -1,0 +1,46 @@
+{
+  "kind": "lesson",
+  "draw_count": 3,
+  "pass_percent": null,
+  "questions": [
+    {
+      "id": "pre-appointment-prep-1",
+      "kind": "single_choice",
+      "prompt": "What should be ready before the appointment?",
+      "options": [
+        "Measuring tools, photos, and samples",
+        "Only a discount offer",
+        "Only a price list"
+      ],
+      "correct_answer": 0,
+      "source_reference": "pre-appointment-prep",
+      "source_quote": "Bring measuring tools"
+    },
+    {
+      "id": "pre-appointment-prep-2",
+      "kind": "single_choice",
+      "prompt": "How should the conversation begin?",
+      "options": [
+        "Price before questions",
+        "Immediate financing guarantees",
+        "Introduction and discovery"
+      ],
+      "correct_answer": 2,
+      "source_reference": "pre-appointment-prep",
+      "source_quote": "begins with introduction and discovery"
+    },
+    {
+      "id": "pre-appointment-prep-3",
+      "kind": "single_choice",
+      "prompt": "What financing information should you use?",
+      "options": [
+        "An unverified guaranteed approval",
+        "Current company-approved information",
+        "Invented monthly payments"
+      ],
+      "correct_answer": 1,
+      "source_reference": "pre-appointment-prep",
+      "source_quote": "current company-approved financing information"
+    }
+  ]
+}

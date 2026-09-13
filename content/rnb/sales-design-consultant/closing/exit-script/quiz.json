@@ -1,0 +1,46 @@
+{
+  "kind": "lesson",
+  "draw_count": 3,
+  "pass_percent": null,
+  "questions": [
+    {
+      "id": "exit-script-1",
+      "kind": "single_choice",
+      "prompt": "What must be agreed before leaving?",
+      "options": [
+        "The next contact",
+        "A fabricated deadline",
+        "An automatic 20% discount"
+      ],
+      "correct_answer": 0,
+      "source_reference": "exit-script",
+      "source_quote": "agree on the next contact"
+    },
+    {
+      "id": "exit-script-2",
+      "kind": "single_choice",
+      "prompt": "What number should you give?",
+      "options": [
+        "Another customer's number",
+        "No number",
+        "Your personal number"
+      ],
+      "correct_answer": 2,
+      "source_reference": "exit-script",
+      "source_quote": "give your personal number"
+    },
+    {
+      "id": "exit-script-3",
+      "kind": "single_choice",
+      "prompt": "How should your follow-up differ from a generic message?",
+      "options": [
+        "Repeat only the automated message",
+        "Reference a specific visit detail",
+        "Ignore the discussion"
+      ],
+      "correct_answer": 1,
+      "source_reference": "exit-script",
+      "source_quote": "reference something specific from the visit"
+    }
+  ]
+}
